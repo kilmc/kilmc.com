@@ -1,0 +1,195 @@
+/* line 3, ../sass/style.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 8, ../sass/style.scss */
+body {
+  font-size: 20px;
+  font-family: "chaparral-pro",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  background: url(../clean_textile.png);
+  color: #363134;
+}
+
+/* line 18, ../sass/style.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1C191B;
+  transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+}
+
+/* line 28, ../sass/style.scss */
+a:hover, a:active {
+  color: #D85547;
+}
+
+/* line 32, ../sass/style.scss */
+.top-nav a[href^="http"]:hover {
+  background-color: #ACF1DD;
+  color: #72AA9A;
+}
+
+/* line 38, ../sass/style.scss */
+a[href^="http"]:hover {
+  color: #ACF1DD;
+}
+
+/* line 43, ../sass/style.scss */
+header {
+  width: 610px;
+  z-index: 10;
+  margin: 20px auto 0;
+  text-align: center;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 20px 0 20px 0;
+}
+
+/* line 53, ../sass/style.scss */
+.top-nav {
+  width: 540px;
+  border-top: 1px solid #E4E4E4;
+  height: 24px;
+  margin: 20px auto;
+  padding: 0 0 0 10px;
+}
+/* line 59, ../sass/style.scss */
+.top-nav li {
+  padding: 18px 0 0 0;
+  margin: 0;
+  width: 33%;
+  float: left;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+/* line 67, ../sass/style.scss */
+.top-nav a, .top-nav a:link, .top-nav a:visited {
+  font-family: "proxima-nova",sans-serif;
+  text-transform: uppercase;
+  font-size: .7em;
+  color: #363134;
+  letter-spacing: .2em;
+  text-decoration: none;
+  display: block;
+  margin: -2px auto;
+  border-radius: 4px;
+  transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  width: 80%;
+  font-weight: normal;
+}
+/* line 84, ../sass/style.scss */
+.top-nav a:hover, .top-nav a:focus, .top-nav a:active {
+  background: #D85547;
+  color: #fff;
+}
+
+/* line 92, ../sass/style.scss */
+.post-wrap {
+  width: 610px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin: 20px auto;
+  padding: 10px 0 30px 0;
+}
+/* line 98, ../sass/style.scss */
+.post-wrap p {
+  width: 520px;
+  margin: 29px auto;
+}
+/* line 102, ../sass/style.scss */
+.post-wrap h2 {
+  width: 520px;
+  margin: 30px auto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+}
+/* line 110, ../sass/style.scss */
+.post-wrap img {
+  width: 610px;
+  display: block;
+  margin: 0 0 40px 0;
+}
+
+/* line 119, ../sass/style.scss */
+.image-caption {
+  font-size: 0.7em;
+  margin: -24px auto 0;
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+/* line 129, ../sass/style.scss */
+.image-caption:before {
+  content: "\2020";
+  font-style: normal;
+  margin: 0 6px 0 0;
+  display: inline-block;
+}
+
+/* line 136, ../sass/style.scss */
+.logo {
+  background: url(../images/kilmc-logo.png) no-repeat center;
+  width: 235px;
+  height: 50px;
+  background-size: 100%;
+  margin: 10px auto 35px;
+  padding: 0;
+}
+
+/* line 145, ../sass/style.scss */
+.ir {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 155, ../sass/style.scss */
+blockquote {
+  font-style: italic;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 50px 0 40px;
+  line-height: 27px;
+}
+
+/* line 164, ../sass/style.scss */
+blockquote:before {
+  content: "\201C";
+  font-size: 3em;
+  margin: 0 0 0 -24px;
+  top: 26px;
+  left: -12px;
+  position: relative;
+  color: #E4E4E4;
+}
+
+/* line 174, ../sass/style.scss */
+blockquote:after {
+  content: "\201D";
+  font-size: 3em;
+  line-height: 0;
+  margin: 0 0 0 -4px;
+  top: 26px;
+  left: 6px;
+  position: relative;
+  color: #E4E4E4;
+}
