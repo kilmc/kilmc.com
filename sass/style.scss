@@ -19,10 +19,7 @@ a, a:link, a:visited {
   text-decoration: none;
   font-weight: 600;
   color: #1C191B;
-  transition: all 0.15s ease-in-out;
-  -moz-transition: all 0.15s ease-in-out;
-  -webkit-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
+  @include single-transition(all, 0.15s, ease-in-out);
 }
 
 a:hover, a:active {
@@ -73,11 +70,8 @@ header {
     text-decoration: none;
     display: block;
     margin: -2px auto;
-    border-radius: 4px;
-    transition: all 0.15s ease-in-out;
-    -moz-transition: all 0.15s ease-in-out;
-    -webkit-transition: all 0.15s ease-in-out;
-    -o-transition: all 0.15s ease-in-out;
+    @include border-radius(4px);
+    @include single-transition(all, 0.15s, ease-in-out);
     width: 80%;
     font-weight: normal;
   }
@@ -149,14 +143,9 @@ header {
   overflow: hidden;
 }
 
-
-
-
 blockquote {
   font-style: italic;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box; 
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   padding: 0 50px 0 40px;
   line-height: 27px;
 }
