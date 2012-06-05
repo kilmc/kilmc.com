@@ -11,7 +11,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 29px;
-  background: url(../clean_textile.png);
+  background: url(../images/clean_textile.png);
   color: #363134;
 }
 
@@ -42,8 +42,6 @@ header {
   z-index: 10;
   margin: 20px auto 0;
   text-align: center;
-  box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
-  background: #fff;
   padding: 20px 0 20px 0;
 }
 
@@ -78,35 +76,82 @@ header {
   a:hover, a:focus, a:active {
     background: #D85547;
     color: #fff;
+
   }
 }
 
 // The wrapper for blog posts 
 // TODO: The general style for this should be mapped to a class so the dropshadow can be reused
-.post-wrap {
-  width: 610px;
+
+.container {
   @include box-shadow(0px 0px 6px rgba(0,0,0,0.1));
   background: #fff;
+}
+
+.post-wrap, .project-wrap {
+  width: 610px;
   margin: 20px auto;
-  padding: 10px 0 30px 0;
+  padding: 0 45px 30px 45px;
+  @include box-sizing(border-box);
   p {
     width: 520px;
     margin: 29px auto;
   }
   h2 {
     width: 520px;
-    margin: 30px auto;
+    margin: 0 auto 30px;
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
+    &.title {
+      padding-top: 30px;
+    }
   }
-
   img {
     width: 610px;
     display: block;
-    margin: 0 0 40px 0;
+    margin: 0 0 10px -45px;
   }
 }
+
+
+
+// PROJECT SECTION
+
+.project-tags {
+  height: 30px;
+  margin: -24px 0 0 0;
+  padding: 0;
+}
+
+
+.project-tag {
+  list-style: none;
+  float: left;
+  display: block;
+  a {
+    text-transform: uppercase;
+    font-size: .7em;
+    letter-spacing: 0.2em;
+    color: #363134;
+    font-family: "proxima-nova",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 0px 0 0;
+    padding: 0 6px 4px 8px;
+    display: block;
+    height: 28px;
+    @include box-sizing(border-box);
+    @include border-radius(4px);
+    &:hover {
+      background: #D85547;
+      color: #fff;
+    }
+  }
+}
+
+
+
 
 
 
@@ -134,6 +179,7 @@ header {
   background-size: 100%;
   margin: 10px auto 35px;
   padding: 0;
+  display: block;
 }
 
 .ir {
@@ -146,7 +192,7 @@ header {
 blockquote {
   font-style: italic;
   @include box-sizing(border-box);
-  padding: 0 50px 0 40px;
+  padding: 0 10px 0 0px;
   line-height: 27px;
 }
 
@@ -170,3 +216,4 @@ blockquote:after {
   position: relative;
   color: #E4E4E4;
 }
+

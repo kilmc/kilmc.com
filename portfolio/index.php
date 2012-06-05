@@ -7,7 +7,7 @@
   <body>
     <?php include('includes/header.php'); ?>
 
-    <div class="container post-wrap">
+    <div class="post-wrap">
       <img src="images/001-hundred-size.jpg" alt="Ull Logo" />
       <h2 class="title">My Music Library is Big, Maybe Too Big</h2>
       <p>
