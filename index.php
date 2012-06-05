@@ -10,6 +10,7 @@
     <div class="container post-wrap">
       <img src="images/001-hundred-size.jpg" alt="Ull Logo" />
       <h2 class="title">My Music Library is Big, Maybe Too Big</h2>
+      <span class="post-info">1st of October, 2011</span>
       <p>
         After coming back from Canada and restarting my freelancing I've ended up having a little money again. It's not much, but enough to start back doing something I've neglected for a long while and that is buying music.
       </p>
