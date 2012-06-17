@@ -1,0 +1,498 @@
+/* line 28, ../sass/style.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 33, ../sass/style.scss */
+body {
+  background: url(../../images/absurdidad.png);
+  color: #363134;
+  font-family: "chaparral-pro", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+/* line 43, ../sass/style.scss */
+a, a:link, a:visited {
+  color: #1c191b;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+/* line 50, ../sass/style.scss */
+a:hover, a:active {
+  color: #d85547;
+}
+
+/* line 60, ../sass/style.scss */
+.container {
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 0 45px 30px 45px;
+  width: 610px;
+}
+@media screen and (min-width: 1024px) {
+  /* line 60, ../sass/style.scss */
+  .container {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 60, ../sass/style.scss */
+  .container {
+    width: 94%;
+    padding: 0 0 30px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 78, ../sass/style.scss */
+  .projects-container {
+    margin: 0 auto;
+    width: 900px;
+  }
+  /* line 82, ../sass/style.scss */
+  .projects-container .project-wrap {
+    height: 270px;
+    width: 430px;
+    float: left;
+  }
+  /* line 85, ../sass/style.scss */
+  .projects-container .project-wrap:nth-child(odd) {
+    margin-right: 20px;
+  }
+  /* line 88, ../sass/style.scss */
+  .projects-container .project-wrap:nth-child(even) {
+    margin-left: 20px;
+  }
+  /* line 92, ../sass/style.scss */
+  .projects-container .project-wrap img {
+    width: 430px;
+  }
+}
+
+/* line 106, ../sass/style.scss */
+header {
+  margin: 20px auto 0;
+  padding: 20px 0 20px 0;
+  text-align: center;
+  width: 610px;
+  z-index: 10;
+}
+@media screen and (min-width: 1024px) {
+  /* line 106, ../sass/style.scss */
+  header {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 106, ../sass/style.scss */
+  header {
+    margin: 10px auto 0;
+    padding: 20px 0 2px 0;
+    width: 94%;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 120, ../sass/style.scss */
+  header h1 {
+    margin: 0 auto;
+  }
+}
+
+/* line 129, ../sass/style.scss */
+.top-nav {
+  border-top: 1px solid #E4E4E4;
+  height: 24px;
+  margin: 20px auto;
+  padding: 0;
+  width: 540px;
+}
+@media screen and (min-width: 1024px) {
+  /* line 129, ../sass/style.scss */
+  .top-nav {
+    width: 830px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 129, ../sass/style.scss */
+  .top-nav {
+    height: 100%;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 129, ../sass/style.scss */
+  .top-nav {
+    margin: 20px auto 0;
+    padding: 10px 0 16px;
+  }
+}
+/* line 147, ../sass/style.scss */
+.top-nav li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 18px 0 0 0;
+  width: 33.333%;
+}
+@media screen and (max-width: 480px) {
+  /* line 147, ../sass/style.scss */
+  .top-nav li {
+    clear: left;
+    padding: 10px 0 0 0;
+    width: 94%;
+  }
+}
+/* line 161, ../sass/style.scss */
+.top-nav a, .top-nav a:link, .top-nav a:visited {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  color: #363134;
+  display: block;
+  font-family: "proxima-nova", sans-serif;
+  font-size: .7em;
+  font-weight: normal;
+  letter-spacing: .2em;
+  margin: -2px auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  width: 80%;
+}
+/* line 176, ../sass/style.scss */
+.top-nav a:hover, .top-nav a:focus, .top-nav a:active {
+  color: #fff;
+  background: #D85547;
+}
+
+/* line 182, ../sass/style.scss */
+.logo {
+  background: url(../../images/kilmc-logo.png) no-repeat center;
+  background-size: 100%;
+  display: block;
+  height: 50px;
+  margin: 10px auto 35px;
+  padding: 0;
+  width: 235px;
+}
+@media screen and (max-width: 640px) {
+  /* line 182, ../sass/style.scss */
+  .logo {
+    margin: 0 auto;
+  }
+}
+
+/* line 204, ../sass/style.scss */
+h2 {
+  width: 520px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0 auto 30px;
+}
+@media screen and (min-width: 1024px) {
+  /* line 204, ../sass/style.scss */
+  h2 {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 204, ../sass/style.scss */
+  h2 {
+    width: 94%;
+  }
+}
+/* line 216, ../sass/style.scss */
+h2.title {
+  padding-top: 50px;
+}
+@media screen and (max-width: 640px) {
+  /* line 216, ../sass/style.scss */
+  h2.title {
+    padding-top: 25px;
+  }
+}
+/* line 222, ../sass/style.scss */
+h2.project-title {
+  padding-top: 30px;
+}
+
+/* line 229, ../sass/style.scss */
+p {
+  font-size: 1em;
+  line-height: 29px;
+  margin: 29px auto;
+  width: 520px;
+}
+@media screen and (min-width: 1024px) {
+  /* line 229, ../sass/style.scss */
+  p {
+    line-height: 30px;
+    width: 750px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 229, ../sass/style.scss */
+  p {
+    font-size: 0.95em;
+    line-height: 22px;
+    margin: 23px auto;
+    width: 94%;
+  }
+}
+
+/* line 246, ../sass/style.scss */
+blockquote {
+  margin: 0;
+}
+
+/* line 250, ../sass/style.scss */
+blockquote p {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-style: italic;
+  line-height: 27px;
+  padding: 0 10px 0 0px;
+  width: 440px;
+}
+@media screen and (min-width: 1024px) {
+  /* line 250, ../sass/style.scss */
+  blockquote p {
+    line-height: 29px;
+    padding-left: 20px;
+    width: 670px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 250, ../sass/style.scss */
+  blockquote p {
+    line-height: 24px;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+  }
+}
+
+/* line 271, ../sass/style.scss */
+blockquote p:before {
+  color: #E4E4E4;
+  content: "\201C";
+  font-size: 3em;
+  left: -12px;
+  margin: 0 0 0 -24px;
+  position: relative;
+  top: 26px;
+}
+@media screen and (max-width: 640px) {
+  /* line 271, ../sass/style.scss */
+  blockquote p:before {
+    left: -4px;
+    margin: 0 0 0 0;
+    top: 26px;
+  }
+}
+/* line 285, ../sass/style.scss */
+blockquote p:after {
+  color: #E4E4E4;
+  content: "\201D";
+  font-size: 3em;
+  left: 6px;
+  line-height: 0;
+  margin: 0 0 0 -4px;
+  position: relative;
+  top: 26px;
+}
+@media screen and (max-width: 640px) {
+  /* line 285, ../sass/style.scss */
+  blockquote p:after {
+    left: 0px;
+  }
+}
+
+/* line 302, ../sass/style.scss */
+.tiny-text, .project-tag a {
+  display: block;
+  font-family: "proxima-nova", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+/* line 309, ../sass/style.scss */
+.tiny-text.post-info, .project-tag a.post-info {
+  margin: -27px auto 0;
+  width: 520px;
+}
+@media screen and (min-width: 1024px) {
+  /* line 309, ../sass/style.scss */
+  .tiny-text.post-info, .project-tag a.post-info {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 309, ../sass/style.scss */
+  .tiny-text.post-info, .project-tag a.post-info {
+    width: 94%;
+  }
+}
+
+/* line 322, ../sass/style.scss */
+.project-tags {
+  height: 30px;
+  margin: -24px 0 0 0;
+  padding: 0;
+}
+
+/* line 328, ../sass/style.scss */
+.project-tag {
+  display: block;
+  float: left;
+  list-style: none;
+}
+/* line 332, ../sass/style.scss */
+.project-tag a {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #363134;
+  font-style: normal;
+  height: 28px;
+  letter-spacing: 0.2em;
+  margin: 0 0px 0 0;
+  padding: 0 6px 4px 8px;
+}
+/* line 342, ../sass/style.scss */
+.project-tag a:hover {
+  background: #D85547;
+  color: #fff;
+}
+
+/* line 351, ../sass/style.scss */
+img {
+  display: block;
+  margin: 0 0 10px -45px;
+  width: 610px;
+}
+@media screen and (min-width: 1024px) {
+  /* line 351, ../sass/style.scss */
+  img {
+    margin: 0 0 10px -75px;
+    width: 900px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 351, ../sass/style.scss */
+  img {
+    margin-left: -3%;
+    width: 106%;
+  }
+}
+
+/* line 365, ../sass/style.scss */
+figure {
+  margin: 0;
+}
+/* line 367, ../sass/style.scss */
+figure img {
+  margin-left: -45px;
+}
+/* line 370, ../sass/style.scss */
+figure figcaption {
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  /* line 370, ../sass/style.scss */
+  figure figcaption {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 370, ../sass/style.scss */
+  figure figcaption {
+    font-size: 0.65em;
+  }
+}
+/* line 378, ../sass/style.scss */
+figure figcaption:before {
+  content: "\2020";
+  display: inline-block;
+  font-style: normal;
+  margin: 0 6px 0 0;
+}
+
+/* line 389, ../sass/style.scss */
+.project-wrap img {
+  margin: 0 0 10px -45px;
+}
+@media screen and (min-width: 1024px) {
+  /* line 389, ../sass/style.scss */
+  .project-wrap img {
+    margin: 0 0 10px -45px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 389, ../sass/style.scss */
+  .project-wrap img {
+    margin-left: -3%;
+  }
+}
+
+/* line 401, ../sass/style.scss */
+.container.with-featured-image > p:first-child {
+  margin-bottom: 0;
+}
+
+/* line 413, ../sass/style.scss */
+.ir {
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/* line 420, ../sass/style.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 421, ../sass/style.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 422, ../sass/style.scss */
+.clearfix {
+  zoom: 1;
+}
