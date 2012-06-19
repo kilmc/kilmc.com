@@ -16,3 +16,6 @@ sitemap.xml.gz
 readme.html
 license.txt
 .DS_Store
+
+assets/styles/.sass-cache
+site/config/config.dev.kilmc.com.php

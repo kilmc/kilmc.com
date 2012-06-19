@@ -15,9 +15,8 @@
   <script type="text/javascript" src="http://use.typekit.com/naf3qdj.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0; 
-  user-scalable=0;">
-  <link href="/git/kirby/assets/styles/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0; user-scalable=0;">
+  <?php echo css('assets/styles/stylesheets/style.css', 'screen') ?>
 </head>
 
 <body>
@@ -26,7 +25,7 @@
     <h1><a class="logo ir" href="<?php echo url('') ?>">Kilmc</a></h1>
     <ul class="top-nav clearfix">
       <li><a href="http://twitter.com/kilmc">Twitter</a></li>
-      <li><a href="/git/kirby/projects">Projects</a></li>
+      <li><a href="<?php echo url('projects') ?>">Projects</a></li>
       <li><a href="http://justhundred.com">Hundred</a></li>
     </ul>
   </header>
