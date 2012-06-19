@@ -7,7 +7,7 @@ class kirbytextExtended extends kirbytext {
     parent::__construct($text, $markdown);
     
     // define custom tags
-    $this->addTags('figure');
+    $this->addTags('figure', 'project');
     
     // define custom attributes
     $this->addAttributes('caption');    
@@ -40,5 +40,19 @@ class kirbytextExtended extends kirbytext {
     return $html;    
 
   }
+
+  function project($params) {
+    
+    global $site;
+    
+    $projectUID = $params['project'];
+    $project    = $site->pages()->find('projects/' . $projectUID);
+    
+    if($project->uid() != $projectUID) return false;            
+    
+    return snippet('project', array('project' => $project), true);
+    
+  }
+
     
 }
