@@ -1,5 +1,27 @@
 #Kirby Changelog
 
+## 1.1
+
+### Update from 1.0.9 to 1.1
+
+To update from 1.0.9 to 1.1 replace the `kirby` system folder. Delete all files in site/cache, if you got caching enabled. 
+
+PLEASE REPLACE YOUR OLD HTACCESS FILE WITH THE NEW HTACCESS FILE!!!
+
+### Changes
+
+- added full multi-language support
+- multi-language box fixes
+- auto-subfolder detection
+- removed the favicons from the default template to keep it more simple
+- fixed some inconsistencies in the templates
+- improved the config
+- all invisible content files are now skipped
+- added a Kirby Panel Version check. 
+- fixed a caching bug
+- changeable content file extensions
+- new improved handling of plugins in the plugins folder (by Lukas)
+
 ## 1.0.9
 
 ### Update from 1.0.8 to 1.0.9

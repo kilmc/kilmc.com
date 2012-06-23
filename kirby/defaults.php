@@ -3,8 +3,12 @@
 // direct access protection
 if(!defined('KIRBY')) die('Direct access is not allowed');
 
-c::set('version.string', '1.0.9');
-c::set('version.number', 1.09);
+c::set('version.string', '1.1');
+c::set('version.number', 1.1);
+
+// set a required panel version to make sure 
+// core and panel will work together nicely
+c::set('panel.min.version', 0.8);
 
 // define all directories
 c::set('root.templates', c::get('root.site') . '/templates');
@@ -58,4 +62,5 @@ c::set('timezone', 'UTC');
 c::set('pagination.variable', 'page');
 c::set('pagination.method', 'params');
 
-?>
+// change the default kirby content file extension
+c::set('content.file.extension', 'txt');

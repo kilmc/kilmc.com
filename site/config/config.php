@@ -40,7 +40,7 @@ Make sure to write the url without a trailing slash.
  
 */
 
-c::set('url', 'http://localhost:8888/git/kirby');
+c::set('url', '/');
 
 
 /* 
@@ -81,7 +81,7 @@ RewriteBase /subfolder
  
 */
 
-c::set('subfolder', 'git/kirby');
+c::set('subfolder', 'git/kilmc');
 
 
 /* 

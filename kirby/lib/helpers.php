@@ -4,21 +4,41 @@
 if(!defined('KIRBY')) die('Direct access is not allowed');
 
 // easy url builder
-function url($uri=false) {
-  if(c::get('rewrite')) {
-    return c::get('url') . '/' . $uri;
-  } else {
-    if(!$uri) return c::get('url');
-    if(is_file(c::get('root') . '/' . $uri)) {
-      return c::get('url') . '/' . $uri;
-    } else {
-      return c::get('url') . '/index.php/' . $uri;
-    }
+function url($uri=false, $lang=false) {
+    
+  // get the base url of the site
+  $baseUrl = c::get('url');
+
+  // url() can also be used to link to css, img or js files
+  // so we need to make sure that this is not a link to a real
+  // file. Otherwise it will be broken by the rest of the code. 
+  if($uri && is_file(c::get('root') . '/' . $uri)) {
+    return $baseUrl . '/' . $uri;          
   }
+    
+  // prepare the lang variable for later
+  if(c::get('lang.support')) {
+    $lang = ($lang) ? $lang : c::get('lang.current');
+    
+    // prepend the language code to the uri
+    $uri = $lang . '/' . ltrim($uri, '/');
+  } 
+
+  // if rewrite is deactivated
+  // index.php needs to be prepended
+  // so urls will still work
+  if(!c::get('rewrite') && $uri) {
+    $uri = 'index.php/' . $uri;
+  }
+  
+  // return the final url and make sure 
+  // we don't get double slashes by triming the uri   
+  return $baseUrl . '/' . ltrim($uri, '/');
+
 }
 
-function u($uri=false) {
-  return url($uri);
+function u($uri=false, $lang=false) {
+  return url($uri, $lang);
 }
 
 // return the current url with all
@@ -64,5 +84,3 @@ function param($key, $default=false) {
   global $site;
   return $site->uri->params($key, $default);
 }
-
-?>

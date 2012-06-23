@@ -15,6 +15,35 @@ class page extends obj {
     return '<a href="' . $this->url() . '">' . $this->url() . '</a>';  
   }
 
+  function content($code=false) {
+    
+    // return the cached version if available
+    if(!$code && is_a($this->content, 'obj')) return $this->content;
+
+    // make sure there's the right code for lang support
+    if(!$code && c::get('lang.support')) $code = c::get('lang.current');
+    
+    $content = ($code) ? $this->contents()->filterBy('languageCode', $code)->first() : $this->contents()->first();
+    $result  = array();
+
+    if($content) {
+
+      foreach($content->variables as $key => $var) {
+        $result[$key] = new variable($var, $this);
+      }
+      
+      // pass on the variables object and the raw filecontent
+      $result['variables']   = $content->variables;
+      $result['filecontent'] = $content->filecontent;
+
+      return new pagecontent($result);
+
+    }
+    
+    return false;        
+    
+  }
+
   function children($offset=null, $limit=null, $sort='dirname', $direction='asc') {
 
     // if children have already been fetched return them from "cache"
@@ -25,10 +54,7 @@ class page extends obj {
     foreach($this->children as $child) {
 
       $child = dir::inspect($this->root . '/' . $child);
-      $page  = page::fromDir($child, $this->uri);
-
-      // add the parent page object
-      $page->parent = $this;
+      $page  = page::fromDir($child, $this);
 
       $pages[$page->uid] = $page;
       
@@ -109,7 +135,7 @@ class page extends obj {
 
   function template() {
 
-    $name = (!$this->content || !$this->content->name) ? c::get('tpl.default') : $this->content->name;
+    $name = (!$this->intendedTemplate) ? c::get('tpl.default') : $this->intendedTemplate;
     
     // construct the template file 
     $file = c::get('root.templates') . '/' . $name . '.php';
@@ -134,11 +160,31 @@ class page extends obj {
     return $this->hash = base_convert($checksum, 10, 36);
   }
   
-  function url() {
+  function url($lang=false) {
     if($this->isHomePage() && !c::get('home.keepurl')) {
-      return u();
+      return url(false, $lang);
+    } else if(c::get('lang.support') && $lang) {
+
+      $obj = $this;
+      $cnt = $this->content($lang);
+      $uri = $cnt ? $cnt->url_key() : false;
+      if(!$uri) $uri = $this->uid;
+                  
+      while($parent = $obj->parent()) {
+        
+        $cnt = $parent->content($lang);
+        $uid = ($cnt) ? $cnt->url_key() : false;
+        if(!$uid) $uid = $parent->uid;
+
+        $uri = $uid . '/' . $uri;
+        $obj = $obj->parent();
+      }
+                
+      $uri = $uri;
+      return u($uri, $lang);      
+                    
     } else {
-      return u($this->uri);
+      return u(($this->translatedURI != '') ? $this->translatedURI : $this->uri);
     }
   }
 
@@ -177,7 +223,7 @@ class page extends obj {
 
     if($this->isActive()) return true;
     
-    $p = str::split($this->uri(), '/');
+    $p = (c::get('lang.support')) ? str::split($this->translatedURI(), '/'): str::split($this->uri(), '/');
     $u = $site->uri->path->toArray();
   
     for($x=0; $x<count($p); $x++) {
@@ -280,17 +326,19 @@ class page extends obj {
     return ($this->contents()->count() > 0) ? true : false;
   }
     
-  static function fromDir($dir, $path) {
+  static function fromDir($dir, $parent) {
   
     // create a new page for this dir      
-    $page = new page();
+    $page   = new page();
+    $parent = ($parent) ? $parent : new obj(); 
     
     $name = self::parseName($dir['name']);
 
     // apply all variables
+    $page->parent   = $parent;
     $page->num      = $name['num'];
     $page->uid      = $name['uid'];
-    $page->uri      = ltrim($path . '/' . $page->uid, '/');
+    $page->uri      = ltrim($parent->uri . '/' . $page->uid, '/');
     $page->dirname  = $dir['name'];
     $page->modified = $dir['modified'];
     $page->root     = $dir['root'];
@@ -305,16 +353,56 @@ class page extends obj {
     // gather all files
     $page->files();
 
-    // fetch the first content
-    $page->content = $page->files()->contents()->first();    
+    // fetch the content
+    $content = $page->files()->contents();    
     
-    // merge all variables
-    if($page->content && is_array($page->content->variables)) {
-      foreach($page->content->variables as $key => $var) {
-        $page->_[$key] = new variable($var, $page);
+    if(c::get('lang.support')) {
+
+      $fallback = $content->filterBy('languageCode', c::get('lang.default'))->first();
+      if(!$fallback) $fallback = $content->first();
+      
+      // get the fallback variables
+      $variables = ($fallback) ? $fallback->variables : array();
+            
+      $page->intendedTemplate = ($fallback) ? $fallback->template : false;
+      
+      if(c::get('lang.translated')) {
+
+        // don't use url_key as fallback
+        // the fallback should always be the folder name
+        unset($variables['url_key']);
+
+        $translation = $content->filterBy('languageCode', c::get('lang.current'))->first();
+        $variables   = ($translation) ? array_merge($variables, $translation->variables) : $variables;
       }
-    }
+
+    } else {
+      
+      $contentfile = $content->first();
+      $variables   = ($contentfile) ? $contentfile->variables : array();
+
+      $page->intendedTemplate = ($contentfile) ? $contentfile->template : false;
                 
+    }
+        
+    // merge all variables
+    foreach($variables as $key => $var) {
+      $page->_[$key] = new variable($var, $page);
+    }
+     
+    // multi-language translatable urls
+    if(c::get('lang.support') && $page->url_key != '') {
+      $page->translatedUID = $page->url_key();
+      $page->translatedURI = ltrim($parent->translatedURI . '/' . $page->url_key(), '/');    
+    } else {
+      $page->translatedUID = $page->uid;
+      $page->translatedURI = ltrim($parent->translatedURI . '/' . $page->uid, '/');    
+    }
+    
+    // attach a cached version of the default content
+    // for backwards compatibility
+    $page->content = $page->content();
+                    
     return $page;
       
   } 
@@ -401,13 +489,18 @@ class pages extends obj {
     $obj   = $this;
     $page  = false;
 
+    // check if we need to search for translated urls
+    $translated = c::get('lang.support');
+
     foreach($array as $p) {    
-      $next = $obj->{'_' . $p};
+
+      $next = ($translated) ? $obj->findBy('translatedUID', $p) : $obj->{'_' . $p};
       if(!$next) return $page;
 
       $page = $next;
       $obj  = $next->children();
     }
+        
     return $page;    
   }
     
@@ -418,15 +511,21 @@ class pages extends obj {
     if($this->active) return $this->active;
 
     $uri = (string)$site->uri->path();
-
+    
     if(empty($uri)) $uri = c::get('home');
 
     $page = $this->find($uri);
 
-    if(!$page || $page->uri() != $uri) {
+    if($page) {
+      $pageURI = (c::get('lang.support')) ? $page->translatedURI() : $page->uri();
+    } else {
+      $pageURI = c::get('404');
+    }
+    
+    if(!$page || $pageURI != $uri) {
       $page = $site->pages->find(c::get('404'));
     }
-           
+               
     return $this->active = $page;
                     
   }
@@ -576,4 +675,10 @@ class pages extends obj {
             
 }
 
-?>
+class pagecontent extends obj {
+  
+  function __toString() {
+    return $this->filecontent;
+  }
+  
+}

@@ -19,3 +19,4 @@ license.txt
 
 assets/styles/.sass-cache
 site/config/config.dev.kilmc.com.php
+sftp-config.json

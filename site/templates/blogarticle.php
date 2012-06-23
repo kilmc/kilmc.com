@@ -8,6 +8,8 @@
   <span class="tiny-text post-info"><?php echo html($page->date('jS \of F, Y')) ?></span>
   <?php echo kirbytext($page->text()) ?>
 
+
+
 </article>
 
 

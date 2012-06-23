@@ -29,17 +29,26 @@ class load {
     self::file($root . '/config.' . server::get('server_name') . '.php');
   }
   
-  static function plugins() {
-    $root  = c::get('root.plugins');
-    $files = dir::read($root);    
+  static function plugins($folder=false) {
+
+    $root   = c::get('root.plugins');
+    $folder = ($folder) ? $folder : $root;
+    $files  = dir::read($folder);
 
     if(!is_array($files)) return false;
     
     foreach($files as $file) {
+      
+      if(is_dir($folder . '/' . $file) && $folder == $root) {
+        self::plugins($folder . '/' . $file);
+        continue;
+      }
+        
       if(f::extension($file) != 'php') continue;
-      self::file($root . '/' . $file);
+      self::file($folder . '/' . $file);
+
     }
-    
+
   }
 
   static function parsers() {
@@ -56,6 +65,15 @@ class load {
     }
     
   }
+
+  static function language() {
+    $root    = c::get('root.site') . '/languages';
+    $default = $root . '/' . c::get('lang.default') . '.php';    
+    $current = $root . '/' . c::get('lang.current') . '.php';    
+    
+    self::file($default);
+    self::file($current);
+  }
   
   static function file($file) {
     if(!file_exists($file)) return false;
@@ -64,4 +82,3 @@ class load {
 
 }
 
-?>

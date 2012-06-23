@@ -5,8 +5,15 @@ if(!defined('KIRBY')) die('Direct access is not allowed');
 
 class file extends obj {
   
+  var $meta = array();
+  
   function __toString() {
     return '<a href="' . $this->url() . '">' . $this->url() . '</a>';  
+  }
+
+  function meta($code=false) {
+    if(!$code) $code = c::get('lang.default');
+    return new obj(a::get($this->meta, $code));
   }
 
   function next() {
@@ -186,7 +193,10 @@ class files extends obj {
   function init($page) {
         
 		foreach($page->rawfiles AS $key => $file) {
-
+      
+      // skip invisible files      
+      if(preg_match('!^\.!', $file)) continue;
+      
 			$info = array(
 			  'name'      => f::name($file),
 				'filename'  => $file,
@@ -194,7 +204,7 @@ class files extends obj {
 				'root'      => $page->root . '/' . $file,
 				'uri'       => $page->diruri . '/' . $file,
 				'parent'    => $this,
-				'modified'  => filectime($page->root . '/' . $file)
+				'modified'  => @filectime($page->root . '/' . $file)
 			);
 				
       switch($info['extension']) {
@@ -227,7 +237,7 @@ class files extends obj {
           $info['type'] = 'sound';
           $class = 'file';
           break;
-        case 'txt':
+        case c::get('content.file.extension', 'txt'):
           $info['type'] = 'content';
           $class = 'variables';
           break;
@@ -275,21 +285,179 @@ class files extends obj {
   }
 
   function dispatchContent() {
-    
-    foreach($this->contents() as $key => $content) {
 
-      // find a matching file
-      $file = $this->find($content->name);
-      if($file) {
-        $file->_ = array_merge($file->_, $content->variables);
-        // remove this from the list of contents
-        unset($this->_[$key]);
+    $meta = array();
+
+    $langSupport = c::get('lang.support');
+    $translated  = c::get('lang.translated');
+            
+    foreach($this->contents() as $key => $content) {
+            
+      // split filenames (already without extension) by .
+      $parts      = explode('.', $content->name);
+      $countParts = count($parts);
+      $lastPart   = a::last($parts);
+      $firstPart  = a::first($parts);
+      
+      // home.txt
+      if($countParts == 1) {
+
+        // files without a language code
+        // are considered to be the default language file            
+        $content->languageCode = c::get('lang.default');
+
+        // keep the entire name for the template (i.e. home)
+        $content->template = $content->name;
+
+      // home.en.txt 
+      // myfile.jpg.txt 
+      // article.video.txt
+      } else if($countParts == 2) {
+
+        // check for a matching file by the entire name        
+        $file = $this->find($content->name);
+        
+        // myfile.jpg.txt
+        if($file) {
+
+          // change the filetype
+          $content->type = 'meta';
+
+          // files without a language code
+          // are considered to be the default language file            
+          $content->languageCode = c::get('lang.default');
+          $file->meta[$content->languageCode] = $content->variables;
+          
+          // add this to the meta array
+          $meta[] = $file;
+                                                                    
+        // home.en.txt
+        // article.video.txt
+        } else {
+          
+          // check for a valid language extension
+          // home.en.txt
+          if($langSupport && in_array($lastPart, c::get('lang.available', array()))) {         
+            
+            // use the first part for the template name (i.e. home)
+            $content->template = $firstPart;
+
+            // add the language code
+            $content->languageCode = $lastPart;
+
+          // plain content file with crazy name
+          // article.video.txt
+          } else {
+
+            // files without a language code
+            // are considered to be the default language file            
+            $content->languageCode = c::get('lang.default');
+
+            // use the entire name for the template (i.e. home)
+            $content->template = $content->name;
+
+          }
+
+        }
+
+
+      // myfile.jpg.de.txt
+      // article.video.de.txt
+      // something more absurd
+      } else if($countParts > 2) {
+                
+        // check for a valid language extension
+        // myfile.jpg.de.txt
+        // article.video.de.txt
+        if($langSupport && in_array($lastPart, c::get('lang.available', array()))) {         
+          
+          // name without the last part / language code
+          $name = implode('.', array_slice($parts, 0, -1));
+          
+          // check for a matching file by the new name        
+          $file = $this->find($name);
+          
+          // add the language code
+          $content->languageCode = $lastPart;
+          
+          // myfile.jpg.de.txt
+          if($file) {
+            
+            // change the filetype
+            $content->type = 'meta';
+            $file->meta[$content->languageCode] = $content->variables;
+
+            // add this to the meta array
+            $meta[] = $file;
+                                    
+          // article.video.de.txt
+          } else {
+
+            // use the already prepared name for the template (i.e. article.video)
+            $content->template = $name;
+                    
+          }
+
+        // something more absurd
+        // article.video.whatever.txt
+        // myfile.something.jpg.txt
+        // or an invalid language code
+        } else {
+
+          // check for a matching file by the new name        
+          $file = $this->find($content->name);
+
+          // files without a language code
+          // are considered to be the default language file
+          $content->languageCode = c::get('lang.default');            
+          
+          if($file) {
+            
+            $content->type = 'meta';
+            $file->meta[$content->languageCode] = $content->variables;
+            
+            // add this to the meta array
+            $meta[] = $file;
+
+          } else {
+                      
+            // use the entire name for the template (i.e. article.video.whatever)
+            $content->template = $content->name;
+          
+          }
+          
+        }
+            
       }
     
     }
     
+    foreach($meta as $m) {
+      
+      if($langSupport) {      
+        
+        $variables = (array)a::get($m->meta, c::get('lang.default'));
+                    
+        if($translated) {
+          $translation = (array)a::get($m->meta, c::get('lang.current'));
+          $variables   = (!empty($translation)) ? array_merge($variables, $translation) : $variables;
+        }
+      
+      } else {
+        $variables = (array)@a::first($m->meta);
+      }
+      
+      // merge the variables with the file object      
+      $m->_ = array_merge($m->_, $variables);
+          
+    }
+                                
   }
-
+  
+  function content() {
+    return $this->content;
+  }
+  
   function slice($offset=null, $limit=null) {
     if($offset === null && $limit === null) return $this;
     return new files(array_slice($this->_, $offset, $limit));
@@ -400,6 +568,10 @@ class files extends obj {
     return $this->findByType('content');
   }
 
+  function meta() {
+    return $this->findByType('meta');
+  }
+
   function others() {
     return $this->findByType('other');
   }
@@ -442,4 +614,3 @@ class files extends obj {
     
 }
 
-?>
