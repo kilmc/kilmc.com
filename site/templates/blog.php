@@ -17,6 +17,9 @@
       </div>
     <?php endif ?>
     <span class="tiny-text post-info date"><?php echo html($article->date('jS \of F, Y')) ?></span>
+    <?php if($article->preface()): ?>
+      <div class="preface home"><?php echo kirbytext($article->preface()) ?></div>
+    <?php endif ?>
     <div class="post-body <?php if($article->summary() == ''): ?><?php echo 'no-summary' ?><?php endif ?>"><?php echo kirbytext($article->text()) ?></div>
     <?php if($article->summary()): ?>
       <span class="tiny-text post-info reading-time">Reading Time: <?php echo readingtime($article->text()) ?></span>
@@ -27,3 +30,6 @@
   <?php endforeach ?>
 
 </section>
+
+
+<?php snippet('footer') ?>

@@ -1,6 +1,6 @@
-   <footer>
+<!--    <footer>
     <?php echo kirbytext($site->copyright()) ?>
-  </footer>
+  </footer> -->
 
 </body>
 

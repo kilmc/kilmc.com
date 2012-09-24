@@ -25,13 +25,13 @@
     <h1><a class="logo ir" href="<?php echo url('') ?>">Kilmc</a></h1>
     <ul class="top-nav clearfix">
       <li><a href="http://twitter.com/kilmc">Twitter</a></li>
-      <li><a href="<?php echo url('projects') ?>">Projects</a></li>
+      <li><a href="<?php echo url('about') ?>">About</a></li>
       <li><a href="http://justhundred.com">Hundred</a></li>
     </ul>
 
     <ul class="mobile-nav clearfix">
       <li><a href="http://twitter.com/kilmc">Twitter</a></li>
-      <li><a href="#">Menu</a></li>
+      <li><a href="<?php echo url('about') ?>">About</a></li>
     </ul>
   </header>
 

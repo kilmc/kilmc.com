@@ -1,4 +1,0 @@
-Title: Blog
-----
-Text: This is a nice Demo Blog. 
-----    

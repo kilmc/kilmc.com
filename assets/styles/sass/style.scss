@@ -295,6 +295,28 @@ p {
   }
 }
 
+.preface {
+  font-style: italic;
+  border-bottom: 2px dotted #BBB;
+  margin: 0 auto;
+  width: 520px;
+  @media screen and (min-width: 1024px) {
+    width: 750px;
+    p {
+      margin: 29px auto;
+      line-height: 29px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    margin: 23px auto;
+    line-height: 23px;
+    width: 100%;
+    &.home {
+      display: none;
+    }
+  }
+}
+
 .inline-title {
   @media screen and (max-width: 640px) {
     display: inline;
@@ -501,7 +523,15 @@ figure {
   @media screen and (max-width: 640px) {
     padding-top: 0;
   }
-  padding-top: 30px;
+  padding-top: 20px;
+}
+
+.no-date {
+  margin: 0 auto -10px;
+}
+
+.this-is-a-change {
+  margin: 0;
 }
 
 
