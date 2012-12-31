@@ -1,9 +1,17 @@
-Title: Kilmc
+﻿Title: Kilmc
+
 ----
+
 Author: Kilian McMahon
+
 ----
+
 Description: It's a blog, site, thingy.
+
 ----
+
 Keywords: kirby, cms, kirbycms, php, filesystem
+
 ----
+
 Copyright: © 2009-(date: Year) (link: http://kilmc.com text: Kilian McMahon)

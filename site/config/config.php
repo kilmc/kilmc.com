@@ -81,7 +81,7 @@ RewriteBase /subfolder
  
 */
 
-c::set('subfolder', 'git/kilmc');
+c::set('subfolder', false);
 
 
 /* 

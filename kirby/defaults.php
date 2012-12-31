@@ -3,12 +3,12 @@
 // direct access protection
 if(!defined('KIRBY')) die('Direct access is not allowed');
 
-c::set('version.string', '1.1');
-c::set('version.number', 1.1);
+c::set('version.string', '1.1.2');
+c::set('version.number', 1.12);
 
 // set a required panel version to make sure 
 // core and panel will work together nicely
-c::set('panel.min.version', 0.8);
+c::set('panel.min.version', 0.9);
 
 // define all directories
 c::set('root.templates', c::get('root.site') . '/templates');
@@ -30,6 +30,7 @@ c::set('home', 'home');
 
 // define the 404 folder
 c::set('404', 'error');
+c::set('404.header', true);
 
 // default template name
 c::set('tpl.default', 'default');
@@ -45,7 +46,26 @@ c::set('cache.html', false);
 c::Set('cache.ignore', array());
 
 // create line breaks in markdown
+c::set('markdown', true);
 c::set('markdown.breaks', true);
+c::set('markdown.extra', false);
+c::set('markdown.blocktags.a', 'ins|del|img');
+c::set('markdown.blocktags.b', 'p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|address|script|noscript|form|fieldset|iframe|math|figure');
+
+// smartypants
+c::set('smartypants', false);
+c::set('smartypants.attr', 1);
+c::set('smartypants.doublequote.open', '&#8220;');
+c::set('smartypants.doublequote.close', '&#8221;');
+c::set('smartypants.space.emdash', ' ');
+c::set('smartypants.space.endash', ' ');
+c::set('smartypants.space.colon', '&#160;');
+c::set('smartypants.space.semicolon', '&#160;');
+c::set('smartypants.space.marks', '&#160;');
+c::set('smartypants.space.frenchquote', '&#160;');
+c::set('smartypants.space.thousand', '&#160;');
+c::set('smartypants.space.unit', '&#160;');
+c::set('smartypants.skip', 'pre|code|kbd|script|math');
 
 // default definitions for the kirbytext parser
 c::set('kirbytext.video.width', 480);

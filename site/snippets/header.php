@@ -15,6 +15,8 @@
   <script type="text/javascript" src="http://use.typekit.com/naf3qdj.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+  <script type="text/javascript" src="<?php echo url('panel/assets/js/jquery.js') ?>"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0; user-scalable=0;">
   <?php echo css('assets/styles/stylesheets/style.css', 'screen') ?>
 </head>

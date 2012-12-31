@@ -4,11 +4,23 @@
  
   <?php foreach($page->children()->visible()->flip() as $article): ?>
   
-  <article class="container <?php if($article->featured_image()): ?><?php echo 'with-featured-image' ?><?php endif ?>">
-    <?php if($article->featured_image()): ?>
-      <a href="<?php echo $article->url() ?>"><?php echo kirbytext($article->featured_image()) ?></a>
+  <?php 
+    $featuredImage = $article->files()->find('featured.jpg');
+
+    if($featuredImage) {
+      $classValue = 'with-featured-image';
+    }
+
+  ?>
+  
+  <article class="container <?php echo $classValue ?>">
+    <?php if($featuredImage): ?>
+      <a href="<?php echo $article->url() ?>">
+        <img src="<?php echo $featuredImage->url() ?>" class="featured-image" alt="" /> 
+      </a>
     <?php endif ?>
-    <h2 class="title <?php if($article->featured_image()): ?><?php echo 'with-featured-image' ?><?php endif ?>"><a href="<?php echo $article->url() ?>"><?php echo html($article->title()) ?></a></h2>
+    <h2 class="title <?php echo $featuredImage ? 'with-featured-image' : '' ?>">
+      <a href="<?php echo $article->url() ?>"><?php echo html($article->title()) ?></a></h2>
     <?php if($article->summary()): ?>
       <div class="post-summary">
         <p><span class="inline-title summary">Summary:</span> 
@@ -17,12 +29,18 @@
       </div>
     <?php endif ?>
     <span class="tiny-text post-info date"><?php echo html($article->date('jS \of F, Y')) ?></span>
+    
     <?php if($article->preface()): ?>
       <div class="preface home"><?php echo kirbytext($article->preface()) ?></div>
     <?php endif ?>
-    <div class="post-body <?php if($article->summary() == ''): ?><?php echo 'no-summary' ?><?php endif ?>"><?php echo kirbytext($article->text()) ?></div>
+    
+    <div class="post-body <?php echo $article->summary() ? '' : 'no-summary' ?>">
+      <?php echo kirbytext($article->text()) ?>
+    </div>
     <?php if($article->summary()): ?>
-      <span class="tiny-text post-info reading-time">Reading Time: <?php echo readingtime($article->text()) ?></span>
+      <span class="tiny-text post-info reading-time">
+        Reading Time: <?php echo readingtime($article->text()) ?>
+      </span>
     <?php endif ?>
 
   </article>

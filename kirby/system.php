@@ -11,6 +11,12 @@ if(floatval(phpversion()) < 5.2) {
   die('Please upgrade to PHP 5.2 or higher');
 }
 
+// check for existing mbstring functions
+if(!function_exists('mb_strtolower')) {
+  require(dirname(__FILE__) . '/modals/mbstring.php');
+  exit();
+}
+
 // include kirby
 require_once($rootKirby . '/lib/kirby.php');
 
@@ -37,6 +43,9 @@ if(!is_dir(c::get('root.site'))) die('The Kirby site directory could not be foun
 // set the timezone to make sure we 
 // avoid errors in php 5.3
 @date_default_timezone_set(c::get('timezone'));
+
+// set default locale settings for php functions
+if(c::get('lang.locale')) setlocale(LC_ALL, c::get('lang.locale'));
 
 // switch on errors
 if(c::get('debug')) {

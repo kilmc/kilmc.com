@@ -17,7 +17,7 @@ readme.html
 license.txt
 .DS_Store
 
-assets/styles/.sass-cache
+.sass-cache
 site/config/config.dev.kilmc.com.php
 sftp-config.json
 disabled-sftp-config.json

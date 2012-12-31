@@ -1,0 +1,16 @@
+/* line 1, ../sass/raplyrics.scss */
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+/* line 6, ../sass/raplyrics.scss */
+.container {
+  width: 600px;
+  margin: 40px 0 0 60px;
+}
+
+/* line 11, ../sass/raplyrics.scss */
+.original {
+  display: block;
+}

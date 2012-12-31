@@ -31,7 +31,7 @@ html, body {
 }
 
 body {
-  background: url(../../images/absurdidad.png);
+  background: #F9F9FA;
   color: $c-text;
   font-family: $primary-text;
   font-size: 20px;
@@ -45,7 +45,7 @@ a, a:link, a:visited {
   font-weight: 600;
   text-decoration: none;
   @include single-transition(all, 0.15s, ease-in-out);
-}
+} 
 
 a:hover, a:active {
   color: $c-primary;
@@ -69,7 +69,7 @@ a:hover, a:active {
   }
   @media screen and (max-width: 640px) {
     width: 94%; 
-    padding: 0 10px 10px 10px;
+    padding: 0 0 10px 0;
     margin-bottom: 40px;
   }
 }
@@ -128,7 +128,7 @@ header {
   @media screen and (max-width: 640px) {
     margin: 10px auto 0;
     padding: 20px 0 2px 0;
-    width: 94%;     
+    width: 90%;     
   }
   h1 {
   // Removes unnecessary whitespace from above the logo on mobile
@@ -259,7 +259,7 @@ h2 {
     width: 750px;
   }
   @media screen and (max-width: 640px) {
-    width: 94%;
+    width: 90%;
   }
   font-style: normal;
   font-weight: 600;
@@ -291,7 +291,8 @@ p {
     font-size: 0.9em;
     line-height: 22px;
     margin: 23px auto;
-    width: 94%;
+    width: 90%;
+    padding: 0 10px 0 10px;
   }
 }
 
@@ -400,7 +401,7 @@ blockquote p {
       width: 750px;
     }
     @media screen and (max-width: 640px) {
-      width: 94%;
+      width: 90%;
       &.date {
         display: none;
       }
@@ -457,13 +458,19 @@ blockquote p {
 img {
   display: block;
   margin: 0 0 10px -45px;
-  width: 610px;    
+  width: 610px;
+  &.featured-image {
+    margin: 0 0 10px -45px;
+  }
   @media screen and (min-width: 1024px) {
     margin: 0 0 10px -75px;
     width: 900px;
   }
   @media screen and (max-width: 640px) {
-    width: 104%;
+    &.featured-image {
+      margin: 0 0 10px 0px;
+      width: 100%;
+    }
   }
 }
 
@@ -535,7 +542,38 @@ figure {
 }
 
 
+// Ordered list styling
 
+ol {
+  padding-left: 55px;
+  @include box-sizing(border-box);
+  p {
+    line-height: 22px;
+  }
+}
+
+
+// ---------------------------------------------------------
+// GALLERY
+// ---------------------------------------------------------
+
+.images-container {
+  width: 700px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .image-thumb {
+    width: 60px;
+    margin: 5px;
+    float: left;
+  }
+}
+
+.gallery-images {
+
+}
 
 
 // ---------------------------------------------------------
