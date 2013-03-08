@@ -6,5 +6,6 @@
 # docs: http://getkirby.com/panel/accounts
 
 username: kilmc
-password: htchkmm13$
+password: 09c50750705aa0d4c175bb1a5a3e8accba2dd987
+encrypt: sha1
 language: en

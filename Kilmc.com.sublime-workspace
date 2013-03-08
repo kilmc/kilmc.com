@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"backg",
+				"background-repeat"
+			],
+			[
+				"sec",
+				"secondary-text"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
 				"nav",
 				"nav-items"
 			],
@@ -32,21 +44,19 @@
 			}
 		},
 		{
-			"file": "site/panel/blueprints/blogarticle.php",
+			"file": "site/templates/journal.php",
 			"settings":
 			{
-				"buffer_size": 325,
-				"line_ending": "Unix"
+				"buffer_size": 711,
+				"line_ending": "Unix",
+				"name": "journal.php"
 			}
 		},
 		{
-			"contents": "Title: I Am A Self Described Person\n\n----\n\nFeatured: on\n\n----\n\nDate: 14.12.2012\n\n----\n\nPreface: \n\n----\n\nText: ",
-			"file": "content/blog/i-am-a-self-described-person/blogarticle.txt",
-			"file_size": 113,
-			"file_write_time": 1355416624000000,
+			"file": "site/templates/journals.php",
 			"settings":
 			{
-				"buffer_size": 110,
+				"buffer_size": 535,
 				"line_ending": "Unix"
 			}
 		},
@@ -54,15 +64,39 @@
 			"file": "site/templates/blog.php",
 			"settings":
 			{
-				"buffer_size": 1650,
+				"buffer_size": 1459,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "assets/styles/sass/style.scss",
+			"file": "content/03-travel/journals.txt",
 			"settings":
 			{
-				"buffer_size": 10802,
+				"buffer_size": 29,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/03-travel/01-great-north-american-adventure/journal.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "site/panel/blueprints/blog.php",
+			"settings":
+			{
+				"buffer_size": 141,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "site/panel/accounts/kilmc.php",
+			"settings":
+			{
+				"buffer_size": 325,
 				"line_ending": "Unix"
 			}
 		}
@@ -70,11 +104,11 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 27.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 489.0
 	},
 	"console":
 	{
@@ -91,6 +125,30 @@
 	},
 	"file_history":
 	[
+		"/Users/kilmc/Sites/kilmc.com/site/panel/blueprints/blog.php",
+		"/Users/kilmc/Sites/kilmc.com/site/panel/blueprints/blogarticle.php",
+		"/Users/kilmc/Sites/kilmc.com/site/panel/blueprints/journal-entry.php",
+		"/Users/kilmc/Sites/kilmc.com/site/panel/blueprints/journal.php",
+		"/Users/kilmc/Sites/kilmc.com/site/templates/gallery.php",
+		"/Users/kilmc/Sites/kilmc.com/site/templates/journal-entry.php",
+		"/Users/kilmc/Sites/kilmc.com/panel/snippets/header.php",
+		"/Users/kilmc/Sites/kilmc.com/site/snippets/header.php",
+		"/Users/kilmc/Sites/kilmc.com/site/panel/blueprints/journals.php",
+		"/Users/kilmc/Sites/kilmc.com/assets/styles/sass/style.scss",
+		"/Users/kilmc/Sites/kilmc.com/content/travel/02-japan-san-francisco/journal.txt",
+		"/Users/kilmc/Sites/kilmc.com/content/travel/01-great-north-american-adventure/journal.txt",
+		"/Users/kilmc/Sites/kilmc.com/content/blog/05-coming-home/blogarticle.txt",
+		"/Users/kilmc/Sites/kilmc.com/content/travel/journals.txt",
+		"/Users/kilmc/Sites/kilmc.com/content/travel/great-north-american-adventure/02-Flight/journal-entry.txt",
+		"/Users/kilmc/Sites/kilmc.com/content/travel/great-north-american-adventure/01-Tea/journal-entry.txt",
+		"/Users/kilmc/Sites/kilmc.com/content/blog/01-big-collection/blogarticle.txt",
+		"/Users/kilmc/Sites/kilmc.com/content/blog/04-the-great-north-american-adventure-part-1/blogarticle.txt",
+		"/Users/kilmc/Sites/kilmc.com/site/templates/journals.php",
+		"/Users/kilmc/Sites/kilmc.com/site/templates/blog.php",
+		"/Users/kilmc/Sites/kilmc.com/content/travel/journal.txt",
+		"/Users/kilmc/Sites/kilmc.com/assets/images/pic_16.jpg",
+		"/Users/kilmc/Sites/kilmc.com/content/blog/i-am-a-self-described-person/blogarticle.txt",
+		"/Users/kilmc/Sites/kilmc.com/.gitignore",
 		"/Users/kilmc/Sites/kilmc.com/site/snippets/footer.php",
 		"/Users/kilmc/Sites/kilmc.com/panel/defaults/blueprints/blogarticle.php",
 		"/Users/kilmc/Sites/Git/kilmc/disabled-sftp-config.json",
@@ -148,6 +206,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"reading time",
+			"this is the summary",
+			"nav-item",
+			"menu",
+			"li",
+			"95DFCC",
+			"hover",
+			"}\n",
 			"94",
 			"contain",
 			"containrt",
@@ -190,7 +256,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -205,8 +271,8 @@
 						"selection":
 						[
 							[
-								187,
-								209
+								593,
+								627
 							]
 						],
 						"settings":
@@ -218,7 +284,7 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 165.0,
+						"translation.x": 11.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -236,8 +302,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								206,
+								206
 							]
 						],
 						"settings":
@@ -255,18 +321,79 @@
 				},
 				{
 					"buffer": 2,
-					"file": "site/panel/blueprints/blogarticle.php",
+					"file": "site/templates/journal.php",
 					"settings":
 					{
-						"buffer_size": 325,
+						"buffer_size": 711,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								649,
+								649
+							]
+						],
+						"settings":
+						{
+							"auto_name": "journal.php",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "site/templates/journals.php",
+					"settings":
+					{
+						"buffer_size": 535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								342,
+								342
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "site/templates/blog.php",
+					"settings":
+					{
+						"buffer_size": 1459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								469,
+								469
 							]
 						],
 						"settings":
@@ -285,11 +412,40 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "content/blog/i-am-a-self-described-person/blogarticle.txt",
+					"buffer": 5,
+					"file": "content/03-travel/journals.txt",
 					"settings":
 					{
-						"buffer_size": 110,
+						"buffer_size": 29,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "content/03-travel/01-great-north-american-adventure/journal.txt",
+					"settings":
+					{
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -314,19 +470,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "site/templates/blog.php",
+					"buffer": 7,
+					"file": "site/panel/blueprints/blog.php",
 					"settings":
 					{
-						"buffer_size": 1650,
+						"buffer_size": 141,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								502,
-								502
+								78,
+								78
 							]
 						],
 						"settings":
@@ -334,12 +490,39 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 116.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "site/panel/accounts/kilmc.php",
+					"settings":
+					{
+						"buffer_size": 325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -347,40 +530,8 @@
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 5,
-					"file": "assets/styles/sass/style.scss",
-					"settings":
-					{
-						"buffer_size": 10802,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2455,
-								2455
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1659.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -441,6 +592,54 @@
 		"selected_items":
 		[
 			[
+				"kilmc",
+				"site/panel/accounts/kilmc.php"
+			],
+			[
+				"blublog",
+				"site/panel/blueprints/blog.php"
+			],
+			[
+				"header",
+				"site/snippets/header.php"
+			],
+			[
+				"journals",
+				"site/panel/blueprints/journals.php"
+			],
+			[
+				"journal",
+				"content/03-travel/01-great-north-american-adventure/journal.txt"
+			],
+			[
+				"bluarti",
+				"site/panel/blueprints/blogarticle.php"
+			],
+			[
+				"jour",
+				"content/travel/great-north-american-adventure/02-Flight/journal-entry.txt"
+			],
+			[
+				"blogarti",
+				"content/blog/04-the-great-north-american-adventure-part-1/blogarticle.txt"
+			],
+			[
+				"blog",
+				"content/blog/01-big-collection/blogarticle.txt"
+			],
+			[
+				"journ",
+				"content/travel/great-north-american-adventure/01-Tea/journal-entry.txt"
+			],
+			[
+				"sty",
+				"assets/styles/sass/style.scss"
+			],
+			[
+				"jou",
+				"site/templates/journals.php"
+			],
+			[
 				"blog.p",
 				"site/templates/blog.php"
 			],
@@ -453,16 +652,8 @@
 				"site/panel/blueprints/default.php"
 			],
 			[
-				"blog",
-				"site/templates/blogarticle.php"
-			],
-			[
 				"blu",
 				"panel/defaults/blueprints/blogarticle.php"
-			],
-			[
-				"sty",
-				"assets/styles/sass/style.scss"
 			],
 			[
 				"footer",
@@ -505,10 +696,6 @@
 				"wp-content/themes/Beginning/style.css"
 			],
 			[
-				"header",
-				"includes/header.php"
-			],
-			[
 				"head",
 				"includes/head.php"
 			],
@@ -541,8 +728,16 @@
 		"selected_items":
 		[
 			[
-				"",
+				"tit",
 				"/Users/kilmc/Sites/Hypertiny/Sublime Projects/Tito.sublime-project"
+			],
+			[
+				"",
+				"/Users/kilmc/Sites/Hypertiny/Ull-New.sublime-project"
+			],
+			[
+				"ull",
+				"/Users/kilmc/Sites/Hypertiny/Ull-New.sublime-project"
 			],
 			[
 				"titpo",
@@ -562,7 +757,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 180.0,
 	"status_bar_visible": true
 }

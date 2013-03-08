@@ -1,8 +1,8 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-# Blog Post Blueprint
+# Journal Entry
 
-title: Blog Post
+title: Journal Entry
 pages: false
 files: true
 fields:
@@ -13,11 +13,11 @@ fields:
     label: Publish Date
     type: date
     format: dd.mm.yy
-  preface:
-    label: Preface
+  location:
+    label: Location
     type:  textarea
   text: 
-    label: Text
+    label: Entry Text
     type:  textarea
     size:  large
   

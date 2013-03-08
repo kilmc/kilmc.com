@@ -37,11 +37,6 @@
     <div class="post-body <?php echo $article->summary() ? '' : 'no-summary' ?>">
       <?php echo kirbytext($article->text()) ?>
     </div>
-    <?php if($article->summary()): ?>
-      <span class="tiny-text post-info reading-time">
-        Reading Time: <?php echo readingtime($article->text()) ?>
-      </span>
-    <?php endif ?>
 
   </article>
 

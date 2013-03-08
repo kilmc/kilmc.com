@@ -8,13 +8,13 @@
 
 // Number of items in the nav (Causes change in % width of)
 // the <li>'s surrounding the links
-$nav-items: 3; 
+$nav-items: 4; 
 
 // COLOUR
 
 $c-text: #363134;
 $c-link: #1C191B;
-$c-primary: #D85547;
+$c-primary: #7fcfba;
 
 // TEXT
 
@@ -86,6 +86,144 @@ a:hover, a:active {
   display: block;
 }
 
+// TRAVEL JOURNAL INDEX
+
+.travel {
+  position: relative;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.99;
+
+  // Hover effect on the <div> to show interaction
+  &:hover {
+    opacity: 0.9;
+    @include single-transition(all, 0.15s, ease-in-out);
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+
+  // Custom class for images that have dark backgrounds
+  &.light {
+    color: #fff;
+    a, a:link, a:visited {
+      color: #fff;
+    }
+  }
+
+  // Travel Journal Title
+  h2 {
+    text-align: center;
+    padding: 123px 0 0 0;
+    font-size: 2.2em;
+    margin: 0 auto 8px;
+  }
+
+  // Date
+  p {
+    text-align: center;
+    font-family: $secondary-text;
+    margin: 0 auto;
+    font-weight: 500;
+  }
+
+  // Adds an additional solid white inner border to mask off the edges of
+  // the featured images
+  @include box-shadow(0px 0px 6px rgba(0,0,0,0.1), inset 0 0px 0px 10px #fff);
+}
+
+// JOURNAL PAGES
+
+.journal {
+  padding-top: 50px;
+  background-repeat: no-repeat;
+
+  article {
+    margin-bottom: 60px;
+    @media screen and (max-width: 640px) {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    width: 100%;
+    .date-icon {
+      margin: 0px 2px 0 0;
+      position: relative;
+      top: 2px;
+      font-size: 1em;
+      color: $c-primary;
+    }
+  }
+
+  .journal-entry-secondary {
+    width: 300px;
+    margin: auto;
+    
+    p {
+      float: left;
+      margin: 0 0 5px 0;
+      font-family: $secondary-text;
+      font-size: 0.7em;
+      line-height: 23px;
+      text-align: center;
+      width: 100%;
+      @media screen and (max-width: 640px) {
+        padding: 0;
+      }
+    }
+
+    .journal-entry-date {
+      font-size: 1.1em;
+      margin-bottom: 2px;
+    }
+  }
+
+  .journal-title {
+    margin: 30px auto 30px;
+    width: 810px;
+    padding-bottom: 5px;
+    text-align: center;
+    @media screen and (max-width: 1024px) {
+      width: 500px;
+    }
+    @media screen and (max-width: 640px) {
+      width: 94%;
+    }
+
+  }
+
+  .journal-entry-primary {
+    width: 600px;
+    margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      width: 500px;
+    }
+    @media screen and (max-width: 560px) {
+      width: 94%; 
+      margin-bottom: 40px;
+    }
+    p {
+      line-height: 1.3em;
+      text-align: justify;
+      padding: 0;
+      width: 94%;
+    }
+    img {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  @include box-shadow(0px 0px 6px rgba(0,0,0,0.1), inset 0 0px 0px 10px #fff);
+}
+
+
+
+
 // PROJECTS
 
 .projects-container {
@@ -128,7 +266,7 @@ header {
   @media screen and (max-width: 640px) {
     margin: 10px auto 0;
     padding: 20px 0 2px 0;
-    width: 90%;     
+    width: 90%;
   }
   h1 {
   // Removes unnecessary whitespace from above the logo on mobile
@@ -188,7 +326,7 @@ header {
 
   a:hover, a:focus, a:active {
     color: #fff;
-    background: #D85547;
+    background: $c-primary;
   }
 }
 
@@ -225,7 +363,7 @@ header {
 
       a:hover, a:focus, a:active {
         color: #fff;
-        background: #D85547;
+        background: $c-primary;
       }
     }
   }

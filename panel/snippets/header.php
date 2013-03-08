@@ -15,6 +15,7 @@
 
 <link rel="stylesheet" href="<?php echo c::get('panel.url') ?>/assets/css/screen.css" />
 <link rel="stylesheet" href="<?php echo c::get('panel.url') ?>/assets/css/screen.mobile.css" media="only screen and (max-width: 800px)" />
+<link rel="apple-touch-icon" href="<?php echo url('assets/images/apple-touch-icon-precomposed.jpg') ?>" />
 
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="<?php echo c::get('panel.url') ?>/assets/css/ie.css" />
