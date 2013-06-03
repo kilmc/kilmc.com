@@ -1,0 +1,568 @@
+@charset "UTF-8";
+/* line 17, ../../../../../.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../.rbenv/versions/1.9.3-p327-perf/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
++---------------------------------------------------------------------+
+|        _                               _         _                  |
+|       | |_  _   _  _ __    ___  _ __  | |  __ _ | |_  ___           |
+|       | __|| | | || '_ \  / _ \| '_ \ | | / _` || __|/ _ \          |
+|       | |_ | |_| || |_) ||  __/| |_) || || (_| || |_|  __/          |
+|        \__| \__, || .__/  \___|| .__/ |_| \__,_| \__|\___|          |
+|             |___/ |_|          |_|                                  |
+|                                                                     |
+|                                                                     |
+| URL: http://typeplate.com                                           |
+| VERSION: 1.0.1                                                      |
+| Github: https://github.com/typePlate/typeplate.github.com           |
+| AUTHORS: Zachary Kain (@zakkain) & Dennis Gaebel (@gryghostvisuals) |
+| LICENSE: Creative Commmons                                          |
+| http://creativecommons.org/licenses/by/3.0                          |
+|                                                                     |
++---------------------------------------------------------------------+
+*/
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C;
+}
+
+/* line 262, ../sass/typeplate.scss */
+body {
+  word-wrap: break-word;
+}
+
+/* line 266, ../sass/typeplate.scss */
+pre code {
+  word-wrap: normal;
+}
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+  @include dropcap($float: left, $font-size: 4em, $font-family: inherit, $text-indent: 0, $margin: inherit, $padding: inherit, $color: inherit, $lineHeight: 1, $bg: transparent);
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+/* line 377, ../sass/typeplate.scss */
+html {
+  font: normal 112.5%/1.65 serif;
+}
+
+/* line 381, ../sass/typeplate.scss */
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  color: #1d1d1d;
+}
+
+/* line 397, ../sass/typeplate.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+}
+
+/* line 412, ../sass/typeplate.scss */
+.tera {
+  font-size: 117px;
+  font-size: 6.5rem;
+  margin-bottom: 0.25385rem;
+}
+
+/* line 412, ../sass/typeplate.scss */
+.giga {
+  font-size: 90px;
+  font-size: 5rem;
+  margin-bottom: 0.33rem;
+}
+
+/* line 412, ../sass/typeplate.scss */
+.mega {
+  font-size: 72px;
+  font-size: 4rem;
+  margin-bottom: 0.4125rem;
+}
+
+/* line 412, ../sass/typeplate.scss */
+.alpha, h1 {
+  font-size: 60px;
+  font-size: 3.33333rem;
+  margin-bottom: 0.495rem;
+}
+
+/* line 412, ../sass/typeplate.scss */
+.beta, h2 {
+  font-size: 48px;
+  font-size: 2.66667rem;
+  margin-bottom: 0.61875rem;
+}
+
+/* line 412, ../sass/typeplate.scss */
+.gamma, h3 {
+  font-size: 36px;
+  font-size: 2rem;
+  margin-bottom: 0.825rem;
+}
+
+/* line 412, ../sass/typeplate.scss */
+.delta, h4 {
+  font-size: 24px;
+  font-size: 1.33333rem;
+  margin-bottom: 1.2375rem;
+}
+
+/* line 412, ../sass/typeplate.scss */
+.epsilon, h5 {
+  font-size: 21px;
+  font-size: 1.16667rem;
+  margin-bottom: 1.41429rem;
+}
+
+/* line 412, ../sass/typeplate.scss */
+.zeta, h6 {
+  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 1.65rem;
+}
+
+/* line 452, ../sass/typeplate.scss */
+p {
+  margin: 0 0 1.5em;
+}
+/* line 454, ../sass/typeplate.scss */
+p + p {
+  text-indent: 1.5em;
+  margin-top: -1.5em;
+}
+
+/* line 478, ../sass/typeplate.scss */
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+}
+
+/* line 495, ../sass/typeplate.scss */
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+/* line 500, ../sass/typeplate.scss */
+pre {
+  white-space: pre;
+}
+
+/* line 504, ../sass/typeplate.scss */
+code {
+  white-space: pre;
+  font-family: monospace;
+}
+
+/**
+ * Abbreviations Markup
+ *
+  <abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 521, ../sass/typeplate.scss */
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+/* line 523, ../sass/typeplate.scss */
+abbr:hover {
+  cursor: help;
+}
+
+/* line 537, ../sass/typeplate.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1d1d1d;
+}
+
+/**
+ * Lining Definition Style Markup
+ *
+  <dl class="lining">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 318, ../sass/typeplate.scss */
+.lining dt,
+.lining dd {
+  display: inline;
+  margin: 0;
+}
+/* line 325, ../sass/typeplate.scss */
+.lining dt + dt:before,
+.lining dd + dt:before {
+  content: "\A";
+  white-space: pre;
+}
+/* line 333, ../sass/typeplate.scss */
+.lining dd + dd:before {
+  content: ", ";
+}
+/* line 337, ../sass/typeplate.scss */
+.lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem;
+}
+
+/**
+ * Dictionary Definition Style Markup
+ *
+  <dl class="dictionary-style">
+    <dt><b></b></dt>
+      <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 345, ../sass/typeplate.scss */
+.dictionary-style dt {
+  display: inline;
+  counter-reset: definitions;
+}
+/* line 349, ../sass/typeplate.scss */
+.dictionary-style dt + dt:before {
+  content: ", ";
+  margin-left: -0.2rem;
+}
+/* line 355, ../sass/typeplate.scss */
+.dictionary-style dd {
+  display: block;
+  counter-increment: definitions;
+}
+/* line 358, ../sass/typeplate.scss */
+.dictionary-style dd:before {
+  content: counter(definitions, decimal) ". ";
+}
+
+/**
+ * Stats Tab Markup
+ *
+  <ul class="stats-tabs">
+    <li><a href="#">[value]<b>[name]</b></a></li>
+  </ul>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 589, ../sass/typeplate.scss */
+.stats-tabs {
+  padding: 0;
+}
+/* line 591, ../sass/typeplate.scss */
+.stats-tabs li {
+  display: inline-block;
+  margin: 0 0.625rem 0 0;
+  padding: 0 0.625rem 0 0;
+  border-right: 0.125rem solid #cccccc;
+}
+/* line 596, ../sass/typeplate.scss */
+.stats-tabs li:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+/* line 601, ../sass/typeplate.scss */
+.stats-tabs li a {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* line 605, ../sass/typeplate.scss */
+.stats-tabs li a b {
+  display: block;
+  margin: 0.125rem 0 0 0;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+/**
+ * Blockquote Markup
+ *
+  <blockquote cite="">
+    <p>&Prime;&Prime;</p>
+    <cite>
+      <small><a href=""></a></small>
+    </cite>
+  </blockquote>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+  <aside class="pull-quote">
+    <blockquote>
+      <p></p>
+    </blockquote>
+  </aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+/* line 685, ../sass/typeplate.scss */
+.pull-quote {
+  position: relative;
+  padding: 1em;
+}
+/* line 667, ../sass/typeplate.scss */
+.pull-quote:before, .pull-quote:after {
+  height: 1em;
+  opacity: 0.15;
+  position: absolute;
+  font-size: 4em;
+}
+/* line 673, ../sass/typeplate.scss */
+.pull-quote:before {
+  content: '“';
+  top: 0em;
+  left: 0em;
+}
+/* line 678, ../sass/typeplate.scss */
+.pull-quote:after {
+  content: '”';
+  bottom: 0em;
+  right: 0em;
+}
+
+/**
+ * Figures Markup
+ *
+  <figure>
+    <figcaption>
+      <strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+    </figcaption>
+  </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+  <article>
+    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+    <footer>
+      <ol class="foot-notes">
+        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+      </ol>
+    </footer>
+  </article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 5, ../sass/bombs.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, ../sass/bombs.scss */
+body {
+  background: #ffff1f;
+  font-family: "futura-pt",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* line 17, ../sass/bombs.scss */
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 30%;
+  margin: -15% 0 0 -50%;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 27, ../sass/bombs.scss */
+.show-link {
+  cursor: pointer;
+}
+/* line 29, ../sass/bombs.scss */
+.show-link h1 {
+  font-size: 10em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #1d1d1d;
+}
+
+/* line 38, ../sass/bombs.scss */
+.explanation {
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+/* line 44, ../sass/bombs.scss */
+.explanation.looksie {
+  opacity: 1;
+}
+/* line 47, ../sass/bombs.scss */
+.explanation blockquote {
+  width: 695px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 51, ../sass/bombs.scss */
+.explanation blockquote:before {
+  content: "“";
+  position: absolute;
+  font-size: 4em;
+  left: -38px;
+  top: 33px;
+  line-height: 0;
+}
+/* line 60, ../sass/bombs.scss */
+.explanation blockquote:after {
+  content: "”";
+  position: absolute;
+  font-size: 4em;
+  right: -26px;
+  top: 93px;
+  line-height: 0;
+}
+/* line 69, ../sass/bombs.scss */
+.explanation blockquote p {
+  font-size: 2.85em;
+  line-height: 1.1em;
+  margin: 1em 0 1em;
+  text-align: left;
+}
+/* line 75, ../sass/bombs.scss */
+.explanation blockquote cite {
+  text-align: right;
+  display: block;
+  font-size: 2em;
+  padding-right: 14px;
+}
+/* line 82, ../sass/bombs.scss */
+.explanation .further-details {
+  width: 691px;
+  margin: 60px auto;
+  padding-right: 12px;
+}
+/* line 86, ../sass/bombs.scss */
+.explanation .further-details p {
+  margin: 20px 0 0 0;
+  text-align: left;
+  text-indent: 0;
+  font-size: 1.1em;
+}
+
+/* line 95, ../sass/bombs.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #1d1d1d;
+}

@@ -1,0 +1,102 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "typeplate";
+
+* { @include box-sizing(border-box) }
+
+$primary: #FFFF1F;
+$secondary: #1d1d1d;
+
+body {
+  background: $primary;
+  font-family: "futura-pt",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 30%;
+  margin: -15% 0 0 -50%;
+  text-align: center;
+  width: 100%;
+}
+
+.show-link {
+  cursor: pointer;
+  h1 {
+    font-size: 10em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: $secondary;
+  }
+}
+
+.explanation {
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+
+  &.looksie {
+    opacity: 1;
+  }
+  blockquote {
+    width: 695px;
+    margin: 0 auto;
+    position: relative;
+    &:before {
+      content: "“";
+      position: absolute;
+      font-size: 4em;
+      left: -38px;
+      top: 33px;
+      line-height: 0;
+    }
+
+    &:after {
+      content: "”";
+      position: absolute;
+      font-size: 4em;
+      right: -26px;
+      top: 93px;
+      line-height: 0;
+    }
+
+    p {
+      font-size: 2.85em;
+      line-height: 1.1em;
+      margin: 1em 0 1em;
+      text-align: left;
+    }
+    cite {
+      text-align: right;
+      display: block;
+      font-size: 2em;
+      padding-right: 14px;
+    }
+  }
+  .further-details {
+    width: 691px;
+    margin: 60px auto;
+    padding-right: 12px;
+    p {
+      margin: 20px 0 0 0;
+      text-align: left;
+      text-indent: 0;
+      font-size: 1.1em;
+    }
+  }
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: $secondary;
+}
+
+
+
+

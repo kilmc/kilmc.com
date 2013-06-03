@@ -1,0 +1,61 @@
+@import "compass/reset";
+@import "compass/css3";
+
+// Variables
+$primary: #FFFF1F;
+
+* {
+  @include box-sizing(border-box);
+}
+
+body:before, body:after {
+  content: "";
+  position: fixed;
+  background: $primary;
+  left: 0;
+  right: 0;
+  height: 15px;
+}
+body:before {
+  top: 0;
+}
+body:after {
+  bottom: 0;
+}
+body {
+  padding: 60px 50px;
+  border-left: 15px solid $primary;
+  border-right: 15px solid $primary;
+  font-family: "futura-pt",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.the-media {
+  float: left;
+  width: 60%;
+  h1 {
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 1px;
+  }
+}
+
+.the-style {
+  float: left;
+  width: 40%;
+  padding: 0 40px;
+  h3 {
+    font-weight: 700;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  p {
+    margin: 12px 0;
+  }
+}
+
+
+

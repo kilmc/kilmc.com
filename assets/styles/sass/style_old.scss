@@ -1,0 +1,732 @@
+@import "compass/css3";
+
+
+
+// ---------------------------------------------------------
+// VARIABLES
+// ---------------------------------------------------------
+
+// Number of items in the nav (Causes change in % width of)
+// the <li>'s surrounding the links
+$nav-items: 4; 
+
+// COLOUR
+
+$c-text: #363134;
+$c-link: #1C191B;
+$c-primary: #7fcfba;
+
+// TEXT
+
+$primary-text: "chaparral-pro",sans-serif;
+$secondary-text: "proxima-nova",sans-serif;
+
+// ---------------------------------------------------------
+// BASE
+// ---------------------------------------------------------
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F9F9FA;
+  color: $c-text;
+  font-family: $primary-text;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+a, a:link, a:visited {
+  color: $c-link;
+  font-weight: 600;
+  text-decoration: none;
+  @include single-transition(all, 0.15s, ease-in-out);
+} 
+
+a:hover, a:active {
+  color: $c-primary;
+}
+
+// ---------------------------------------------------------
+// CONTAINERS
+// ---------------------------------------------------------
+
+// GENERIC
+
+.container {
+  background: #fff;
+  @include box-sizing(border-box);
+  @include box-shadow(0px 0px 6px rgba(0,0,0,0.1));
+  margin: 20px auto 40px;
+  padding: 0 45px 30px 45px;
+  width: 610px;
+  @media screen and (min-width: 1024px) {
+    width: 900px;
+  }
+  @media screen and (max-width: 640px) {
+    width: 94%; 
+    padding: 0 0 10px 0;
+    margin-bottom: 40px;
+  }
+}
+
+// BLOG
+
+.post-body {
+  @media screen and (max-width: 640px) {
+    display: none;
+    &.no-summary {
+      display: block;
+    }
+  }
+  display: block;
+}
+
+// TRAVEL JOURNAL INDEX
+
+.travel {
+  position: relative;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.99;
+
+  // Hover effect on the <div> to show interaction
+  &:hover {
+    opacity: 0.9;
+    @include single-transition(all, 0.15s, ease-in-out);
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+
+  // Custom class for images that have dark backgrounds
+  &.light {
+    color: #fff;
+    a, a:link, a:visited {
+      color: #fff;
+    }
+  }
+
+  // Travel Journal Title
+  h2 {
+    text-align: center;
+    padding: 123px 0 0 0;
+    font-size: 2.2em;
+    margin: 0 auto 8px;
+  }
+
+  // Date
+  p {
+    text-align: center;
+    font-family: $secondary-text;
+    margin: 0 auto;
+    font-weight: 500;
+  }
+
+  // Adds an additional solid white inner border to mask off the edges of
+  // the featured images
+  @include box-shadow(0px 0px 6px rgba(0,0,0,0.1), inset 0 0px 0px 10px #fff);
+}
+
+// JOURNAL PAGES
+
+.journal {
+  padding-top: 50px;
+  background-repeat: no-repeat;
+
+  article {
+    margin-bottom: 60px;
+    @media screen and (max-width: 640px) {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    width: 100%;
+    .date-icon {
+      margin: 0px 2px 0 0;
+      position: relative;
+      top: 2px;
+      font-size: 1em;
+      color: $c-primary;
+    }
+  }
+
+  .journal-entry-secondary {
+    width: 300px;
+    margin: auto;
+    
+    p {
+      float: left;
+      margin: 0 0 5px 0;
+      font-family: $secondary-text;
+      font-size: 0.7em;
+      line-height: 23px;
+      text-align: center;
+      width: 100%;
+      @media screen and (max-width: 640px) {
+        padding: 0;
+      }
+    }
+
+    .journal-entry-date {
+      font-size: 1.1em;
+      margin-bottom: 2px;
+    }
+  }
+
+  .journal-title {
+    margin: 30px auto 30px;
+    width: 810px;
+    padding-bottom: 5px;
+    text-align: center;
+    @media screen and (max-width: 1024px) {
+      width: 500px;
+    }
+    @media screen and (max-width: 640px) {
+      width: 94%;
+    }
+
+  }
+
+  .journal-entry-primary {
+    width: 600px;
+    margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      width: 500px;
+    }
+    @media screen and (max-width: 560px) {
+      width: 94%; 
+      margin-bottom: 40px;
+    }
+    p {
+      line-height: 1.3em;
+      text-align: justify;
+      padding: 0;
+      width: 94%;
+    }
+    img {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  @include box-shadow(0px 0px 6px rgba(0,0,0,0.1), inset 0 0px 0px 10px #fff);
+}
+
+
+
+
+// PROJECTS
+
+.projects-container {
+  @media screen and (min-width: 1024px) {
+    margin: 0 auto;
+    width: 900px;
+    .project-wrap {
+      height: 270px;
+      width: 430px;
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+      &:nth-child(even) {
+        margin-left: 20px;
+      }
+      float: left;
+      img {
+        width: 430px;
+      }
+    }
+  }
+}
+
+
+
+// ---------------------------------------------------------
+// CORE (Header, footer, nav etc.)
+// ---------------------------------------------------------
+
+
+header {
+  margin: 20px auto 0;
+  padding: 20px 0 20px 0;
+  text-align: center;
+  width: 610px;
+  z-index: 10;
+  @media screen and (min-width: 1024px) {
+    width: 900px;
+  }
+  @media screen and (max-width: 640px) {
+    margin: 10px auto 0;
+    padding: 20px 0 2px 0;
+    width: 90%;
+  }
+  h1 {
+  // Removes unnecessary whitespace from above the logo on mobile
+    @media screen and (max-width: 640px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+// Top menu on the site
+.top-nav {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+  display: block;
+  border-top: 1px solid #E4E4E4;
+  height: 24px;
+  margin: 20px auto;
+  padding: 0;
+  width: 540px;
+  @media screen and (min-width: 1024px) {
+    width: 830px;
+  }
+  @media screen and (max-width: 640px) {
+    height: 100%;
+    width: 80%;  
+  }
+
+  li {
+    @include box-sizing(border-box);
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 18px 0 0 0;
+    width: 100/$nav-items + 0% ;
+    @media screen and (max-width: 480px) {
+      clear: left;
+      padding: 10px 0 0 0;
+      width: 94%;
+    }
+  }
+
+  a, a:link, a:visited {
+    @include border-radius(4px);
+    color: #363134;
+    display: block;
+    font-family: $secondary-text;
+    font-size: .7em;
+    font-weight: normal;
+    letter-spacing: .2em;
+    margin: -2px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include single-transition(all, 0.15s, ease-in-out);
+    width: 80%;
+  }
+
+  a:hover, a:focus, a:active {
+    color: #fff;
+    background: $c-primary;
+  }
+}
+
+.mobile-nav {
+  display: none;
+  @media screen and (max-width: 480px) {
+    display: block;
+    width: 80%;
+    margin: 20px auto 0;
+    padding: 0;
+    border-top: 1px solid #E4E4E4;
+    li {
+      @include box-sizing(border-box);
+      float: left;
+      list-style-type: none;
+      margin: 0;
+      padding: 18px 0 0 0;
+      width: 50% ;
+      a, a:link, a:visited {
+        @include border-radius(4px);
+        color: #363134;
+        display: block;
+        font-family: $secondary-text;
+        font-size: .7em;
+        font-weight: normal;
+        letter-spacing: .2em;
+        margin: -2px auto;
+        text-decoration: none;
+        text-transform: uppercase;
+        background: #F0F0F0;
+        @include single-transition(all, 0.15s, ease-in-out);
+        width: 80%;
+      }
+
+      a:hover, a:focus, a:active {
+        color: #fff;
+        background: $c-primary;
+      }
+    }
+  }
+}
+
+.logo {
+  background: url(../../images/kilmc-logo.png) no-repeat center;
+  background-size: 100%;
+  display: block;
+  height: 50px;
+  margin: 10px auto 35px;
+  padding: 0;
+  width: 235px;  
+  @media screen and (max-width: 640px) {
+    margin: 0 auto;
+  }
+}
+
+
+
+// ---------------------------------------------------------
+// GENERAL CONTENT
+// ---------------------------------------------------------
+
+
+// HEADINGS
+
+h2 {
+  width: 520px;
+  @media screen and (min-width: 1024px) {
+    width: 750px;
+  }
+  @media screen and (max-width: 640px) {
+    width: 90%;
+  }
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0 auto 30px;
+  &.title {
+    padding-top: 50px;
+    @media screen and (max-width: 640px) {
+      padding-top: 25px;
+    }
+  }
+  &.project-title {
+    padding-top: 30px;
+  }
+}
+
+// BODY COPY
+
+p {
+  font-size: 1em;
+  line-height: 29px;
+  margin: 29px auto;
+  width: 520px;
+  @media screen and (min-width: 1024px) {
+    line-height: 30px;
+    width: 750px;
+  }
+  @media screen and (max-width: 640px) {
+    font-size: 0.9em;
+    line-height: 22px;
+    margin: 23px auto;
+    width: 90%;
+    padding: 0 10px 0 10px;
+  }
+}
+
+.preface {
+  font-style: italic;
+  border-bottom: 2px dotted #BBB;
+  margin: 0 auto;
+  width: 520px;
+  @media screen and (min-width: 1024px) {
+    width: 750px;
+    p {
+      margin: 29px auto;
+      line-height: 29px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    margin: 23px auto;
+    line-height: 23px;
+    width: 100%;
+    &.home {
+      display: none;
+    }
+  }
+}
+
+.inline-title {
+  @media screen and (max-width: 640px) {
+    display: inline;
+  }
+  font-style: italic;
+  font-weight: 700;
+  display: none;
+}
+
+.inline-title + a {
+  font-weight: normal;
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  @include box-sizing(border-box);
+  font-style: italic;
+  line-height: 27px;
+  padding: 0 10px 0 0px;
+  width: 440px;
+  @media screen and (min-width: 1024px) {
+    line-height: 29px;
+    padding-left: 20px;
+    width: 670px;        
+  }
+  @media screen and (max-width: 640px) {
+    line-height: 24px;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+  }
+}
+
+// Adds book quote marks to the start and end of a blockquote
+blockquote p {
+  &:before {
+    color: #E4E4E4;
+    content: "\201C";
+    font-size: 3em;
+    left: -12px;
+    margin: 0 0 0 -24px;
+    position: relative;
+    top: 26px;
+    @media screen and (max-width: 640px) {
+      left: -4px;
+      margin: 0 0 0 0;
+      top: 26px;
+    }
+  }
+  &:after {
+    color: #E4E4E4;
+    content: "\201D";
+    font-size: 3em;
+    left: 6px;
+    line-height: 0;
+    margin: 0 0 0 -4px;
+    position: relative;
+    top: 26px;
+    @media screen and (max-width: 640px) {
+      left: 0px;
+    }
+  }
+}
+
+// TAGS, ADDITIONAL INFO ETC.
+
+.tiny-text {
+  display: block;
+  font-family: $secondary-text;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  &.post-info {
+    margin: -27px auto 0;
+    width: 520px;
+    @media screen and (min-width: 1024px) {
+      width: 750px;
+    }
+    @media screen and (max-width: 640px) {
+      width: 90%;
+      &.date {
+        display: none;
+      }
+    }
+    &.reading-time {
+      display: none;
+      @media screen and (max-width: 640px) {
+        display: block;
+        margin: -12px auto 0;
+      }
+    }
+  }
+}
+
+.post-summary {
+  @media screen and (max-width: 640px) {
+    display: block;
+    margin: -19px 0 0 0;
+  }
+  display: none;
+}
+
+
+
+.project-tags {
+  height: 30px;
+  margin: -24px 0 0 0;
+  padding: 0;
+}
+
+.project-tag {
+  display: block;
+  float: left;
+  list-style: none;
+  a {
+    @extend .tiny-text;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+    color: #363134;
+    font-style: normal;
+    height: 28px;
+    letter-spacing: 0.2em;
+    margin: 0 0px 0 0;
+    padding: 0 6px 4px 8px;
+    &:hover {
+      background: #D85547;
+      color: #fff;
+    }
+  }
+}
+
+// IMAGES
+
+img {
+  display: block;
+  margin: 0 0 10px -45px;
+  width: 610px;
+  &.featured-image {
+    margin: 0 0 10px -45px;
+  }
+  @media screen and (min-width: 1024px) {
+    margin: 0 0 10px -75px;
+    width: 900px;
+  }
+  @media screen and (max-width: 640px) {
+    &.featured-image {
+      margin: 0 0 10px 0px;
+      width: 100%;
+    }
+  }
+}
+
+p img {
+  @media screen and (max-width: 640px) {
+    margin-left: -6%;
+    width: 112%;
+    padding-top: 4px;   
+  }
+}
+
+figure {
+  margin: 0;
+  img {
+    margin-left: -45px;
+    @media screen and (max-width: 640px) {
+      margin-left: -5px;
+    }
+  }
+  figcaption {
+    margin: 0 auto;
+    @media screen and (min-width: 1024px) {
+      width: 750px;
+    }
+    @media screen and (max-width: 640px) {
+      font-size: 0.65em;
+      margin-left: 10px;
+    }
+    &:before {
+      content:  "\2020";
+      display: inline-block;
+      font-style: normal;
+      margin: 0 6px 0 0;
+    }
+  }
+}
+
+// Adjusts image positioning in projects section
+.project-wrap {
+  img {
+    margin: 0 0 10px -45px;
+    @media screen and (min-width: 1024px) {
+      margin: 0 0 10px -45px;
+    }
+    @media screen and (max-width: 640px) {
+      margin-left: -3%;
+    }
+  }
+}
+
+// Removes bottom margin on the featured image
+.container.with-featured-image > p:first-child {
+  margin-bottom: 0;
+}
+
+.title.with-featured-image {
+  @media screen and (max-width: 640px) {
+    padding-top: 0;
+  }
+  padding-top: 20px;
+}
+
+.no-date {
+  margin: 0 auto -10px;
+}
+
+.this-is-a-change {
+  margin: 0;
+}
+
+
+// Ordered list styling
+
+ol {
+  padding-left: 55px;
+  @include box-sizing(border-box);
+  p {
+    line-height: 22px;
+  }
+}
+
+
+// ---------------------------------------------------------
+// GALLERY
+// ---------------------------------------------------------
+
+.images-container {
+  width: 700px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .image-thumb {
+    width: 60px;
+    margin: 5px;
+    float: left;
+  }
+}
+
+.gallery-images {
+
+}
+
+
+// ---------------------------------------------------------
+// HELPERS
+// ---------------------------------------------------------
+
+.ir {
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
