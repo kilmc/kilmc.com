@@ -96,7 +96,7 @@ your homepage for example. Just change it here in that case.
 
 */
 
-c::set('home', 'blog');
+c::set('home', 'home');
 
 
 /*

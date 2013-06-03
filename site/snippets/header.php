@@ -12,9 +12,9 @@
   <link rel="icon" href="<?php echo url('assets/images/favicon.png') ?>" type="image/png" />
   <link rel="apple-touch-icon" href="<?php echo url('assets/images/apple-touch-icon-precomposed.jpg') ?>" />
 
-  <script type="text/javascript" src="http://use.typekit.com/naf3qdj.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/yur8vji.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+  <script type="text/javascript" src="assets/scripts/jquery-1.9.1.min.js"></script>
   <link href="<?php echo url('assets/fonts/ss-standard.css') ?>" rel="stylesheet" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0; user-scalable=0;">
@@ -22,19 +22,23 @@
 </head>
 
 <body>
+<script>
+  $(document).ready(function() {
+    $(".logo").click(function () {
+      $(".content").fadeToggle("fast", function () {
 
-  <header>
-    <h1><a class="logo ir" href="<?php echo url('') ?>">Kilmc</a></h1>
-    <ul class="top-nav clearfix">
-      <li><a href="<?php echo url('blog') ?>">Blog</a></li>
-      <li><a href="<?php echo url('travel') ?>">Travel</a></li>
-      <li><a href="<?php echo url('about') ?>">About</a></li>
-      <li><a href="http://twitter.com/kilmc">Twitter</a></li>
-    </ul>
+      });
+      $(".menu").fadeToggle("fast", function () {
+        
+      });
+    });
+  });
+</script>
 
-    <ul class="mobile-nav clearfix">
-      <li><a href="http://twitter.com/kilmc">Twitter</a></li>
-      <li><a href="<?php echo url('about') ?>">About</a></li>
-    </ul>
-  </header>
-
+<nav class="menu">
+  <a href="#">Blog Posts</a>
+  <a href="#">Films</a>
+  <a href="#">Music</a>
+  <a href="#">Design</a>
+  <a href="#">Links</a>
+</nav>
