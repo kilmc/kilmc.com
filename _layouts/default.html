@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    {% javascript jquery-1.9.1.min %}
+    {% javascript site %}
+    <script type="text/javascript" src="//use.typekit.net/yur8vji.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    {% stylesheet screen %}
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a href="#" class="logo"><h1>Kilmc</h1></a>
+      <nav class="menu">
+        <a href="#">Blog Posts</a>
+        <a href="#">Music</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Links</a>
+      </nav>
+    </aside>
+    
+    <div class="container">
+      {{ content }}
+    </div> <!-- /container -->
+
+  </body>
+</html>

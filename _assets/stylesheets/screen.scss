@@ -1,0 +1,191 @@
+@import "bourbon";
+@import "reset";
+
+// ---------------------------------------------------------
+// Mixins & Variables
+// ---------------------------------------------------------
+
+// COLOURS
+$dark-grey: #1C1C1C;
+
+// TRANSITIONS
+
+@mixin fade {
+  @include transition (all 0.15s ease-in-out);
+}
+
+@mixin fast-fade {
+  @include transition (all 0.05s ease-in-out);
+}
+
+@mixin bp($point) {
+  @if $point == large {
+    @media (min-width: 1600px) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 1250px) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 650px)  { @content; }
+  }
+}
+
+// Typography
+
+$chaparral: "chaparral-pro",sans-serif;
+$omnes: "omnes-pro",sans-serif;
+$leading: 1.4em;
+
+// ---------------------------------------------------------
+// Base
+// ---------------------------------------------------------
+
+// $primary: #61A3FF;
+$primary: #C90825;
+
+
+body {
+  font-family: $chaparral;
+  font-style: normal;
+  font-weight: 400;
+  color: $primary;
+}
+
+a, a:link, a:visited {
+  color: $primary;
+  text-decoration: none;
+  -webkit-transition: all .05s ease-in-out;
+}
+
+// ---------------------------------------------------------
+// Layout
+// ---------------------------------------------------------
+
+.logo {
+  h1 {
+    color: $primary;
+    font-size: 4em;
+    font-weight: 600;
+    margin: 0;
+    opacity: 1;
+    padding: 0 0 20px 0;
+    -webkit-transition: all .05s ease-in-out;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  @include bp(small) {
+    width: 600px;
+  }
+}
+
+.sidebar {
+  margin: 2em auto;
+  position: relative;
+  width: 90%;
+  @include bp(small) {
+    width: 600px;
+  }
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  a {
+    display: block;
+    font-size: 3em;
+    font-weight: 300;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease;
+    background: #fff;
+  }
+}
+
+.category-title {
+  display: block;
+  font-size: 2em;
+}
+
+.post {
+  margin-bottom: $leading*4;
+}
+
+// ---------------------------------------------------------
+// Text
+// ---------------------------------------------------------
+
+
+
+// Use the class text on any container specifically for textual content
+.text {
+  font-family: $chaparral;
+  h1 {
+    color: $primary;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1.05em;
+    margin: 0 0 $leading/2 0;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+
+  p {
+    color: #555;
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin: 0 0 $leading 0;
+  }
+
+  // p.quote,
+  // h1.quote {
+  //   position: relative;
+  //   &:before {
+  //     content: "“";
+  //     position: absolute;
+  //     left: -0.4em;
+  //   }
+  // }
+
+  ul {
+
+  }
+
+  ol {
+
+  }
+
+  blockquote {
+
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @include bp(small) {
+    h1 {
+      font-size: 4em;
+      font-weight: 200;
+      line-height: 0.9em;
+    }
+    p {
+      font-size: 1.4em;
+      line-height: 1.4em;
+    }
+  }
+}
+
+
