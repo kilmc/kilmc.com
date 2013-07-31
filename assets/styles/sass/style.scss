@@ -1,4 +1,4 @@
-@import "compass/css3";
+@import "bourbon";
 
 
 
@@ -44,7 +44,7 @@ a, a:link, a:visited {
   color: $c-link;
   font-weight: 600;
   text-decoration: none;
-  @include single-transition(all, 0.15s, ease-in-out);
+  @include transition(all, 0.15s, ease-in-out);
 } 
 
 a:hover, a:active {
@@ -98,7 +98,7 @@ a:hover, a:active {
   // Hover effect on the <div> to show interaction
   &:hover {
     opacity: 0.9;
-    @include single-transition(all, 0.15s, ease-in-out);
+    @include transition(all, 0.15s, ease-in-out);
   }
 
   a {

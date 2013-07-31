@@ -1,0 +1,323 @@
+@import "bourbon";
+
+// ---------------------------------------------------------
+// VARIABLES
+// ---------------------------------------------------------
+
+// Number of items in the nav (Causes change in % width of)
+// the <li>'s surrounding the links
+$nav-items: 3; 
+
+// COLOUR
+
+$c-text: #363134;
+$c-link: #1C191B;
+$c-primary: #7fcfba;
+
+// TEXT
+
+$primary-text: "chaparral-pro",sans-serif;
+$secondary-text: "proxima-nova",sans-serif;
+
+// ---------------------------------------------------------
+// BASE
+// ---------------------------------------------------------
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F9F9FA;
+  color: $c-text;
+  font-family: $primary-text;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+a, a:link, a:visited {
+  color: $c-link;
+  font-weight: 600;
+  text-decoration: none;
+  @include transition(all, 0.15s, ease-in-out);
+} 
+
+a:hover, a:active {
+  color: $c-primary;
+}
+
+// ---------------------------------------------------------
+// Layout
+// ---------------------------------------------------------
+
+header[role="banner"] {
+  margin: 20px auto 0;
+  padding: 20px 0 20px 0;
+  text-align: center;
+  width: 610px;
+  z-index: 10;
+
+  h1 {
+  // Removes unnecessary whitespace from above the logo on mobile
+    @media screen and (max-width: 640px) {
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    margin: 10px auto 0;
+    padding: 20px 0 2px 0;
+    width: 90%;
+  }
+}
+
+// Top menu on the site
+.top-nav {
+  display: block;
+  border-top: 1px solid #E4E4E4;
+  height: 24px;
+  margin: 20px auto;
+  padding: 0;
+  width: 610px;
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: 100%;
+    width: 80%;  
+  }
+}
+
+
+.top-nav li {
+  @include box-sizing(border-box);
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 18px 0 0 0;
+  width: 100/$nav-items + 0% ;
+
+  a, a:link, a:visited {
+    border-radius: 4px;
+    color: #363134;
+    display: block;
+    font-family: $secondary-text;
+    font-size: .7em;
+    font-weight: normal;
+    letter-spacing: .2em;
+    margin: -2px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include transition(all, 0.15s, ease-in-out);
+    width: 80%;
+    &:hover, &:focus, &:active {
+      color: #fff;
+      background: $c-primary;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    clear: left;
+    padding: 10px 0 0 0;
+    width: 94%;
+  }
+}
+
+.mobile-nav {
+  display: none;
+
+  @media screen and (max-width: 480px) {
+    display: block;
+    width: 80%;
+    margin: 20px auto 0;
+    padding: 0;
+    border-top: 1px solid #E4E4E4;
+  }
+}
+
+.mobile-nav li {
+  @media screen and (max-width: 480px) {
+    @include box-sizing(border-box);
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 18px 0 0 0;
+    width: 50% ;
+
+    a, a:link, a:visited {
+      border-radius: 4px;
+      color: #363134;
+      display: block;
+      font-family: $secondary-text;
+      font-size: .7em;
+      font-weight: normal;
+      letter-spacing: .2em;
+      margin: -2px auto;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: #F0F0F0;
+      @include transition(all, 0.15s, ease-in-out);
+      width: 80%;
+    }
+    a:hover, a:focus, a:active {
+      color: #fff;
+      background: $c-primary;
+    }
+  }
+}
+
+.logo {
+  background: url(../../images/kilmc-logo.png) no-repeat center;
+  background-size: 100%;
+  display: block;
+  height: 50px;
+  margin: 10px auto 35px;
+  padding: 0;
+  width: 235px;  
+  @media screen and (max-width: 640px) {
+    margin: 0 auto;
+  }
+}
+
+.container {
+  background: #fff;
+  @include box-sizing(border-box);
+  @include box-shadow(0px 0px 6px rgba(0,0,0,0.1));
+  margin: 20px auto 40px;
+  padding: 0 45px 30px 45px;
+  width: 610px;
+
+  @media screen and (max-width: 640px) {
+    width: 94%; 
+    padding: 0 0 10px 0;
+    margin-bottom: 40px;
+  }
+}
+
+// POSTS & POST TYPES
+
+.post {
+  padding: 0;
+}
+
+.post article {
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 640px) {
+    margin-bottom: 0;
+  }
+}
+
+.post header {
+  width: 488px;
+  margin: auto;
+  text-align: center;
+  padding: 20px 0;
+  @include clearfix;
+}
+
+.post-date {
+  float: left;
+  margin: 0 0 5px 0;
+  font-family: $secondary-text;
+  font-size: 0.7em;
+  line-height: 23px;
+  text-align: center;
+  width: 100%;
+  
+  .date-icon {
+    margin: 0px 2px 0 0;
+    position: relative;
+    top: 2px;
+    font-size: 1em;
+    color: $c-primary;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 0;
+  }
+}
+
+.post-text {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin: 0 auto;
+  width: 488px;
+}
+
+
+// AUDIO POST
+
+.audio-post {
+  line-height: 0;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 570px;
+  iframe {
+    width: 570px;
+  }
+}
+
+// LINK POST
+
+.link-post {
+  padding: 20px 0;
+
+  .link-title {
+    font-family: $secondary-text;
+    font-size: 1.4em;
+    line-height: 1em;
+    text-align: center;
+  }
+}
+
+// TEXT POST
+
+.text-post {
+  padding: 50px 0;
+  
+  .text-post-title {
+    font-family: $secondary-text;
+    font-size: 1.1em;
+    margin: 0 auto 2px;
+    text-align: center;
+  }
+}
+
+// VIDEO POST
+
+.video-post {
+  width: 570px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.photo-post {
+  padding: 20px;
+  
+  img {
+    margin: 0 auto;
+    width: 570px;
+  }
+}
+
+// ---------------------------------------------------------
+// HELPERS
+// ---------------------------------------------------------
+
+.ir {
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+

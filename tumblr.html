@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>{Title}</title>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="{Favicon}" />
+  <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
+  <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+  
+  <!-- Typekit : Blog Site -->
+  <script type="text/javascript" src="http://use.typekit.com/naf3qdj.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="http://kilmc.com/service-assets/kilmc-tumblr/jquery.fitvids.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0; user-scalable=0;">
+
+  <link href="http://kilmc.com/assets/fonts/ss-standard.css" rel="stylesheet" />
+  <link href="http://kilmc.com/assets/styles/stylesheets/tumblr.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+  <script>
+    $(document).ready(function() {
+      $(".video-post").fitVids();
+    });
+  </script>
+
+  <header role="banner">
+    <h1><a class="logo ir" href="http://kilmc.com/">Kilmc</a></h1>
+    <ul class="top-nav clearfix">
+      <li><a href="http://blog.kilmc.com/">Blog</a></li>
+      <li><a href="http://kilmc.com/about/">About</a></li>
+      <li><a href="http://twitter.com/kilmc/">Twitter</a></li>
+    </ul>
+
+    <ul class="mobile-nav clearfix">
+      <li><a href="http://twitter.com/kilmc">Twitter</a></li>
+      <li><a href="http://blog.kilmc.com/">Blog</a></li>
+    </ul>
+  </header>
+
+  {block:Posts}
+    <section class="container post">
+      
+      {block:Text}
+        <article class="text-post">
+          <header>
+            {block:Title}
+              <a class="text-post-title" href="{Permalink}">{Title}</a>
+            {/block:Title}
+            <p class="post-date">
+              <i class="ss-icon date-icon">Date</i>
+                {block:Date}
+                  {DayOfMonth}{DayOfMonthSuffix} of {Month}, {Year}
+                {/block:Date}
+            </p>
+          </header>
+          
+          <div class="post-text">
+            {Body}
+          </div>
+          
+        </article>
+      {/block:Text}
+      
+      {block:Photo}
+        <article class="photo-post">
+          {LinkOpenTag}
+            <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+          {LinkCloseTag}
+          
+          {block:Caption}
+            <div class="post-text">
+              {Caption}
+            </div>
+          {/block:Caption}
+        </article>
+      {/block:Photo}
+      
+      {block:Video}
+        <article class="video-post">
+          <div class="media">{Video-500}</div>
+          {block:Caption}
+            <div class="post-text">
+              {Caption}
+            </div>
+          {/block:Caption}
+        </article>
+      {/block:Video}
+      
+      {block:Audio}
+        <article class="audio-post">
+          {block:AudioEmbed}
+            {AudioEmbed}
+          {/block:AudioEmbed}
+          
+          {block:AudioPlayer}
+            {block:IfShowAlbumArtOnAudioPosts}
+              {block:AlbumArt}
+                <div class="album_art">
+                  <img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" />
+                </div>
+              {/block:AlbumArt}
+            {/block:IfShowAlbumArtOnAudioPosts}
+            
+            <div class="audio">
+              <div class="player">{AudioPlayerWhite}</div>
+              <div class="meta">
+                {block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}{block:ExternalAudio}<span class="download_external_audio"> &bull; <a href="{ExternalAudioURL}">{lang:Download}</a></span>{/block:ExternalAudio}</div>
+            </div>
+          {/block:AudioPlayer}
+          
+          {block:Caption}
+            <div class="post-text">
+              {Caption}
+            </div>
+          {/block:Caption}
+        </article>
+      {/block:Audio}
+      
+      {block:Link}
+        <article class="link-post">
+          <header>
+            <a class="link-title" href="{URL}" {Target}>{Name}</a>
+          </header>
+
+          {block:Description}
+            <div class="post-text">
+              {Description}
+            </div>
+          {/block:Description}
+        </article>
+      {/block:Link}
+      
+  </section>
+{/block:Posts}
+
+
+
+</body>
+</html>
