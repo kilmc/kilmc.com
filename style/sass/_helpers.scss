@@ -1,0 +1,13 @@
+@mixin links {
+  a, a:link, a:visited {
+    text-decoration: none;
+    color: $dark-grey;
+  }
+
+  a:hover, a:focus, a:active {
+    text-decoration: underline;
+  }
+}
+
+
+

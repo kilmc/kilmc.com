@@ -1,0 +1,151 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import 'reset';
+@import 'helpers';
+
+/* MIXINS & VARIABLES
+================================ */
+
+// COLOURS
+$dark-grey: #1C1C1C;
+$main: lighten(#000, 22%);
+$main-alt: lighten($main, 60%);
+
+// TYPE
+$dagny: "ff-dagny-web-pro",sans-serif;
+$avenir: Avenir LT Std;
+$font-size: 1.3rem;
+$leading: 1.85rem;
+
+@mixin hyphens {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+
+// TRANSITIONS
+
+@mixin fade {
+  @include transition (all 0.15s ease-in-out);
+}
+
+@mixin fast-fade {
+  @include transition (all 0.05s ease-in-out);
+}
+
+
+/* BASE
+================================ */
+
+body {
+  font-family: $avenir;
+  color: $main;
+  font-size: 13px;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: $main;
+  font-weight: bold;
+}
+
+
+/* TEXT
+================================ */
+
+// Use the class text on any container specifically for textual content
+
+.text {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: $font-size;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin: $leading auto;
+    line-height: $leading;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    font-size: $font-size;
+    line-height: $leading;
+    margin-bottom: $leading;
+    @include hyphens;
+  }
+
+  a:hover, a:focus, a:active {
+    border-bottom: 3px solid $main-alt;
+  }
+
+  ul {
+
+  }
+
+  ol {
+
+  }
+
+  blockquote {
+
+  }
+  i {
+    display: none;
+  }
+}
+
+/* LAYOUT
+================================ */
+
+.site-wrap {
+  @include outer-container;
+  margin-top: 4rem;
+  width: 42rem;
+}
+.nav-wrap,
+.content-wrap {
+  margin-top: $leading*2;
+}
+
+.nav-wrap {
+  display: none;
+}
+
+.logo {
+  border-bottom: 6px solid $main;
+  color: $main;
+  display: block;
+  font-size: $font-size;
+  font-weight: bold;
+  padding-bottom: $leading/2;
+  &:hover {
+    border-bottom: 6px solid $main-alt;
+  }
+}
+
+.post-info {
+  margin: $leading auto;
+  p {
+    margin: 0 auto;
+  }
+}
+
+.tag {
+  &:after {
+    content: ",";
+  }
+  &:last-of-type:after {
+    content: "";
+  }
+}
+
+
+
