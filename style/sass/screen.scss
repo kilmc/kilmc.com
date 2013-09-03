@@ -110,14 +110,6 @@ a, a:link, a:visited {
   margin-top: 4rem;
   width: 42rem;
 }
-.nav-wrap,
-.content-wrap {
-  margin-top: $leading*2;
-}
-
-.nav-wrap {
-  display: none;
-}
 
 .logo {
   border-bottom: 6px solid $main;
@@ -128,6 +120,27 @@ a, a:link, a:visited {
   padding-bottom: $leading/2;
   &:hover {
     border-bottom: 6px solid $main-alt;
+  }
+}
+
+.nav-wrap,
+.content-wrap {
+  margin-top: $leading*2;
+}
+
+.nav-wrap {
+  display: none;
+  position: absolute;
+  a {
+    font-size: $font-size;
+    margin-bottom: $leading/2;
+    border-bottom: 3px solid #fff;
+    display: inline-block;
+    float: left;
+    clear: left;
+  }
+  a:hover, a:focus, a:active {
+    border-bottom: 3px solid $main-alt;
   }
 }
 

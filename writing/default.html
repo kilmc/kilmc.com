@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  {% include 'includes/head' %}
+<body>
+  <div class="site-wrap">
+    {% include 'includes/header' %}
+    
+    <div class="content-wrap text">
+      {% if type == 'post' %}
+        {% assign post = current %}
+        <article>
+          <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+          <div class="post-info">
+            <p>{{post.date | date: "%d, %B %Y"}}</p>
+            <ul>
+            {% for tag in taxonomy['tags'] %}
+              <li><a href="{{tag.url}}" class="tag">{{tag.value}}</a></li>
+            {% endfor %}
+            </ul>
+          </div>
+          
+          {{post.body}}
+          
+        </article>
+      {% endif %}
+    </div>
+    
+  </div>
+</body>
+</html>

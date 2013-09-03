@@ -1,0 +1,11 @@
+<a href="#" class="logo">
+  <h1>{{site.title}}</h1>
+</a>
+
+<div class="nav-wrap">
+  <nav>
+    {% for page in site.pages %}
+      <a href="{{page.url}}">{{page.title}}</a>
+    {% endfor %}
+  </nav>
+</div>

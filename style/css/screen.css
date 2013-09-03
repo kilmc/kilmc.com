@@ -169,13 +169,6 @@ a, a:link, a:visited {
   .site-wrap:after {
     clear: both; }
 
-.nav-wrap,
-.content-wrap {
-  margin-top: 3.7rem; }
-
-.nav-wrap {
-  display: none; }
-
 .logo {
   border-bottom: 6px solid #383838;
   color: #383838;
@@ -185,6 +178,23 @@ a, a:link, a:visited {
   padding-bottom: 0.925rem; }
   .logo:hover {
     border-bottom: 6px solid #d1d1d1; }
+
+.nav-wrap,
+.content-wrap {
+  margin-top: 3.7rem; }
+
+.nav-wrap {
+  display: none;
+  position: absolute; }
+  .nav-wrap a {
+    font-size: 1.3rem;
+    margin-bottom: 0.925rem;
+    border-bottom: 3px solid #fff;
+    display: inline-block;
+    float: left;
+    clear: left; }
+  .nav-wrap a:hover, .nav-wrap a:focus, .nav-wrap a:active {
+    border-bottom: 3px solid #d1d1d1; }
 
 .post-info {
   margin: 1.85rem auto; }
