@@ -1,0 +1,26 @@
+{% comment %} Writing Archive {% endcomment %}
+{% include 'includes/header' %}
+
+<div class="content-wrap text archive">
+  
+  {% for post in posts %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+
+    {% if year != prev_year %}
+    
+      {% if prev_year %}
+        </section>
+      {% endif %}
+      
+      <section class='archive-year'>
+        <h3 class="archive-year-title">{{ year }}</h3>
+    {% endif %}
+    
+    <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+    
+    {% assign prev_year = year %}
+  {% endfor %}
+  
+</div>
+    
+{% include 'includes/footer' %}

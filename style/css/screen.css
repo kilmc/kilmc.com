@@ -113,19 +113,35 @@ textarea {
   overflow: auto;
   vertical-align: top; }
 
-/* MIXINS & VARIABLES
+/* Mixins & Variables
 ================================ */
+@font-face {
+  font-family: "Avenir LT W01 45 Book";
+  src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix");
+  src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix") format("eot"), url("/fonts/939cba03-5b40-4d01-9bc5-7589eca863db.woff") format("woff"), url("/fonts/849bc5b9-a2ff-4343-977b-26ba8bd24a60.ttf") format("truetype"), url("/fonts/f67fa3b5-c1d1-488f-8e60-a828b9ad56a4.svg#f67fa3b5-c1d1-488f-8e60-a828b9ad56a4") format("svg"); }
+
+@font-face {
+  font-family: "Avenir LT W01 85 Heavy";
+  src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix");
+  src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix") format("eot"), url("/fonts/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff") format("woff"), url("/fonts/d1dc54b2-878d-4693-8d6e-b442e99fef68.ttf") format("truetype"), url("/fonts/731dd4d3-64da-427d-ba61-01575b3cf3f7.svg#731dd4d3-64da-427d-ba61-01575b3cf3f7") format("svg"); }
+
+@font-face {
+  font-family: "AvenirLTW01-85HeavyObli";
+  src: url("/fonts/7be0fdec-384a-42b5-ab27-c60a322cde7d.eot?#iefix");
+  src: url("/fonts/7be0fdec-384a-42b5-ab27-c60a322cde7d.eot?#iefix") format("eot"), url("/fonts/53554f6f-4b01-4815-87fe-82c49b8ba5a9.woff") format("woff"), url("/fonts/28dfedaf-6372-45a1-8833-b3078dc56a21.ttf") format("truetype"), url("/fonts/f747b6ee-4d13-4e45-815d-f33ac1b71d63.svg#f747b6ee-4d13-4e45-815d-f33ac1b71d63") format("svg"); }
+
 /* BASE
 ================================ */
 body {
-  font-family: Avenir LT Std;
+  font-family: "Avenir LT W01 45 Book";
   color: #383838;
   font-size: 13px; }
 
 a, a:link, a:visited {
-  text-decoration: none;
   color: #383838;
-  font-weight: bold; }
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Avenir LT W01 85 Heavy"; }
 
 /* TEXT
 ================================ */
@@ -137,71 +153,198 @@ a, a:link, a:visited {
 .text h6 {
   font-size: 1.3rem; }
 .text h2 {
-  font-weight: bold;
+  font-family: "Avenir LT W01 85 Heavy";
   margin: 1.85rem auto;
   line-height: 1.85rem; }
   .text h2:first-of-type {
     margin-top: 0; }
+  .writing .text h2 {
+    margin-bottom: 0.925rem; }
 .text p {
   font-size: 1.3rem;
   line-height: 1.85rem;
-  margin-bottom: 1.85rem;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto; }
+  margin-bottom: 1.85rem; }
 .text a:hover, .text a:focus, .text a:active {
-  border-bottom: 3px solid #d1d1d1; }
+  border-bottom: 3px solid #d1d1d1;
+  padding-bottom: 1px; }
 .text i {
   display: none; }
 
 /* LAYOUT
 ================================ */
 .site-wrap {
+  margin: 1rem auto 6rem;
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4rem;
-  width: 42rem; }
+  position: relative;
+  width: 95%; }
   .site-wrap:before, .site-wrap:after {
     content: " ";
     display: table; }
   .site-wrap:after {
     clear: both; }
+  @media only screen and (min-width: 980px) {
+    .site-wrap {
+      margin-top: 4rem;
+      width: 42rem; }
+      .photography .site-wrap {
+        width: 60rem; } }
 
-.logo {
+.site-nav {
+  display: block;
+  margin-bottom: 1rem;
+  width: 100px; }
+  @media only screen and (min-width: 980px) {
+    .site-nav {
+      left: -140px;
+      position: absolute; }
+      .photography .site-nav {
+        position: static; } }
+
+.site-nav .logo {
   border-bottom: 6px solid #383838;
-  color: #383838;
   display: block;
   font-size: 1.3rem;
-  font-weight: bold;
-  padding-bottom: 0.925rem; }
-  .logo:hover {
+  padding-bottom: 0.925rem;
+  width: 100%; }
+  .site-nav .logo:hover, .site-nav .logo:focus, .site-nav .logo:active {
     border-bottom: 6px solid #d1d1d1; }
 
-.nav-wrap,
+.site-page-list {
+  display: none;
+  margin-top: 1rem; }
+  @media only screen and (min-width: 980px) {
+    .site-page-list {
+      margin-top: 3.7rem; } }
+
+.site-page-list a {
+  font-size: 1.3rem;
+  line-height: 3.7rem;
+  margin-bottom: 0.925rem;
+  border-bottom: 3px solid #fff;
+  display: inline-block;
+  font-size: 2.6rem; }
+  .site-page-list a:hover, .site-page-list a:focus, .site-page-list a:active {
+    border-bottom: 3px solid #d1d1d1; }
+
+.site-header {
+  border-bottom: 6px solid #383838;
+  height: 42px;
+  *zoom: 1; }
+  .site-header:before, .site-header:after {
+    content: " ";
+    display: table; }
+  .site-header:after {
+    clear: both; }
+  .site-header a {
+    float: left;
+    color: #383838;
+    font-size: 1.3rem;
+    font-family: "Avenir LT W01 85 Heavy";
+    padding-bottom: 0.925rem;
+    margin-right: 1rem;
+    position: relative; }
+  .site-header a:hover, .site-header a:focus, .site-header a:active {
+    border-bottom: 6px solid #d1d1d1; }
+
+.site-footer {
+  border-top: 3px solid #d1d1d1;
+  font-size: 1.3rem;
+  padding-top: 1.85rem;
+  font-size: 1.2em;
+  text-transform: uppercase; }
+  .site-footer .contact {
+    float: right;
+    text-align: right;
+    clear: both; }
+  .site-footer a {
+    float: left;
+    margin-bottom: 0.925rem;
+    border-bottom: 3px solid white;
+    margin-right: 1rem; }
+    .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+      border-bottom: 3px solid #d1d1d1; }
+
 .content-wrap {
   margin-top: 3.7rem; }
+  .content-wrap img {
+    max-width: 100%; }
 
-.nav-wrap {
-  display: none;
-  position: absolute; }
-  .nav-wrap a {
-    font-size: 1.3rem;
-    margin-bottom: 0.925rem;
-    border-bottom: 3px solid #fff;
-    display: inline-block;
-    float: left;
-    clear: left; }
-  .nav-wrap a:hover, .nav-wrap a:focus, .nav-wrap a:active {
-    border-bottom: 3px solid #d1d1d1; }
+.post {
+  margin-bottom: 3.7rem; }
 
 .post-info {
   margin: 1.85rem auto; }
   .post-info p {
     margin: 0 auto; }
+  .post-info ul {
+    *zoom: 1; }
+    .post-info ul:before, .post-info ul:after {
+      content: " ";
+      display: table; }
+    .post-info ul:after {
+      clear: both; }
+  .post-info li {
+    font-size: 1.3rem;
+    float: left; }
+    .post-info li:after {
+      content: ", "; }
+    .post-info li:last-of-type:after {
+      content: ""; }
 
-.tag:after {
-  content: ","; }
-.tag:last-of-type:after {
-  content: ""; }
+.archive-year {
+  margin-bottom: 1.85rem; }
+  .archive-year .archive-year-title {
+    margin-bottom: 0.925rem; }
+  .archive-year h2 {
+    margin: 0.4625rem auto; }
+
+.collection-image {
+  width: 100%;
+  margin-bottom: 1.85rem; }
+
+/* 
+  Colour variants are set per section of the site.
+
+  To define a colour pallette for a section simply define the following
+  information in the colour-variation include:
+
+    - Section name (i.e. writing/design/photography etc.)
+    - Base Colour in Hex Value
+    - Percentage value to lighten the base colour by
+
+    @include colour-variation(design, #999, 20%);
+
+  You additionally have the option to alter the background colour
+  name, hex value and the percentage value for how much lighter you want the.
+
+*/
+body.writing {
+  color: #383838;
+  background: white; }
+  body.writing a, body.writing a:link, body.writing a:visited {
+    color: #383838; }
+  body.writing .site-nav .logo,
+  body.writing header {
+    border-bottom-color: #383838; }
+  body.writing .text a:hover,
+  body.writing .text a:focus,
+  body.writing .text a:active,
+  body.writing .site-nav .logo:hover,
+  body.writing .site-nav .logo:focus,
+  body.writing .site-nav .logo:active,
+  body.writing .site-page-list a:hover,
+  body.writing .site-page-list a:focus,
+  body.writing .site-page-list a:active,
+  body.writing .site-header a:hover,
+  body.writing .site-header a:focus,
+  body.writing .site-header a:active,
+  body.writing .site-footer a:hover,
+  body.writing .site-footer a:focus,
+  body.writing .site-footer a:active {
+    border-bottom-color: #d1d1d1; }
+  body.writing .site-page-list a,
+  body.writing .site-footer a {
+    border-bottom-color: white; }

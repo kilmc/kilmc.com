@@ -1,0 +1,12 @@
+{% comment %} Homepage {% endcomment %}
+{% include 'includes/header' %}
+
+<div class="content-wrap images">
+  {% for asset in assets %}
+    {% if asset.type == 'image' %}
+      <img src="{{asset.url}}">
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% include 'includes/footer' %}

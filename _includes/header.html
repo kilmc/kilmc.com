@@ -1,11 +1,54 @@
-<a href="#" class="logo">
-  <h1>{{site.title}}</h1>
-</a>
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>
+      {{site.title}} | {{title}} 
+      {% if type == 'archive' %}
+        Archive
+      {% endif %}
+    </title>
+    
+    <link rel="stylesheet" href="/style/css/screen.css" media="all">
+    
+    <script src="/scripts/avenir.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="/scripts/nav.js"></script>
 
-<div class="nav-wrap">
-  <nav>
-    {% for page in site.pages %}
-      <a href="{{page.url}}">{{page.title}}</a>
-    {% endfor %}
-  </nav>
-</div>
+    <meta name="viewport" content="width=device-width, initial-scale=1;">
+    
+  </head>
+  <body class="
+    {% if type == 'page' %}
+      {{current.title | downcase}}
+    {% elsif type == 'post' %}
+      {{parent.title | downcase }}
+    {% endif %}">
+    <div class="site-wrap">
+      <nav class="site-nav">
+        <a class="logo">
+          <h1>{{site.title}}</h1>
+        </a>
+        <ul class="site-page-list">
+          {% for page in site.pages %}
+            <li><a href="{{page.url}}">{{page.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <header class="site-header">
+        {% if type == 'page' %}
+          <a href="{{current.url}}" class="">
+            <h1>{{current.title}}</h1>
+          </a>
+        {% elsif type == 'archive' %}
+          <a href="{{parent.url}}" class="">
+            <h1>{{current.title}}</h1>
+          </a>
+        {% elsif type == 'post' %}
+          <a href="{{parent.url}}" class="">
+            <h1>&larr; {{parent.title}}</h1>
+          </a>
+        {% endif %}
+      </header>

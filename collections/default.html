@@ -1,0 +1,16 @@
+{% comment %} Collection Post {% endcomment %}
+{% include 'includes/header' %}
+
+<div class="content-wrap images">
+  <div class="text">
+    <h2><a href="{{current.url}}">{{current.title}}</a></h2>
+    {{ current.body }}
+  </div>
+  {% for asset in assets %}
+    {% if asset.type == 'image' %}
+      <img src="{{asset.url}}" class="collection-image">
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% include 'includes/footer' %}

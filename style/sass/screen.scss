@@ -3,51 +3,20 @@
 @import 'reset';
 @import 'helpers';
 
-/* MIXINS & VARIABLES
-================================ */
-
-// COLOURS
-$dark-grey: #1C1C1C;
-$main: lighten(#000, 22%);
-$main-alt: lighten($main, 60%);
-
-// TYPE
-$dagny: "ff-dagny-web-pro",sans-serif;
-$avenir: Avenir LT Std;
-$font-size: 1.3rem;
-$leading: 1.85rem;
-
-@mixin hyphens {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-}
-
-
-// TRANSITIONS
-
-@mixin fade {
-  @include transition (all 0.15s ease-in-out);
-}
-
-@mixin fast-fade {
-  @include transition (all 0.05s ease-in-out);
-}
-
-
 /* BASE
 ================================ */
 
 body {
-  font-family: $avenir;
-  color: $main;
+  font-family: $f-avenir;
+  color: $c-main;
   font-size: 13px;
 }
 
 a, a:link, a:visited {
+  color: $c-main;
+  cursor: pointer;
   text-decoration: none;
-  color: $main;
-  font-weight: bold;
+  font-family: $f-avenir-bold;
 }
 
 
@@ -67,11 +36,14 @@ a, a:link, a:visited {
   }
 
   h2 {
-    font-weight: bold;
+    font-family: $f-avenir-bold;
     margin: $leading auto;
     line-height: $leading;
     &:first-of-type {
       margin-top: 0;
+    }
+    .writing & {
+      margin-bottom: $leading/2;
     }
   }
 
@@ -79,24 +51,13 @@ a, a:link, a:visited {
     font-size: $font-size;
     line-height: $leading;
     margin-bottom: $leading;
-    @include hyphens;
   }
 
   a:hover, a:focus, a:active {
-    border-bottom: 3px solid $main-alt;
+    border-bottom: 3px solid $c-main-alt;
+    padding-bottom: 1px;
   }
 
-  ul {
-
-  }
-
-  ol {
-
-  }
-
-  blockquote {
-
-  }
   i {
     display: none;
   }
@@ -106,42 +67,120 @@ a, a:link, a:visited {
 ================================ */
 
 .site-wrap {
+  margin: 1rem auto 6rem;
   @include outer-container;
-  margin-top: 4rem;
-  width: 42rem;
+  position: relative;
+  width: 95%;
+
+  @media only screen and (min-width: $medium) {
+    margin-top: 4rem;
+    width: 42rem;
+    .photography & {
+      width: 60rem;
+    }
+  }
 }
 
-.logo {
-  border-bottom: 6px solid $main;
-  color: $main;
+.site-nav {
+  display: block;
+  margin-bottom: 1rem;
+  width: 100px;
+
+  @media only screen and (min-width: $medium) {
+    left: -140px;
+    position: absolute;
+    .photography & {
+      position: static;
+    }
+  }
+}
+
+.site-nav .logo {
+  border-bottom: 6px solid $c-main;
   display: block;
   font-size: $font-size;
-  font-weight: bold;
   padding-bottom: $leading/2;
-  &:hover {
-    border-bottom: 6px solid $main-alt;
+  width: 100%;
+
+  &:hover, &:focus, &:active {
+    border-bottom: 6px solid $c-main-alt;
   }
 }
 
-.nav-wrap,
-.content-wrap {
-  margin-top: $leading*2;
+.site-page-list {
+  display: none;
+  margin-top: 1rem;
+  @media only screen and (min-width: $medium) {
+    margin-top: $leading*2;
+  }
 }
 
-.nav-wrap {
-  display: none;
-  position: absolute;
+.site-page-list a {
+  font-size: $font-size;
+  line-height: $leading*2;
+  margin-bottom: $leading/2;
+  border-bottom: 3px solid #fff;
+  display: inline-block;
+  font-size: $font-size*2;
+  
+  &:hover, &:focus, &:active {
+    border-bottom: 3px solid $c-main-alt;
+  }
+}
+
+.site-header {
+  border-bottom: 6px solid $c-main;
+  height: 42px;
+  @include clearfix;
   a {
-    font-size: $font-size;
-    margin-bottom: $leading/2;
-    border-bottom: 3px solid #fff;
-    display: inline-block;
     float: left;
-    clear: left;
+    color: $c-main;
+    font-size: $font-size;
+    font-family: $f-avenir-bold;
+    padding-bottom: $leading/2;
+    margin-right: 1rem;
+    position: relative;
   }
   a:hover, a:focus, a:active {
-    border-bottom: 3px solid $main-alt;
+    border-bottom: 6px solid $c-main-alt;
   }
+}
+
+.site-footer {
+  border-top: 3px solid $c-main-alt;
+  font-size: $font-size;
+  padding-top: $leading;
+  font-size: 1.2em;
+  text-transform: uppercase;
+
+  .contact {
+    float: right;
+    text-align: right;
+    clear: both;
+  }
+
+  a {
+    float: left;
+    margin-bottom: $leading/2;
+    border-bottom: 3px solid $c-background;
+    margin-right: 1rem;
+    &:hover, &:focus, &:active {
+      border-bottom: 3px solid $c-main-alt;
+    }
+  }
+}
+
+// Writing
+
+.content-wrap {
+  margin-top: $leading*2;
+  img {
+    max-width: 100%;
+  }
+}
+
+.post {
+  margin-bottom: $leading*2;
 }
 
 .post-info {
@@ -149,16 +188,42 @@ a, a:link, a:visited {
   p {
     margin: 0 auto;
   }
+
+  ul {
+    @include clearfix;
+  }
+
+  li {
+    font-size: $font-size;
+    float: left;
+    &:after {
+      content: ", ";
+    }
+    &:last-of-type:after {
+      content: "";
+    }
+  }
 }
 
-.tag {
-  &:after {
-    content: ",";
+// Archive
+
+.archive-year {
+  margin-bottom: $leading;
+  .archive-year-title {
+    margin-bottom: $leading/2;
   }
-  &:last-of-type:after {
-    content: "";
+  h2 {
+    margin: $leading/4 auto;
   }
+}
+
+// Collections 
+
+.collection-image {
+  width: 100%;
+  margin-bottom: $leading;
 }
 
 
 
+@import 'colours';

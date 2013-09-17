@@ -1,0 +1,18 @@
+{% comment %} Photography {% endcomment %}
+{% include 'includes/header' %}
+
+<div class="content-wrap images text">
+  {% for post in posts limit:20 %}
+    <article class="post">
+      {% for asset in post.assets %}
+        {% if asset.type == 'image' %}
+          <img src="{{asset.url}}" class="collection-image">
+        {% endif %}
+      {% endfor %}
+      <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+      
+    </article>
+  {% endfor %}
+</div>
+
+{% include 'includes/footer' %}
