@@ -43,7 +43,7 @@ a, a:link, a:visited {
       margin-top: 0;
     }
     .writing & {
-      margin-bottom: $leading/2;
+      margin: 0;
     }
   }
 
@@ -68,7 +68,7 @@ a, a:link, a:visited {
 
 .site-wrap {
   margin: 1rem auto 6rem;
-  @include outer-container;
+  @include clearfix;
   position: relative;
   width: 95%;
 
@@ -76,7 +76,7 @@ a, a:link, a:visited {
     margin-top: 4rem;
     width: 42rem;
     .photography & {
-      width: 60rem;
+      width: 59.3rem;
     }
   }
 }
@@ -184,7 +184,7 @@ a, a:link, a:visited {
 }
 
 .post-info {
-  margin: $leading auto;
+  margin: 0 auto $leading;
   p {
     margin: 0 auto;
   }

@@ -159,7 +159,7 @@ a, a:link, a:visited {
   .text h2:first-of-type {
     margin-top: 0; }
   .writing .text h2 {
-    margin-bottom: 0.925rem; }
+    margin: 0; }
 .text p {
   font-size: 1.3rem;
   line-height: 1.85rem;
@@ -175,9 +175,6 @@ a, a:link, a:visited {
 .site-wrap {
   margin: 1rem auto 6rem;
   *zoom: 1;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   width: 95%; }
   .site-wrap:before, .site-wrap:after {
@@ -190,7 +187,7 @@ a, a:link, a:visited {
       margin-top: 4rem;
       width: 42rem; }
       .photography .site-wrap {
-        width: 60rem; } }
+        width: 59.3rem; } }
 
 .site-nav {
   display: block;
@@ -276,7 +273,7 @@ a, a:link, a:visited {
   margin-bottom: 3.7rem; }
 
 .post-info {
-  margin: 1.85rem auto; }
+  margin: 0 auto 1.85rem; }
   .post-info p {
     margin: 0 auto; }
   .post-info ul {
