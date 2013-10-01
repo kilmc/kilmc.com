@@ -18,8 +18,8 @@
 @mixin colour-variation($class, $main-colour, $lighten-percentage: 60%, $bg-colour: #fff) {
   body.#{$class} {
     color: $main-colour;
-    background: $bg-colour;
-    
+    background-color: $bg-colour;
+
     a, a:link, a:visited {
       color: $main-colour;
     }
@@ -49,12 +49,14 @@
 
     .site-page-list a,
     .site-footer a {
-      border-bottom-color: $bg-colour;
+      border-bottom-color: transparent;
     }
   }
 }
 
-@include colour-variation(writing, #383838, 60%);
+// @include colour-variation(writing, #2F3440, 40%);
+// @include colour-variation(about, #2F3440, 40%);
+// @include colour-variation(photography, #2F3440, 40%);
 // @include colour-variation(music, #3A55A5, 45%);
 // @include colour-variation(photography, #D31914, 45%);
 // @include colour-variation(obsessions, #FED24A, 20%, #1B1C1B);

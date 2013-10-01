@@ -132,13 +132,16 @@ textarea {
 
 /* BASE
 ================================ */
+html {
+  height: 100%; }
+
 body {
   font-family: "Avenir LT W01 45 Book";
-  color: #383838;
+  color: #4b5264;
   font-size: 13px; }
 
 a, a:link, a:visited {
-  color: #383838;
+  color: #4b5264;
   cursor: pointer;
   text-decoration: none;
   font-family: "Avenir LT W01 85 Heavy"; }
@@ -159,14 +162,28 @@ a, a:link, a:visited {
   .text h2:first-of-type {
     margin-top: 0; }
   .writing .text h2 {
-    margin: 0; }
+    margin: 0.925rem 0; }
+.text h3 {
+  margin: 0.925rem 0;
+  text-transform: uppercase;
+  font-size: 1.2em; }
 .text p {
   font-size: 1.3rem;
   line-height: 1.85rem;
   margin-bottom: 1.85rem; }
 .text a:hover, .text a:focus, .text a:active {
-  border-bottom: 3px solid #d1d1d1;
+  border-bottom: 3px solid #d1d4dd;
   padding-bottom: 1px; }
+.text ul {
+  margin: 1.85rem 0; }
+.text li {
+  font-size: 1.3rem;
+  margin: 0.925rem 0; }
+.text hr {
+  border: none;
+  height: 1px;
+  background: #d1d4dd;
+  margin: 1.85rem 0; }
 .text i {
   display: none; }
 
@@ -185,29 +202,28 @@ a, a:link, a:visited {
   @media only screen and (min-width: 980px) {
     .site-wrap {
       margin-top: 4rem;
-      width: 42rem; }
-      .photography .site-wrap {
-        width: 59.3rem; } }
+      width: 59.45rem; }
+      .writing .site-wrap, .about .site-wrap {
+        width: 42rem; } }
 
 .site-nav {
   display: block;
   margin-bottom: 1rem;
   width: 100px; }
   @media only screen and (min-width: 980px) {
-    .site-nav {
+    .writing .site-nav, .about .site-nav {
       left: -140px;
-      position: absolute; }
-      .photography .site-nav {
-        position: static; } }
+      position: absolute; } }
 
 .site-nav .logo {
-  border-bottom: 6px solid #383838;
+  border-bottom: 6px solid #4b5264;
   display: block;
   font-size: 1.3rem;
   padding-bottom: 0.925rem;
-  width: 100%; }
+  width: 100%;
+  letter-spacing: 0.1rem; }
   .site-nav .logo:hover, .site-nav .logo:focus, .site-nav .logo:active {
-    border-bottom: 6px solid #d1d1d1; }
+    border-bottom: 6px solid #d1d4dd; }
 
 .site-page-list {
   display: none;
@@ -224,10 +240,10 @@ a, a:link, a:visited {
   display: inline-block;
   font-size: 2.6rem; }
   .site-page-list a:hover, .site-page-list a:focus, .site-page-list a:active {
-    border-bottom: 3px solid #d1d1d1; }
+    border-bottom: 3px solid #d1d4dd; }
 
 .site-header {
-  border-bottom: 6px solid #383838;
+  border-bottom: 6px solid #4b5264;
   height: 42px;
   *zoom: 1; }
   .site-header:before, .site-header:after {
@@ -237,21 +253,28 @@ a, a:link, a:visited {
     clear: both; }
   .site-header a {
     float: left;
-    color: #383838;
+    color: #4b5264;
     font-size: 1.3rem;
     font-family: "Avenir LT W01 85 Heavy";
     padding-bottom: 0.925rem;
     margin-right: 1rem;
     position: relative; }
   .site-header a:hover, .site-header a:focus, .site-header a:active {
-    border-bottom: 6px solid #d1d1d1; }
+    border-bottom: 6px solid #d1d4dd; }
 
 .site-footer {
-  border-top: 3px solid #d1d1d1;
+  border-top: 3px solid #d1d4dd;
+  *zoom: 1;
   font-size: 1.3rem;
+  margin-bottom: 1.85rem;
   padding-top: 1.85rem;
   font-size: 1.2em;
   text-transform: uppercase; }
+  .site-footer:before, .site-footer:after {
+    content: " ";
+    display: table; }
+  .site-footer:after {
+    clear: both; }
   .site-footer .contact {
     float: right;
     text-align: right;
@@ -262,7 +285,21 @@ a, a:link, a:visited {
     border-bottom: 3px solid white;
     margin-right: 1rem; }
     .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
-      border-bottom: 3px solid #d1d1d1; }
+      border-bottom: 3px solid #d1d4dd; }
+  .site-footer .easter-egg {
+    display: block;
+    float: right;
+    width: 25px;
+    height: 25px;
+    background: url("/assets/smile-white.svg");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    margin: -10px 0 0 0; }
+    .site-footer .easter-egg:hover {
+      background: url("/assets/smile.svg");
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      border: none; }
 
 .content-wrap {
   margin-top: 3.7rem; }
@@ -302,6 +339,16 @@ a, a:link, a:visited {
   width: 100%;
   margin-bottom: 1.85rem; }
 
+.about-intro {
+  font-family: "Avenir LT W01 45 Book";
+  font-size: 1.3rem;
+  line-height: 1.85rem; }
+
+.photography .text h2 {
+  text-align: center; }
+.photography .text a {
+  font-family: "Avenir LT W01 45 Book"; }
+
 /* 
   Colour variants are set per section of the site.
 
@@ -318,30 +365,7 @@ a, a:link, a:visited {
   name, hex value and the percentage value for how much lighter you want the.
 
 */
-body.writing {
-  color: #383838;
-  background: white; }
-  body.writing a, body.writing a:link, body.writing a:visited {
-    color: #383838; }
-  body.writing .site-nav .logo,
-  body.writing header {
-    border-bottom-color: #383838; }
-  body.writing .text a:hover,
-  body.writing .text a:focus,
-  body.writing .text a:active,
-  body.writing .site-nav .logo:hover,
-  body.writing .site-nav .logo:focus,
-  body.writing .site-nav .logo:active,
-  body.writing .site-page-list a:hover,
-  body.writing .site-page-list a:focus,
-  body.writing .site-page-list a:active,
-  body.writing .site-header a:hover,
-  body.writing .site-header a:focus,
-  body.writing .site-header a:active,
-  body.writing .site-footer a:hover,
-  body.writing .site-footer a:focus,
-  body.writing .site-footer a:active {
-    border-bottom-color: #d1d1d1; }
-  body.writing .site-page-list a,
-  body.writing .site-footer a {
-    border-bottom-color: white; }
+/* STATES
+================================ */
+.in-transition {
+  position: absolute; }

@@ -15,9 +15,8 @@
     <script src="/scripts/avenir.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="/scripts/nav.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1;">
-    <link rel="icon shortcut" href="/assets/favicon.png">
-      
     
   </head>
   <body class="{% if type == 'page' %}{{current.title | downcase}}{% elsif type == 'post' %}{{parent.title | downcase }}{% endif %}">
@@ -32,19 +31,3 @@
           {% endfor %}
         </ul>
       </nav>
-
-      <header class="site-header">
-        {% if type == 'page' %}
-          <a href="{{current.url}}" class="">
-            <h1>{{current.title}}</h1>
-          </a>
-        {% elsif type == 'archive' %}
-          <a href="{{parent.url}}" class="">
-            <h1>{{current.title}}</h1>
-          </a>
-        {% elsif type == 'post' %}
-          <a href="{{parent.url}}" class="">
-            <h1>&larr; {{parent.title}}</h1>
-          </a>
-        {% endif %}
-      </header>
