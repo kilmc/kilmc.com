@@ -1,0 +1,23 @@
+{% comment %} Writing Post {% endcomment %}
+{% include 'includes/header' %}
+
+<div class="content-wrap text">
+  {% if type == 'post' %}
+    {% assign post = current %}
+    <article class="post">
+      {% for asset in post.assets %}
+        {% if asset.type == 'image' %}
+          <img src="{{asset.url}}" class="collection-image">
+        {% endif %}
+      {% endfor %}
+      <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+      
+      <div class="photo-description">
+        {{post.body}}
+      </div>
+      
+    </article>
+  {% endif %}
+</div>
+    
+{% include 'includes/footer' %}

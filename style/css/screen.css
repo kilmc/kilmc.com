@@ -349,6 +349,9 @@ a, a:link, a:visited {
 .photography .text a {
   font-family: "Avenir LT W01 45 Book"; }
 
+.photo-description {
+  text-align: center; }
+
 /* 
   Colour variants are set per section of the site.
 
