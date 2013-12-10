@@ -87,6 +87,24 @@ a, a:link, a:visited {
   i {
     display: none;
   }
+
+  img {
+
+    &.half {
+      width: 48%;
+      margin-bottom: $leading;
+    }
+
+    &.left {
+      float: left;
+      
+    }
+
+    &.right {
+      float: right;
+      
+    }
+  }
 }
 
 /* LAYOUT
@@ -99,10 +117,10 @@ a, a:link, a:visited {
   width: 95%;
 
   @media only screen and (min-width: $medium) {
+    width: 42rem;
     margin-top: 4rem;
-    width: 59.45rem;
-    .writing &, .about & {
-      width: 42rem;
+    .photography & {
+      width: 59.45rem;
     }
   }
 }
@@ -113,10 +131,10 @@ a, a:link, a:visited {
   width: 100px;
 
   @media only screen and (min-width: $medium) {
-
-    .writing &, .about & {
-      left: -140px;
-      position: absolute;
+    left: -140px;
+    position: absolute;
+    .photography & {
+      position: static;
     }
   }
 }
@@ -173,6 +191,10 @@ a, a:link, a:visited {
   }
 }
 
+.site-content {
+  @include clearfix;
+}
+
 .site-footer {
   border-top: 3px solid $c-main-alt;
   @include clearfix;
@@ -219,6 +241,7 @@ a, a:link, a:visited {
 // Writing
 
 .content-wrap {
+  @include clearfix;
   margin-top: $leading*2;
   img {
     max-width: 100%;

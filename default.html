@@ -2,23 +2,18 @@
 {% include 'includes/header' %}
 
 <div class="content-wrap text">
-  {% if type == 'post' %}
-    {% assign post = current %}
-    <article class="post">
-      <h2><a href="{{post.url}}">{{post.title}}</a></h2>
-      <div class="post-info">
-        <p>{{post.date | date: "%d, %B %Y"}}</p>
-        <ul>
-        {% for tag in taxonomy['tags'] %}
-          <li><a href="{{tag.url}}" class="tag">{{tag.value}}</a></li>
-        {% endfor %}
-        </ul>
-      </div>
-      
-      {{post.body}}
-      
-    </article>
-  {% endif %}
+  {{ body }}
+  {% for asset in assets %}
+    {% if asset.type == 'image' %}
+    <img src="{{asset.url}}" {% if asset.meta.class %} class="{{ asset.meta.class }}" {% endif %}>
+    {% elsif asset.type == 'audio' %}
+    <audio><source src="{{asset.url}}" type="{{asset.content_type}}"></audio>
+    {% elsif asset.type == 'video' %}
+    <video><source src="{{asset.url}}" type="{{asset.content_type}}"></video>
+    {% elsif asset.type == 'other' %}
+    <a href="{{asset.url}}">Download {{asset.filename}}</a></li>
+    {% endif %}
+  {% endfor %}
 </div>
 
 {% include 'includes/footer' %}

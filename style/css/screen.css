@@ -186,6 +186,13 @@ a, a:link, a:visited {
   margin: 1.85rem 0; }
 .text i {
   display: none; }
+.text img.half {
+  width: 48%;
+  margin-bottom: 1.85rem; }
+.text img.left {
+  float: left; }
+.text img.right {
+  float: right; }
 
 /* LAYOUT
 ================================ */
@@ -201,19 +208,21 @@ a, a:link, a:visited {
     clear: both; }
   @media only screen and (min-width: 980px) {
     .site-wrap {
-      margin-top: 4rem;
-      width: 59.45rem; }
-      .writing .site-wrap, .about .site-wrap {
-        width: 42rem; } }
+      width: 42rem;
+      margin-top: 4rem; }
+      .photography .site-wrap {
+        width: 59.45rem; } }
 
 .site-nav {
   display: block;
   margin-bottom: 1rem;
   width: 100px; }
   @media only screen and (min-width: 980px) {
-    .writing .site-nav, .about .site-nav {
+    .site-nav {
       left: -140px;
-      position: absolute; } }
+      position: absolute; }
+      .photography .site-nav {
+        position: static; } }
 
 .site-nav .logo {
   border-bottom: 6px solid #4b5264;
@@ -262,6 +271,14 @@ a, a:link, a:visited {
   .site-header a:hover, .site-header a:focus, .site-header a:active {
     border-bottom: 6px solid #d1d4dd; }
 
+.site-content {
+  *zoom: 1; }
+  .site-content:before, .site-content:after {
+    content: " ";
+    display: table; }
+  .site-content:after {
+    clear: both; }
+
 .site-footer {
   border-top: 3px solid #d1d4dd;
   *zoom: 1;
@@ -302,7 +319,13 @@ a, a:link, a:visited {
       border: none; }
 
 .content-wrap {
+  *zoom: 1;
   margin-top: 3.7rem; }
+  .content-wrap:before, .content-wrap:after {
+    content: " ";
+    display: table; }
+  .content-wrap:after {
+    clear: both; }
   .content-wrap img {
     max-width: 100%; }
 
