@@ -1,5 +1,5 @@
 .*
 style/sass/*.scss
 scripts/*.coffee
-kilmc.com.sublime-project
-kilmc.com.sublime-workspace
+*.sublime-project
+*.sublime-workspace

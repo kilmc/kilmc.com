@@ -1,0 +1,861 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"f-",
+				"f-avenir-bold"
+			],
+			[
+				"viny",
+				"vinylCollection"
+			],
+			[
+				"c-",
+				"c-primary"
+			],
+			[
+				"game",
+				"game-list"
+			],
+			[
+				"game-l",
+				"game-list-item"
+			],
+			[
+				"back-btn",
+				"back-btn-2"
+			],
+			[
+				"cb-nav",
+				"cb-nav-item"
+			],
+			[
+				"ir",
+				"ir-width-auto"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"webkit",
+				"webkit-appearance"
+			],
+			[
+				"flow-",
+				"flow-progress-label-select"
+			],
+			[
+				"tc-na",
+				"tc-name-email-wrap"
+			],
+			[
+				"tc-header",
+				"tc-header-title"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "_includes/header.html",
+			"settings":
+			{
+				"buffer_size": 1376,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style/sass/screen.scss",
+			"settings":
+			{
+				"buffer_size": 5717,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style/sass/_helpers.scss",
+			"settings":
+			{
+				"buffer_size": 2020,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/kilmc/Sites/kilmc.com/style/sass/vendor/garnish/helpers/_hover.scss",
+		"/Users/kilmc/Sites/kilmc.com/style/sass/_helpers.scss",
+		"/Users/kilmc/Sites/kilmc.com/style/sass/vendor/garnish/helpers/_media.scss",
+		"/Users/kilmc/Sites/kilmc.com/collections/vinyl/index.html",
+		"/Users/kilmc/Sites/kilmc.com/style/sass/vinyl.scss",
+		"/Users/kilmc/Sites/kilmc.com/style/sass/vendor/garnish/garnish.scss",
+		"/Users/kilmc/Sites/kilmc.com/.gitignore",
+		"/Users/kilmc/Sites/kilmc.com/scripts/sheetsee/ICanHaz.js",
+		"/Users/kilmc/Sites/kilmc.com/index.html",
+		"/Users/kilmc/Sites/kilmc.com/style/css/screen.css",
+		"/Users/kilmc/Sites/kilmc.com/scripts/sheetsee/sheetsee.js",
+		"/Users/kilmc/Sites/kilmc.com/_includes/head.html",
+		"/Users/kilmc/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/kilmc/Sites/kilmc.com/.siteleafignore",
+		"/Users/kilmc/Sites/kilmc.com/config.ru",
+		"/Users/kilmc/Sites/ron-telesky/style/sass/screen.scss",
+		"/Users/kilmc/Sites/ron-telesky/style/sass/vendor/bourbon/css3/_background.scss",
+		"/Users/kilmc/Sites/ron-telesky/style/sass/vendor/bourbon/_bourbon-deprecated-upcoming.scss",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/css/style.css",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/_game-list.scss",
+		"/Users/kilmc/Sites/battlequotes/guess-step1.php",
+		"/Users/kilmc/Sites/battlequotes/nope.php",
+		"/Users/kilmc/Sites/battlequotes/index.php",
+		"/Users/kilmc/Sites/battlequotes/game-step1.php",
+		"/Users/kilmc/Sites/battlequotes/game-step2.php",
+		"/Users/kilmc/Sites/battlequotes/guess-step3.php",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/_base.scss",
+		"/Users/kilmc/Sites/battlequotes/main.php",
+		"/Users/kilmc/Sites/battlequotes/about.php",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/vendor/bitters/_forms.scss",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/_modules.scss",
+		"/Users/kilmc/Sites/battlequotes/guess-step2.php",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/_helpers.scss",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/_app-header.scss",
+		"/Users/kilmc/Sites/battlequotes/new-game.php",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/_layout.scss",
+		"/Users/kilmc/Sites/battlequotes/functions.php",
+		"/Users/kilmc/Sites/battlequotes/game-step4.php",
+		"/Users/kilmc/Sites/battlequotes/game-step3.php",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/vendor/bitters/_variables.scss",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/style.scss",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/vendor/bourbon/addons/_button.scss",
+		"/Users/kilmc/Sites/battlequotes/stylesheets/sass/_m-notices.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/dash_modules.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/layouts/_nav.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/nav.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/doc/_.tito.io.csr",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/layouts/_modal.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/_variables.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/checkin/_variables.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/shared/_variables.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/event/classic/_variables.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/layouts/application.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/notices.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/helpers/application_helper.rb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/releases/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/tickets/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/application.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/buttons.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/events/events/show.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/shared/_helpers.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/_helpers.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/outer/_helpers+variables.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/helpers.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/header.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/pagination.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/loaders.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/surveys/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/registrations.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/interested_users/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/action_bar.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/_main.scss.css",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/map.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/fonts.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/tickets/show.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/_mixins.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/event/classic/fonts.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/tickets/new.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/registrations/registrations/show.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/settings/tax_types/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/settings/tax_types/_form.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/checkin_lists/show.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/settings/basics/edit.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/events/_index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/registrations/registrations/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/account_switcher.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/viewer.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/section-title.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/javascripts/organizer/viewer.js.coffee",
+		"/Users/kilmc/Sites/Hypertiny/Tito/spec/acceptance/visitor_registers_interest_spec.rb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/modal.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/style.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/lotteries/confirm.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/payouts/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/plans/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/questions/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/releases/show.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/releases/new.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/reports/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application.css",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/settings/basics/_basics_form.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/settings/basics/_basics.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/main.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/settings/tax_types/new.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/models/tax_type.rb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/tickets_mailer/ticket_added.text.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/config/tito.yml",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/activities/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/answers/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/discount_codes/index.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/events/show.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/layouts/page.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/config/initializers/mime_types.rb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/.cloud66/manifest.yml",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/models/link.rb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/admin/custom.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/releases/_release.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/checkin_lists/_progress_bar.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/releases/_show.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/events/_dashboard.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/chopping_board.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/my/events/new.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/surveys/new.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/registrations/registrations/_dashboard.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/views/organizer/ticket_types/_ticket_type.html.erb",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/event/classic/progress-bars.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/mobile.css.scss",
+		"/Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/application/event_new.css.scss"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"",
+			"- /Users/kilmc/Sites/Hypertiny/Tito/app/assets/stylesheets/outer/",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"c-main",
+			"—",
+			"–",
+			".app-content",
+			"app-content",
+			"app-contnet",
+			"your-turn",
+			".game-list",
+			"game-list",
+			"your turn",
+			"unfortunately",
+			"settings-icon",
+			"add new",
+			"+",
+			".game-list",
+			"Next</li",
+			"Next",
+			"login-btn",
+			"app-launch",
+			"oops",
+			"@mixin button",
+			"%button",
+			"bitters",
+			"button",
+			".back-btn",
+			"setting-icon",
+			"settings-icon",
+			"settings",
+			"give up",
+			".back-btn",
+			"back-btn",
+			"you were right",
+			"you think",
+			".btn",
+			"proceed-btn",
+			"button",
+			"li",
+			"bitters",
+			"button",
+			"helvetica",
+			"nav_link",
+			"cb-nav-item",
+			"div class=\"chopping-board",
+			"<nav>",
+			"<nav></nav>",
+			"id=\"chopping-board-header",
+			"chopping-board-header",
+			"id=\"chopping-board",
+			"alert-payments",
+			"$c-primay-red",
+			"$c-primary-red",
+			"popover-content",
+			"@include hide-text",
+			"hide",
+			"@import 'globals'",
+			"@import \"globals\"",
+			"@import \"globals\";",
+			"class=\"visually-hidden",
+			"header-details",
+			"underline",
+			"interested people",
+			"385px",
+			"navbar action-bar",
+			"class=\"action-bar\"",
+			"class=\"action-bar",
+			"id=\"export-",
+			"fa-search",
+			"export-tsv",
+			"margin-top: 5",
+			".viewer",
+			"class=\"buttons",
+			".buttons",
+			"settings_links",
+			"<div class=\"avatar\"",
+			"create a tax",
+			"<h3 class=\"section-header-title\">Tax",
+			"table class=\"settings-show",
+			"id=\"settings-index\"",
+			"id=\"tickets-index\"",
+			"@include header",
+			"<header",
+			"section-header",
+			"<section id=\"main",
+			"id=\"main",
+			".css",
+			".nav",
+			".ir",
+			".tito-logo",
+			"nav_link",
+			"<article",
+			"@include header",
+			"<article>",
+			"@include header",
+			".section-title",
+			".section-header",
+			".nav",
+			"tickets nav",
+			"class=\"ticket-details",
+			"$baseBorderRadius",
+			"$border-radius-base",
+			"$baseFontFamily",
+			"progress-bar",
+			".progress-bar",
+			".standard-list",
+			".progress-bar",
+			"#dashboard",
+			".alert-payments",
+			"chopping-board-nav",
+			".action-bar",
+			".navbar",
+			"span:before",
+			".js",
+			"additional-info",
+			"90deg",
+			"flow-progress-label-complete",
+			"complete registration",
+			"assigned-tickets-overview",
+			"at-detail",
+			"receipt-overview",
+			"assigned-tickets-overview",
+			"assigned-tickets",
+			".assigned-tickets",
+			"receipt-overview",
+			"your receipt",
+			"assigned-tickets",
+			".assigned-tickets",
+			".assigned-tickets > div > div",
+			".ticket-overview"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"btn",
+			"plus-circle",
+			"only-icon",
+			"<i class=\"fa fa",
+			"<i class=\"fa fa-"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/Users/kilmc/Sites/kilmc.com"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_includes/header.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1046,
+								1046
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 100.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "style/sass/screen.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4809,
+								4809
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "style/sass/_helpers.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2020,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								101
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 11.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"hel",
+				"style/sass/_helpers.scss"
+			],
+			[
+				"media",
+				"style/sass/vendor/garnish/helpers/_media.scss"
+			],
+			[
+				"screen",
+				"style/sass/screen.scss"
+			],
+			[
+				"head",
+				"_includes/header.html"
+			],
+			[
+				"",
+				".siteleafignore"
+			],
+			[
+				"back",
+				"style/sass/vendor/bourbon/css3/_background.scss"
+			],
+			[
+				"module",
+				"stylesheets/sass/_modules.scss"
+			],
+			[
+				"mod",
+				"stylesheets/sass/_modules.scss"
+			],
+			[
+				"games",
+				"game-step1.php"
+			],
+			[
+				"step2",
+				"game-step2.php"
+			],
+			[
+				"header",
+				"stylesheets/sass/_app-header.scss"
+			],
+			[
+				"noti",
+				"stylesheets/sass/_m-notices.scss"
+			],
+			[
+				"guess",
+				"guess-step2.php"
+			],
+			[
+				"lay",
+				"stylesheets/sass/_layout.scss"
+			],
+			[
+				"helpers",
+				"stylesheets/sass/_helpers.scss"
+			],
+			[
+				"function",
+				"functions.php"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"ind",
+				"index.php"
+			],
+			[
+				"helpe",
+				"stylesheets/sass/_helpers.scss"
+			],
+			[
+				"varia",
+				"stylesheets/sass/vendor/bitters/_variables.scss"
+			],
+			[
+				"modul",
+				"stylesheets/sass/_modules.scss"
+			],
+			[
+				"_help",
+				"app/assets/stylesheets/application/_helpers.css.scss"
+			],
+			[
+				"_mixin",
+				"app/assets/stylesheets/application/_mixins.css.scss"
+			],
+			[
+				"_vari",
+				"app/assets/stylesheets/application/_variables.css.scss"
+			],
+			[
+				"_helpe",
+				"app/assets/stylesheets/application/_helpers.css.scss"
+			],
+			[
+				"fon",
+				"app/assets/stylesheets/event/classic/fonts.css.scss"
+			],
+			[
+				"viewer",
+				"app/assets/stylesheets/application/viewer.css.scss"
+			],
+			[
+				"variab",
+				"app/assets/stylesheets/application/_variables.css.scss"
+			],
+			[
+				"taxform",
+				"app/views/organizer/settings/tax_types/_form.html.erb"
+			],
+			[
+				"mixin",
+				"app/assets/stylesheets/application/_mixins.css.scss"
+			],
+			[
+				"dash",
+				"app/assets/stylesheets/application/dash_modules.css.scss"
+			],
+			[
+				"nav",
+				"app/views/layouts/_nav.html.erb"
+			],
+			[
+				"chopping",
+				"app/assets/stylesheets/application/chopping_board.css.scss"
+			],
+			[
+				"va",
+				"app/assets/stylesheets/event/classic/_variables.css.scss"
+			],
+			[
+				"dashmod",
+				"app/assets/stylesheets/application/dash_modules.css.scss"
+			],
+			[
+				"inclcss",
+				"app/assets/stylesheets/event/classic/incomplete_tickets.css.scss"
+			],
+			[
+				"registratisumm",
+				"app/views/registrations/_summary.html.erb"
+			],
+			[
+				"passfile",
+				"app/models/passbook/pass_file.rb"
+			],
+			[
+				"maincard",
+				"app/assets/stylesheets/event/classic/main-card.css.scss"
+			],
+			[
+				"classhelpers",
+				"app/assets/stylesheets/event/classic/_helpers.css.scss"
+			],
+			[
+				"registratidec",
+				"app/decorators/registration_decorator.rb"
+			],
+			[
+				"ticketsshow",
+				"app/views/tickets/show.html.erb"
+			],
+			[
+				"_show",
+				"app/views/tickets/_show.html.erb"
+			],
+			[
+				"tickedit",
+				"app/views/tickets/edit.html.erb"
+			],
+			[
+				"tickincomp",
+				"app/views/tickets/_incomplete.html.erb"
+			],
+			[
+				"ticketsettings",
+				"app/views/tickets/settings.html.erb"
+			],
+			[
+				"tickshow",
+				"app/views/tickets/show.html.erb"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"ticketsinco",
+				"app/views/tickets/_incomplete.html.erb"
+			],
+			[
+				"ticketsetting",
+				"app/views/tickets/settings.html.erb"
+			],
+			[
+				"ticketsedit",
+				"app/views/tickets/edit.html.erb"
+			],
+			[
+				"font",
+				"app/assets/stylesheets/event/classic/fonts.css.scss"
+			],
+			[
+				"classscss",
+				"app/assets/stylesheets/event/classic/loading.css.scss"
+			],
+			[
+				"button",
+				"app/assets/stylesheets/application/buttons.css.scss"
+			],
+			[
+				"incomplete",
+				"app/assets/stylesheets/event/classic/incomplete_tickets.css.scss"
+			],
+			[
+				"vari",
+				"app/assets/stylesheets/event/classic/_variables.css.scss"
+			],
+			[
+				"_inco",
+				"app/views/registrations/_incomplete.html.erb"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"blog",
+				"stylesheets/css/blog.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Sites/Hypertiny/ull/ull.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

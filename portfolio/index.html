@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilmc | Portfolio</title>
+  <link rel="stylesheet" href="/style/css/portfolio.css" media="all">
+  <script src="/scripts/avenir.js"></script>
+  <script src="//code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/scripts/unslider.min.js"></script>
+  <script src="/scripts/portfolio.js"></script>
+  <link href="/fonts/ss-standard/ss-standard.css" rel="stylesheet">
+  <script src="/scripts/jquery.event.swipe.js"></script>
+</head>
+<body>
+  <section class="top">
+    <div class="inner">
+      <h1 class="title">Kilmc</h1>
+      <p class="sub-title">Kilian McMahon</p>
+    </div>
+  </section>
+
+  {% for section in pages %}
+    <section class="{{section.slug}}">
+      <div class="inner">
+        <h2 class="title">{{section.title}}</h2>
+        {{section.body}}
+      </div>
+      <div class="{{section.slug}}-slides">
+        <ul>
+          {% for slide in section.assets %}
+            <li><img src="{{slide.url}}"></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="arrow-wrap">
+        <a class="{{section.slug}}-arrow prev ss-navigateleft"><b>Previous slide</b></a>
+        <a class="{{section.slug}}-arrow next ss-navigateright"><b>Next slide</b></a>
+      </div>
+    </section>
+  {% endfor %}
+
+  <section class="contact">
+    <div class="inner">
+      <h2>Contact</h2>
+      <p>
+        This is an alpha iOS app which was designed by me and built by Dave Larkan. It was intended as a Christmas present for my sister and is now continueing on to hopefully be a fully featured app for film buffs.
+      </p>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@import 'bourbon/bourbon';
+@import 'vendor/garnish/garnish';
+@import 'neat/neat';
+@import 'reset';
+@import 'helpers';
+
+body {
+  font-family: $f-avenir;
+}
+
+.site-wrap {
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.section-title {
+  font-family: $f-avenir-bold;
+  margin: 2rem auto 4rem;
+  font-size: 3rem;
+}
+
+.vinyl-list {
+  @include clearfix;
+}
+
+.vinyl-item {
+  float: none;
+  margin-bottom: 2rem;
+
+  @include media-between(480px, 800px) {
+    float: left;
+    margin-right: 5%;
+    width: 45%;
+  }
+
+  @include media-from(800px) {
+    float: left;
+    margin-right: 3%;
+    width: 22%;
+  }
+
+  img {
+    width: 100%;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+  }
+  dt {
+    display: none;
+  }
+}
+
+.v-artist {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: $f-avenir-bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.v-album-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

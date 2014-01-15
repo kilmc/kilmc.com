@@ -34,17 +34,13 @@
       </nav>
 
       <header class="site-header">
-        {% if type == 'page' %}
-          <a href="{{current.url}}" class="">
-            <h1>{{current.title}}</h1>
+        {% if parent %}
+          <a href="{{parent.url}}">
+            <h1>{% unless type == 'archive' %}&larr; {% endunless %}{{parent.title}}</h1>
           </a>
-        {% elsif type == 'archive' %}
-          <a href="{{parent.url}}" class="">
-            <h1>{{current.title}}</h1>
-          </a>
-        {% elsif type == 'post' %}
-          <a href="{{parent.url}}" class="">
-            <h1>&larr; {{parent.title}}</h1>
+        {% else %}
+          <a href="{{url}}">
+            <h1>{{title}}</h1>
           </a>
         {% endif %}
       </header>

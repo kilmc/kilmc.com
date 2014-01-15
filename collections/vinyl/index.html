@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilmc | Vinyl Collection</title>
+  <script type="text/javascript" src="/scripts/sheetsee/ICanHaz.js"></script> 
+  <script type="text/javascript" src="/scripts/sheetsee/jquery.js"></script>
+  <script type="text/javascript" src="/scripts/sheetsee/d3.js"></script>
+  <script type="text/javascript" src="/scripts/sheetsee/tabletop.js"></script>
+  <script type="text/javascript" src="/scripts/sheetsee/sheetsee.js"></script>
+  <script src="/scripts/avenir.js"></script>
+  <link rel="stylesheet" href="/style/css/vinyl.css" media="all">
+</head>
+<body>
+  <div class="site-wrap">
+    <div class="collection-wrap" >
+      <h2 class="section-title">Vinyl Collection</h2>
+      <ul class="vinyl-list" id="vinylCollection">
+        
+      </ul>
+    </div>
+  </div>
+
+  {% raw %}
+    <script id="vinylCollection" type="text/html">
+      {{#rows}}
+        <li class="vinyl-item">
+          <img src="/assets/{{albumcover}}" alt="{{artist}} - {{albumtitle}} {{releasetype}} artwork" class="v-artwork">
+          <dl>
+            <dt>Artist</dt>
+            <dd class="v-artist">{{artist}}</dd>
+            <dt>Album Title</dt>
+            <dd class="v-album-title">{{albumtitle}}</dd>
+          </dl>
+        </li>
+      {{/rows}}
+    </script>
+  {% endraw %}
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var gData
+      var URL = "0AhoMYPsRefBndDVYZEVsUkJ4MmlkRzBhZ0pHYW5MaUE"
+      Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } ) 
+    }) 
+
+    function showInfo(data) {
+      gData = data
+      // make the table, and the search bar
+      Sheetsee.makeTable(gData, "#vinylCollection"
+    )};
+
+  </script>
+
+</body>
+</html>
