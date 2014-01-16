@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1;">
   <title>Kilmc | Portfolio</title>
   <link rel="stylesheet" href="/style/css/portfolio.css" media="all">
   <script src="/scripts/avenir.js"></script>
   <script src="//code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/scripts/jquery.event.move.js"></script>
+  <script src="/scripts/jquery.event.swipe.js"></script>
   <script src="/scripts/unslider.min.js"></script>
   <script src="/scripts/portfolio.js"></script>
   <link href="/fonts/ss-standard/ss-standard.css" rel="stylesheet">
-  <script src="/scripts/jquery.event.swipe.js"></script>
 </head>
 <body>
   <section class="top">
     <div class="inner">
-      <h1 class="title">Kilmc</h1>
-      <p class="sub-title">Kilian McMahon</p>
+      <h1 class="title">Kilian McMahon</h1>
+      <p class="sub-title">Frontend Portfolio</p>
     </div>
   </section>
 
@@ -25,6 +27,12 @@
         <h2 class="title">{{section.title}}</h2>
         {{section.body}}
       </div>
+      {% if section.meta['links']? %}
+        <div class="links">
+          <h3>Links:</h3>
+          {{ section.meta['links'] | markdown }}
+        </div>
+      {% endif %}
       <div class="{{section.slug}}-slides">
         <ul>
           {% for slide in section.assets %}
@@ -43,7 +51,19 @@
     <div class="inner">
       <h2>Contact</h2>
       <p>
-        This is an alpha iOS app which was designed by me and built by Dave Larkan. It was intended as a Christmas present for my sister and is now continueing on to hopefully be a fully featured app for film buffs.
+        If you'd like to get in touch with me, please send an email to work@kilmc.com or call me on +353 86 080 9196
+      </p>
+      <h3>Experience With</h3>
+      <p>
+        Twitter Bootstrap, 
+        Thoughtbot's Bourbon, 
+        Wordpress, 
+        Tumblr, 
+      </p>
+      <h3>Familiar With</h3>
+      <p>
+        Ruby on Rails,
+        PHP,
       </p>
     </div>
   </section>

@@ -33,13 +33,17 @@ $c-personal:                #4B5264;
 $c-battlequotes:            #55AE97;
 
 // Type
-$f-avenir:            "Avenir LT W01 45 Book";
-$f-avenir-bold:       "Avenir LT W01 85 Heavy";
-$tz-body:              2.2rem;
-$tl-body:              3rem;
+$f-avenir:                  "Avenir LT W01 45 Book";
+$f-avenir-bold:             "Avenir LT W01 85 Heavy";
+$tz-body:                   2.2rem;
+$tl-body:                   3rem;
 
-$tz-s-body:              1.8rem;
-$tl-s-body:              2.6rem;
+$tz-s-body:                 2rem;
+$tl-s-body:                 2.6rem;
+
+// Breakpoints
+$bp-large:                  910px;
+$bp-medium:                 700px;
 
 
 @mixin fast-fade {
@@ -61,7 +65,11 @@ body {
   font-family: $f-avenir;
   font-size: $tz-s-body;
   line-height: $tl-s-body;
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: $bp-large) {
+    font-size: $tz-body;
+    line-height: $tl-body;
+  }
+  @media only screen and (min-width: $bp-large) {
     font-size: $tz-body;
     line-height: $tl-body;
   }
@@ -72,7 +80,6 @@ body {
 // ---------------------------------------------------------
 
 section {
-  max-height: 95rem;
   padding-bottom: 6rem;
   position: relative;
 }
@@ -80,19 +87,26 @@ section {
 .inner {
   width: 100%;
   padding: 6rem 1rem 0;
+  margin: 0 auto 4rem;
 
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: $bp-medium) {
+    padding-top: 6rem;
+    width: 60rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
     padding-top: 6rem;
     width: 80rem;
-    margin: 0 auto 4rem;
   }
 
   h2 {
     font-family: $f-avenir-bold;
-    font-size: 4rem;
-    margin-bottom: $tl-body;
-  }
-  p {
+    font-size: 3rem;
+    
+    @media only screen and (min-width: $bp-large) {
+      font-size: 4rem;
+      margin-bottom: $tl-body;
+    }
   }
 }
 
@@ -105,7 +119,10 @@ section {
 }
 
 .title, .sub-title {
-  font-size: 4rem;
+  font-size: 3rem;
+  @media only screen and (min-width: $bp-large) {
+    font-size: 4rem;
+  }
 }
 
 .title {
@@ -119,13 +136,6 @@ section {
 
 .ull {
   background: $c-ull;
-  @include fast-fade;
-  &.y-2013 {
-    background: lighten(#161612, 5%);
-  }
-  &.y-2012 {
-    background: #B13232;
-  }
 }
 
 .hundred {
@@ -151,24 +161,61 @@ section {
 .battlequotes-slides { 
   position: relative; 
   overflow: auto; 
+  height: 100% !important;
+  padding-bottom: 4rem;
+
+  @media only screen and (min-width: $bp-large) {
+    height: 100% !important;
+
+  }
 
   img {
     width: 100%;
     margin: 0 auto;
     padding: 0 1rem;
     display: block;
-    @media only screen and (min-width: 480px) {
+    @media only screen and (min-width: $bp-medium) {
+      width: 60rem;
+    }
+    @media only screen and (min-width: $bp-large) {
       width: 80rem;
     }
   }
 
-  ul li { 
-    float: left; 
+  ul {
+    height: 100% !important;
+    @include clearfix;
   }
 
-  li { 
-    list-style: none; 
-    width: 100%;
+  ul li { 
+    float: left; 
+    list-style: none;
+
+  }
+
+  ol {
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include clearfix;
+  }
+
+  ol li { 
+    text-align: center;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    @include hide-text;
+    display: inline-block;
+    &.active {
+      background: #fff;
+    }
   }
 }
 
@@ -178,27 +225,98 @@ section {
 .personal-arrow,
 .battlequotes-arrow, {
   position: absolute;
+  display: none;
+  @media only screen and (min-width: $bp-medium) {
+    display: block;
+  }
+
   b {
     @include hide-text;
   }
   
+  &.prev,
+  &.next {
+    
+    @media only screen and (min-width: $bp-medium) {
+      top: -20rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      top: -26rem;
+    }
+  }
+
   &.prev {
-    top: -26rem;
     left: 0;
   }
+
   &.next {
-    top: -26rem;
     right: 0;
   }
 }
 
 .arrow-wrap {
-  width: 90rem;
+  width: 96%;
   margin: 0 auto;
   display: block;
   position: relative;
+
+  @media only screen and (min-width: $bp-medium) {
+    width: 70rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    width: 90rem;
+  }
 }
 
+.links {
+  padding: 0 1rem;
+  margin: $tl-body auto $tl-body;
+  @include clearfix;
+
+  h3 {
+    font-family: $f-avenir-bold;
+    float: left;
+    margin-right: 1rem;
+    width: 100%;
+    @media only screen and (min-width: $bp-medium) {
+      width: auto;
+    }
+
+  }
+
+  ul {
+    @include clearfix;
+  }
+  
+  ul li {
+    float: left;
+    margin-right: 1rem;
+    &:not(:last-of-type) {
+      &:after {
+        content: ","
+
+      }
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    width: 60rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    width: 80rem;
+  }
+}
 
 
 

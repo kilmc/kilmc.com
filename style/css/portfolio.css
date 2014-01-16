@@ -136,37 +136,50 @@ body {
 body {
   color: #fff;
   font-family: "Avenir LT W01 45 Book";
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 2.6rem; }
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 910px) {
+    body {
+      font-size: 2.2rem;
+      line-height: 3rem; } }
+  @media only screen and (min-width: 910px) {
     body {
       font-size: 2.2rem;
       line-height: 3rem; } }
 
 section {
-  max-height: 95rem;
   padding-bottom: 6rem;
   position: relative; }
 
 .inner {
   width: 100%;
-  padding: 6rem 1rem 0; }
-  @media only screen and (min-width: 480px) {
+  padding: 6rem 1rem 0;
+  margin: 0 auto 4rem; }
+  @media only screen and (min-width: 700px) {
     .inner {
       padding-top: 6rem;
-      width: 80rem;
-      margin: 0 auto 4rem; } }
+      width: 60rem; } }
+  @media only screen and (min-width: 910px) {
+    .inner {
+      padding-top: 6rem;
+      width: 80rem; } }
   .inner h2 {
     font-family: "Avenir LT W01 85 Heavy";
-    font-size: 4rem;
-    margin-bottom: 3rem; }
+    font-size: 3rem; }
+    @media only screen and (min-width: 910px) {
+      .inner h2 {
+        font-size: 4rem;
+        margin-bottom: 3rem; } }
 
 .top {
   color: #000;
   height: 20rem; }
 
 .title, .sub-title {
-  font-size: 4rem; }
+  font-size: 3rem; }
+  @media only screen and (min-width: 910px) {
+    .title, .sub-title {
+      font-size: 4rem; } }
 
 .title {
   margin-bottom: 1.5rem;
@@ -176,14 +189,7 @@ section {
   background: #68a6c2; }
 
 .ull {
-  background: #ec5d60;
-  -webkit-transition: all 0.05s ease-in-out;
-  -moz-transition: all 0.05s ease-in-out;
-  transition: all 0.05s ease-in-out; }
-  .ull.y-2013 {
-    background: #24241d; }
-  .ull.y-2012 {
-    background: #B13232; }
+  background: #ec5d60; }
 
 .hundred {
   background: black; }
@@ -203,7 +209,16 @@ section {
 .personal-slides,
 .battlequotes-slides {
   position: relative;
-  overflow: auto; }
+  overflow: auto;
+  height: 100% !important;
+  padding-bottom: 4rem; }
+  @media only screen and (min-width: 910px) {
+    .tito-slides,
+    .ull-slides,
+    .hundred-slides,
+    .personal-slides,
+    .battlequotes-slides {
+      height: 100% !important; } }
   .tito-slides img,
   .ull-slides img,
   .hundred-slides img,
@@ -213,33 +228,117 @@ section {
     margin: 0 auto;
     padding: 0 1rem;
     display: block; }
-    @media only screen and (min-width: 480px) {
+    @media only screen and (min-width: 700px) {
+      .tito-slides img,
+      .ull-slides img,
+      .hundred-slides img,
+      .personal-slides img,
+      .battlequotes-slides img {
+        width: 60rem; } }
+    @media only screen and (min-width: 910px) {
       .tito-slides img,
       .ull-slides img,
       .hundred-slides img,
       .personal-slides img,
       .battlequotes-slides img {
         width: 80rem; } }
+  .tito-slides ul,
+  .ull-slides ul,
+  .hundred-slides ul,
+  .personal-slides ul,
+  .battlequotes-slides ul {
+    height: 100% !important;
+    *zoom: 1; }
+    .tito-slides ul:before, .tito-slides ul:after,
+    .ull-slides ul:before,
+    .ull-slides ul:after,
+    .hundred-slides ul:before,
+    .hundred-slides ul:after,
+    .personal-slides ul:before,
+    .personal-slides ul:after,
+    .battlequotes-slides ul:before,
+    .battlequotes-slides ul:after {
+      content: " ";
+      display: table; }
+    .tito-slides ul:after,
+    .ull-slides ul:after,
+    .hundred-slides ul:after,
+    .personal-slides ul:after,
+    .battlequotes-slides ul:after {
+      clear: both; }
   .tito-slides ul li,
   .ull-slides ul li,
   .hundred-slides ul li,
   .personal-slides ul li,
   .battlequotes-slides ul li {
-    float: left; }
-  .tito-slides li,
-  .ull-slides li,
-  .hundred-slides li,
-  .personal-slides li,
-  .battlequotes-slides li {
-    list-style: none;
-    width: 100%; }
+    float: left;
+    list-style: none; }
+  .tito-slides ol,
+  .ull-slides ol,
+  .hundred-slides ol,
+  .personal-slides ol,
+  .battlequotes-slides ol {
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    *zoom: 1; }
+    .tito-slides ol:before, .tito-slides ol:after,
+    .ull-slides ol:before,
+    .ull-slides ol:after,
+    .hundred-slides ol:before,
+    .hundred-slides ol:after,
+    .personal-slides ol:before,
+    .personal-slides ol:after,
+    .battlequotes-slides ol:before,
+    .battlequotes-slides ol:after {
+      content: " ";
+      display: table; }
+    .tito-slides ol:after,
+    .ull-slides ol:after,
+    .hundred-slides ol:after,
+    .personal-slides ol:after,
+    .battlequotes-slides ol:after {
+      clear: both; }
+  .tito-slides ol li,
+  .ull-slides ol li,
+  .hundred-slides ol li,
+  .personal-slides ol li,
+  .battlequotes-slides ol li {
+    text-align: center;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+    display: inline-block; }
+    .tito-slides ol li.active,
+    .ull-slides ol li.active,
+    .hundred-slides ol li.active,
+    .personal-slides ol li.active,
+    .battlequotes-slides ol li.active {
+      background: #fff; }
 
 .tito-arrow,
 .ull-arrow,
 .hundred-arrow,
 .personal-arrow,
 .battlequotes-arrow {
-  position: absolute; }
+  position: absolute;
+  display: none; }
+  @media only screen and (min-width: 700px) {
+    .tito-arrow,
+    .ull-arrow,
+    .hundred-arrow,
+    .personal-arrow,
+    .battlequotes-arrow {
+      display: block; } }
   .tito-arrow b,
   .ull-arrow b,
   .hundred-arrow b,
@@ -248,23 +347,90 @@ section {
     color: transparent;
     font: 0/0 a;
     text-shadow: none; }
+  @media only screen and (min-width: 700px) {
+    .tito-arrow.prev, .tito-arrow.next,
+    .ull-arrow.prev,
+    .ull-arrow.next,
+    .hundred-arrow.prev,
+    .hundred-arrow.next,
+    .personal-arrow.prev,
+    .personal-arrow.next,
+    .battlequotes-arrow.prev,
+    .battlequotes-arrow.next {
+      top: -20rem; } }
+  @media only screen and (min-width: 910px) {
+    .tito-arrow.prev, .tito-arrow.next,
+    .ull-arrow.prev,
+    .ull-arrow.next,
+    .hundred-arrow.prev,
+    .hundred-arrow.next,
+    .personal-arrow.prev,
+    .personal-arrow.next,
+    .battlequotes-arrow.prev,
+    .battlequotes-arrow.next {
+      top: -26rem; } }
   .tito-arrow.prev,
   .ull-arrow.prev,
   .hundred-arrow.prev,
   .personal-arrow.prev,
   .battlequotes-arrow.prev {
-    top: -26rem;
     left: 0; }
   .tito-arrow.next,
   .ull-arrow.next,
   .hundred-arrow.next,
   .personal-arrow.next,
   .battlequotes-arrow.next {
-    top: -26rem;
     right: 0; }
 
 .arrow-wrap {
-  width: 90rem;
+  width: 96%;
   margin: 0 auto;
   display: block;
   position: relative; }
+  @media only screen and (min-width: 700px) {
+    .arrow-wrap {
+      width: 70rem; } }
+  @media only screen and (min-width: 910px) {
+    .arrow-wrap {
+      width: 90rem; } }
+
+.links {
+  padding: 0 1rem;
+  margin: 3rem auto 3rem;
+  *zoom: 1; }
+  .links:before, .links:after {
+    content: " ";
+    display: table; }
+  .links:after {
+    clear: both; }
+  .links h3 {
+    font-family: "Avenir LT W01 85 Heavy";
+    float: left;
+    margin-right: 1rem;
+    width: 100%; }
+    @media only screen and (min-width: 700px) {
+      .links h3 {
+        width: auto; } }
+  .links ul {
+    *zoom: 1; }
+    .links ul:before, .links ul:after {
+      content: " ";
+      display: table; }
+    .links ul:after {
+      clear: both; }
+  .links ul li {
+    float: left;
+    margin-right: 1rem; }
+    .links ul li:not(:last-of-type):after {
+      content: ","; }
+  .links a {
+    color: #fff;
+    text-decoration: none; }
+    .links a:hover {
+      text-decoration: underline; }
+  @media only screen and (min-width: 700px) {
+    .links {
+      width: 60rem; } }
+  @media only screen and (min-width: 910px) {
+    .links {
+      width: 80rem; } }
