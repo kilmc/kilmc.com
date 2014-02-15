@@ -4,7 +4,7 @@
 <div class="content-wrap text">
   {% for post in posts %}
     <article class="post">
-      <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+      <h2 class="title"><a href="{{post.url}}">{{post.title}}</a></h2>
       {{post.excerpt}}
     </article>
   {% endfor %}

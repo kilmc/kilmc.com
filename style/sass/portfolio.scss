@@ -26,7 +26,7 @@
 // ---------------------------------------------------------
 
 // Colours
-$c-tito:                    #68A6C2;
+$c-tito:                    darken(#A4C1D7, 15%);
 $c-ull:                     #EC5D60;
 $c-hundred:                 #000;
 $c-personal:                #4B5264;
@@ -75,8 +75,18 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+}
 
-// Main Sections
+h1, 
+h2, 
+h3 {
+  font-family: $f-avenir-bold;
+}
+
+
+// Main Sections: General
 // ---------------------------------------------------------
 
 section {
@@ -86,8 +96,8 @@ section {
 
 .inner {
   width: 100%;
-  padding: 6rem 1rem 0;
-  margin: 0 auto 4rem;
+  padding: 4rem 1rem 0;
+  margin: 0 auto;
 
   @media only screen and (min-width: $bp-medium) {
     padding-top: 6rem;
@@ -100,21 +110,24 @@ section {
   }
 
   h2 {
-    font-family: $f-avenir-bold;
     font-size: 3rem;
-    
+    margin-bottom: $tl-body;
+
     @media only screen and (min-width: $bp-large) {
       font-size: 4rem;
-      margin-bottom: $tl-body;
     }
   }
 }
 
+// Main Sections: Top
+// ---------------------------------------------------------
+
 .top {
   color: #000;
   height: 20rem;
-  .inner {
 
+  .inner {
+    padding-top: 6rem;
   }
 }
 
@@ -130,9 +143,77 @@ section {
   font-family: $f-avenir-bold;
 }
 
+.tito,
+.ull,
+.hundred,
+.personal,
+.battlequotes {
+  p {
+    margin-bottom: $tl-body;
+    a {
+      color: #fff;
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+      &:hover {
+        border-bottom: 2px solid rgba(255,255,255,1);
+      }
+    }
+  }
+}
+
+.meta {
+  padding: 0 1rem;
+  margin: $tl-body/2 auto;
+  @include clearfix;
+
+  h3 {
+    font-family: $f-avenir-bold;
+    float: left;
+    margin-right: 1rem;
+    width: 100%;
+    @media only screen and (min-width: $bp-medium) {
+      width: auto;
+    }
+  }
+
+  ul { @include clearfix; }
+
+  ul li {
+    float: left;
+    margin-right: 1rem;
+    &:not(:last-of-type) {
+      &:after {
+        content: ","
+      }
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    &:hover {
+      border-bottom: 2px solid rgba(255,255,255,1);
+    }
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    width: 60rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    width: 80rem;
+  }
+}
+
+// Main Sections: Tito
+// ---------------------------------------------------------
+
 .tito {
   background: $c-tito;
 }
+
+// Main Sections: Ull
+// ---------------------------------------------------------
 
 .ull {
   background: $c-ull;
@@ -150,11 +231,49 @@ section {
   background: $c-battlequotes;
 }
 
-.contact {
+
+// Main Sections: CV
+// ---------------------------------------------------------
+
+.cv {
   color: #000;
+
+  h4 {
+    margin-top: $tl-body/2;
+    text-transform: uppercase;
+    font-size: $tz-body/1.3;
+    letter-spacing: 0.1rem;
+  }
 }
 
-.tito-slides,
+.work, .experience {
+  margin-bottom: $tl-body;
+  @include clearfix;
+}
+
+.job, .skill {
+  margin-bottom: $tl-body;
+  width: 100%;
+  @media only screen and (min-width: $bp-medium) {
+    width: 50%;
+    float: left;
+  }
+}
+
+.contact {
+  clear: left;
+  a {
+    color: #000;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+    &:hover {
+      border-bottom: 2px solid rgba(0,0,0,1);
+    }
+  }
+}
+
+// Slides
+// ---------------------------------------------------------
+
 .ull-slides,
 .hundred-slides,
 .personal-slides,
@@ -163,10 +282,10 @@ section {
   overflow: auto; 
   height: 100% !important;
   padding-bottom: 4rem;
+  margin-top: 4rem;
 
   @media only screen and (min-width: $bp-large) {
     height: 100% !important;
-
   }
 
   img {
@@ -208,24 +327,25 @@ section {
     border-radius: 10px;
     background: transparent;
     border: 2px solid #fff;
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px;
     @include hide-text;
     display: inline-block;
+    cursor: pointer;
     &.active {
       background: #fff;
     }
   }
 }
 
-.tito-arrow,
 .ull-arrow,
 .hundred-arrow,
 .personal-arrow,
 .battlequotes-arrow, {
   position: absolute;
-  display: none;
+  cursor: pointer;
+
   @media only screen and (min-width: $bp-medium) {
     display: block;
   }
@@ -236,22 +356,29 @@ section {
   
   &.prev,
   &.next {
-    
+    top: -1.6rem;
+
     @media only screen and (min-width: $bp-medium) {
-      top: -20rem;
+      top: -23rem;
     }
 
     @media only screen and (min-width: $bp-large) {
-      top: -26rem;
+      top: -30rem;
     }
   }
 
   &.prev {
-    left: 0;
+    left: 2rem;
+    @media only screen and (min-width: $bp-medium) {
+      left: 0;
+    }
   }
 
   &.next {
-    right: 0;
+    right: 2rem;
+    @media only screen and (min-width: $bp-medium) {
+      right: 0;
+    }
   }
 }
 
@@ -270,53 +397,7 @@ section {
   }
 }
 
-.links {
-  padding: 0 1rem;
-  margin: $tl-body auto $tl-body;
-  @include clearfix;
-
-  h3 {
-    font-family: $f-avenir-bold;
-    float: left;
-    margin-right: 1rem;
-    width: 100%;
-    @media only screen and (min-width: $bp-medium) {
-      width: auto;
-    }
-
-  }
-
-  ul {
-    @include clearfix;
-  }
-  
-  ul li {
-    float: left;
-    margin-right: 1rem;
-    &:not(:last-of-type) {
-      &:after {
-        content: ","
-
-      }
-    }
-  }
-
-  a {
-    color: #fff;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  @media only screen and (min-width: $bp-medium) {
-    width: 60rem;
-  }
-
-  @media only screen and (min-width: $bp-large) {
-    width: 80rem;
-  }
+.tito-slides, .tito-arrow {
+  display: none;
 }
-
-
 

@@ -155,18 +155,29 @@ a, a:link, a:visited {
 .text h5,
 .text h6 {
   font-size: 1.3rem; }
+.text h1 {
+  font-size: 1.8rem;
+  font-family: "Avenir LT W01 85 Heavy";
+  margin-bottom: 1.85rem; }
 .text h2 {
+  font-size: 1.3rem;
+  font-family: "Avenir LT W01 85 Heavy";
+  margin-top: 3.7rem;
+  margin-bottom: 1.85rem;
+  border-bottom: 4px solid rgba(75, 82, 100, 0.3);
+  padding-bottom: 0.925rem; }
+.text h3 {
+  margin: 0.925rem 0;
+  font-size: 1.3rem;
+  font-family: "Avenir LT W01 85 Heavy"; }
+.text .title {
   font-family: "Avenir LT W01 85 Heavy";
   margin: 1.85rem auto;
   line-height: 1.85rem; }
-  .text h2:first-of-type {
+  .text .title:first-of-type {
     margin-top: 0; }
-  .writing .text h2 {
+  .writing .text .title {
     margin: 0.925rem 0; }
-.text h3 {
-  margin: 0.925rem 0;
-  text-transform: uppercase;
-  font-size: 1.2em; }
 .text p {
   font-size: 1.3rem;
   line-height: 1.85rem;
@@ -193,6 +204,13 @@ a, a:link, a:visited {
   float: left; }
 .text img.right {
   float: right; }
+.text code {
+  display: block;
+  font-size: 1.2rem;
+  background: rgba(75, 82, 100, 0.05);
+  padding: 1rem;
+  margin: 1.85rem auto;
+  line-height: 1.85rem; }
 
 /* LAYOUT
 ================================ */

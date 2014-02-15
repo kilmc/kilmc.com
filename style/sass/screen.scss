@@ -39,7 +39,28 @@ a, a:link, a:visited {
     font-size: $font-size;
   }
 
+  h1 {
+    font-size: 1.8rem;
+    font-family: $f-avenir-bold;
+    margin-bottom: $leading;
+  }
+
   h2 {
+    font-size: 1.3rem;
+    font-family: $f-avenir-bold;
+    margin-top: $leading*2;
+    margin-bottom: $leading;
+    border-bottom: 4px solid rgba($c-main, 0.3);
+    padding-bottom: $leading/2;
+  }
+
+  h3 {
+    margin: $leading/2 0;
+    font-size: 1.3rem;
+    font-family: $f-avenir-bold;
+  }
+
+  .title {
     font-family: $f-avenir-bold;
     margin: $leading auto;
     line-height: $leading;
@@ -51,11 +72,11 @@ a, a:link, a:visited {
     }
   }
 
-  h3 {
-    margin: $leading/2 0;
-    text-transform: uppercase;
-    font-size: 1.2em;
-  }
+  // h3 {
+  //   margin: $leading/2 0;
+  //   text-transform: uppercase;
+  //   font-size: 1.2em;
+  // }
 
   p {
     font-size: $font-size;
@@ -102,6 +123,14 @@ a, a:link, a:visited {
     &.right {
       float: right;
     }
+  }
+  code {
+    display: block;
+    font-size: 1.2rem;
+    background: rgba($c-main, 0.05);
+    padding: 1rem;
+    margin: $leading auto;;
+    line-height: $leading;
   }
 }
 
@@ -332,6 +361,8 @@ a, a:link, a:visited {
   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#388cbd', endColorstr='#ff96ab', GradientType=1 );
   // background-attachment: fixed;
 }
+
+
 
 /* STATES
 ================================ */

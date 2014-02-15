@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1;">
+  <link rel="icon shortcut" href="/assets/favicon.png">
   <title>Kilmc | Portfolio</title>
   <link rel="stylesheet" href="/style/css/portfolio.css" media="all">
   <script src="/scripts/avenir.js"></script>
@@ -27,8 +28,14 @@
         <h2 class="title">{{section.title}}</h2>
         {{section.body}}
       </div>
+      {% if section.meta['responsibilities']? %}
+        <div class="meta links">
+          <h3>Responsible for:</h3>
+          {{ section.meta['responsibilities'] | markdown }}
+        </div>
+      {% endif %}
       {% if section.meta['links']? %}
-        <div class="links">
+        <div class="meta links">
           <h3>Links:</h3>
           {{ section.meta['links'] | markdown }}
         </div>
@@ -47,24 +54,78 @@
     </section>
   {% endfor %}
 
-  <section class="contact">
+  <section class="cv">
     <div class="inner">
-      <h2>Contact</h2>
-      <p>
-        If you'd like to get in touch with me, please send an email to work@kilmc.com or call me on +353 86 080 9196
-      </p>
-      <h3>Experience With</h3>
-      <p>
-        Twitter Bootstrap, 
-        Thoughtbot's Bourbon, 
-        Wordpress, 
-        Tumblr, 
-      </p>
-      <h3>Familiar With</h3>
-      <p>
-        Ruby on Rails,
-        PHP,
-      </p>
+      <h2>Employment</h2>
+      <ul class="work">
+        <li class="job">
+          <h3>Tito</h3>
+          <p>2012 – present</p>
+          Junior Designer
+          <h4>Role</h4>
+          <ul>
+            <li>UX/UI Design</li>
+            <li>Frontend Development</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <h3>Úll</h3>
+          <p>2011 – present</p>
+          Lead Designer
+          <h4>Role</h4>
+          <ul>
+            <li>Branding</li>
+            <li>Site Design & Development</li>
+            <li>Print Design</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Skills</h2>
+      <div class="experience">
+        <div class="skill">
+          <h3>Experienced with</h3>
+          <h4>Languages</h4>
+          <p>HTML</p>
+          <p>CSS/SASS</p>
+
+          <h4>Frameworks</h4>
+          <p>Twitter Bootstrap</p>
+          <p>Bourbon</p>
+
+          <h4>Version Control</h4>
+          <p>Git & GitHub</p>
+
+          <h4>CMS's</h4>
+          <p>Wordpress</p>
+          <p>Tumblr</p>
+          <p>Siteleaf</p>
+        </div>
+
+        <div class="skill">
+          <h3>Familiar with</h3>
+          <h4>Languages</h4>
+          <p>Liquid</p>
+          <p>Ruby on Rails</p>
+          <p>PHP</p>
+          <p>Javascript/jQuery</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions or would like to get in touch with me about some work, please do so via email or phone. Details below.</p>
+        <ul>
+          <li>
+            <h4>Email</h4>
+            <a href="mailto:work@kilmc.com">work@kilmc.com</a></li>
+          <li>
+            <h4>Phone:</h4>
+            <p>+353 86 080 9196</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </body>
