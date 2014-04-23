@@ -3,3 +3,4 @@ style/sass/*.scss
 scripts/*.coffee
 *.sublime-project
 *.sublime-workspace
+config.codekit
