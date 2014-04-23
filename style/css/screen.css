@@ -54,7 +54,7 @@ table {
 /* HTML5 Boilerplate */
 html {
   font-size: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -119,17 +119,14 @@ textarea {
   font-family: "Avenir LT W01 45 Book";
   src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix");
   src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix") format("eot"), url("/fonts/939cba03-5b40-4d01-9bc5-7589eca863db.woff") format("woff"), url("/fonts/849bc5b9-a2ff-4343-977b-26ba8bd24a60.ttf") format("truetype"), url("/fonts/f67fa3b5-c1d1-488f-8e60-a828b9ad56a4.svg#f67fa3b5-c1d1-488f-8e60-a828b9ad56a4") format("svg"); }
-
 @font-face {
   font-family: "Avenir LT W01 85 Heavy";
   src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix");
   src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix") format("eot"), url("/fonts/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff") format("woff"), url("/fonts/d1dc54b2-878d-4693-8d6e-b442e99fef68.ttf") format("truetype"), url("/fonts/731dd4d3-64da-427d-ba61-01575b3cf3f7.svg#731dd4d3-64da-427d-ba61-01575b3cf3f7") format("svg"); }
-
 @font-face {
   font-family: "AvenirLTW01-85HeavyObli";
   src: url("/fonts/7be0fdec-384a-42b5-ab27-c60a322cde7d.eot?#iefix");
   src: url("/fonts/7be0fdec-384a-42b5-ab27-c60a322cde7d.eot?#iefix") format("eot"), url("/fonts/53554f6f-4b01-4815-87fe-82c49b8ba5a9.woff") format("woff"), url("/fonts/28dfedaf-6372-45a1-8833-b3078dc56a21.ttf") format("truetype"), url("/fonts/f747b6ee-4d13-4e45-815d-f33ac1b71d63.svg#f747b6ee-4d13-4e45-815d-f33ac1b71d63") format("svg"); }
-
 /* BASE
 ================================ */
 html {
@@ -163,8 +160,6 @@ a, a:link, a:visited {
   font-size: 1.3rem;
   font-family: "Avenir LT W01 85 Heavy";
   margin-top: 3.7rem;
-  margin-bottom: 1.85rem;
-  border-bottom: 4px solid rgba(75, 82, 100, 0.3);
   padding-bottom: 0.925rem; }
 .text h3 {
   margin: 0.925rem 0;
@@ -216,13 +211,11 @@ a, a:link, a:visited {
 ================================ */
 .site-wrap {
   margin: 1rem auto 6rem;
-  *zoom: 1;
   position: relative;
   width: 95%; }
-  .site-wrap:before, .site-wrap:after {
-    content: " ";
-    display: table; }
   .site-wrap:after {
+    content: "";
+    display: table;
     clear: both; }
   @media only screen and (min-width: 980px) {
     .site-wrap {
@@ -271,12 +264,10 @@ a, a:link, a:visited {
 
 .site-header {
   border-bottom: 6px solid #4b5264;
-  height: 42px;
-  *zoom: 1; }
-  .site-header:before, .site-header:after {
-    content: " ";
-    display: table; }
+  height: 42px; }
   .site-header:after {
+    content: "";
+    display: table;
     clear: both; }
   .site-header a {
     float: left;
@@ -289,26 +280,21 @@ a, a:link, a:visited {
   .site-header a:hover, .site-header a:focus, .site-header a:active {
     border-bottom: 6px solid #d1d4dd; }
 
-.site-content {
-  *zoom: 1; }
-  .site-content:before, .site-content:after {
-    content: " ";
-    display: table; }
-  .site-content:after {
-    clear: both; }
+.site-content:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .site-footer {
   border-top: 3px solid #d1d4dd;
-  *zoom: 1;
   font-size: 1.3rem;
   margin-bottom: 1.85rem;
   padding-top: 1.85rem;
   font-size: 1.2em;
   text-transform: uppercase; }
-  .site-footer:before, .site-footer:after {
-    content: " ";
-    display: table; }
   .site-footer:after {
+    content: "";
+    display: table;
     clear: both; }
   .site-footer .contact {
     float: right;
@@ -337,12 +323,10 @@ a, a:link, a:visited {
       border: none; }
 
 .content-wrap {
-  *zoom: 1;
   margin-top: 3.7rem; }
-  .content-wrap:before, .content-wrap:after {
-    content: " ";
-    display: table; }
   .content-wrap:after {
+    content: "";
+    display: table;
     clear: both; }
   .content-wrap img {
     max-width: 100%; }
@@ -354,13 +338,10 @@ a, a:link, a:visited {
   margin: 0 auto 1.85rem; }
   .post-info p {
     margin: 0 auto; }
-  .post-info ul {
-    *zoom: 1; }
-    .post-info ul:before, .post-info ul:after {
-      content: " ";
-      display: table; }
-    .post-info ul:after {
-      clear: both; }
+  .post-info ul:after {
+    content: "";
+    display: table;
+    clear: both; }
   .post-info li {
     font-size: 1.3rem;
     float: left; }

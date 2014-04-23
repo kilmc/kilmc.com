@@ -49,8 +49,8 @@ a, a:link, a:visited {
     font-size: 1.3rem;
     font-family: $f-avenir-bold;
     margin-top: $leading*2;
-    margin-bottom: $leading;
-    border-bottom: 4px solid rgba($c-main, 0.3);
+    // margin-bottom: $leading;
+    // border-bottom: 4px solid rgba($c-main, 0.3);
     padding-bottom: $leading/2;
   }
 
