@@ -1,5 +1,5 @@
-kilmc.com.sublime-project
-kilmc.com.sublime-workspace
+*.com.sublime-project
+*.com.sublime-workspace
 jessica/
 config.codekit
 style/sass/.sass-cache/
