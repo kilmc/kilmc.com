@@ -1,0 +1,43 @@
+// Breaks
+
+$nav-b1: 1080px
+$nav-b2: 1200px
+
+
+nav
+  // left: 9rem
+  position: absolute
+  bottom: 6rem
+  @include text-large($nav-b1, $nav-b2)
+
+  @include from($nav-b1)
+    width: 20rem
+    position: fixed
+    top: 9rem
+    width: 20rem
+    left: $nav-push-medium
+
+  @include from($nav-b2)
+    left: $nav-push-large
+
+  a
+    opacity: 0.2
+    &:hover
+      opacity: 1
+  h1
+    font-family: $avenir-bold
+
+.nav-item 
+  float: left
+  display: block
+  margin-right: 1rem
+  margin-top: 1rem
+
+  @include from($nav-b1)
+    width: 100%
+    margin-bottom: 1rem
+    float: left
+    margin-top: 0
+
+    &:first-of-type 
+      margin-top: 2.4rem

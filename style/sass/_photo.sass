@@ -1,0 +1,19 @@
+.photo
+  width: $measure-b0
+  margin-bottom: $leading-small-b0*2
+  @include from($text-b1)
+    width: $measure-b1
+    margin-bottom: $leading-small-b1*3
+  @include from($text-b2)
+    width: $measure-b2
+    margin-bottom: $leading-small-b2*3
+
+  img 
+    width: 100%
+    margin-bottom: $leading-small-b0
+    @include from($text-b1)
+      margin-bottom: $leading-small-b1
+    @include from($text-b2)
+      margin-bottom: $leading-small-b2
+  h2
+    @include text-small

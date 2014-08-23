@@ -1,7 +1,7 @@
 {% comment %} Default Page {% endcomment %}
 {% include 'includes/header' %}
 
-<div class="content-wrap text">
+<section class="main">
   {{ body }}
   {% for asset in assets %}
     {% if asset.type == 'image' %}
@@ -15,11 +15,10 @@
     {% endif %}
   {% endfor %}
   {% for page in pages %}
-  <article>
-    <h2 class="title"><a href="{{page.url}}">{{page.title}}</a></h2>
-  </article>
+    <article>
+      <h2 class="title"><a href="{{page.url}}">{{page.title}}</a></h2>
+    </article>
   {% endfor %}
-</div>
+</section>
 
 {% include 'includes/footer' %}
-

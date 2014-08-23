@@ -1,0 +1,45 @@
+// =========================================================
+// General Mixins
+// =========================================================
+
+// Design
+
+@mixin border-gradient($size, $colour1, $colour2) 
+  margin-left: $size
+  margin-right: $size
+  position: relative
+  border-top: $size solid $colour1
+  border-bottom: $size solid $colour2
+  
+  &:before, &:after 
+    content: ""
+    position: absolute
+  &:before 
+    top: -($size)
+    left: -($size)
+    bottom: -($size)
+    right: -($size)
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($colour1), to($colour2))
+    background-image: -webkit-linear-gradient($colour1, $colour2)
+    background-image: -moz-linear-gradient($colour1, $colour2)
+    background-image: -o-linear-gradient($colour1, $colour2)
+    z-index: -2
+  &:after 
+    z-index: -1
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background: #fff
+
+// Helpers
+
+@mixin hyphens 
+  -webkit-hyphens: auto
+  -moz-hyphens: auto
+  hyphens: auto
+
+@mixin ellipsis 
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis

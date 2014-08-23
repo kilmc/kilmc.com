@@ -1,0 +1,51 @@
+// =========================================================
+// BREAKPOINTS
+// =========================================================
+
+@mixin upto($end)
+  @media screen and (max-width: ($end - 1))
+    @content
+
+@mixin between($start, $end)
+  @media screen and (min-width: $start) and (max-width: ($end - 1))
+    @content
+
+@mixin from($start)
+  @media screen and (min-width: $start)
+    @content
+
+$break-small:                                          540px
+$break-medium:                                         690px
+$break-mlarge:                                        1080px
+$break-large:                                         1200px
+$break-xlarge:                                        1400px
+
+$text-b1:                                              550px
+$text-b2:                                             1200px
+
+$break-small:                                          540px
+$break-medium:                                         690px
+$break-mlarge:                                        1080px
+$break-large:                                         1200px
+$break-xlarge:                                        1400px
+
+
+@mixin break-small
+  @media (min-width: $break-small)
+    @content
+
+@mixin break-medium
+  @media (min-width: $break-medium)
+    @content
+
+@mixin break-mlarge
+  @media (min-width: $break-mlarge)
+    @content
+
+@mixin break-large
+  @media (min-width: $break-large)
+    @content
+
+@mixin break-xlarge
+  @media (min-width: $break-xlarge)
+    @content

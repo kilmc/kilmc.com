@@ -1,0 +1,19 @@
+*, *:after, *:before
+  @include box-sizing(border-box)
+
+html
+  @include border-gradient(0.2rem,#75FFDE, #67B1FF)
+  @include from($break-medium)
+    @include border-gradient(0.6rem,#75FFDE, #67B1FF)
+  min-height: 100%
+  font-size: 62.5%
+
+body
+  color: $c-text
+  background: $c-bg
+  font-family: $avenir
+
+a
+  text-decoration: none
+  color: $c-text
+  font-weight: normal

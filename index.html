@@ -1,13 +1,14 @@
 {% comment %} Homepage {% endcomment %}
 {% include 'includes/header' %}
 
-<div class="content-wrap text">
-  {% for post in posts %}
-    <article class="post">
-      <h2 class="title"><a href="{{post.url}}">{{post.title}}</a></h2>
-      {{post.excerpt}}
-    </article>
-  {% endfor %}
-</div>
+{% for post in posts %}
+  <article class="post">
+    <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+    {{post.excerpt}}
+    {% if post.excerpt != post.body %}
+    <a href="{{post.url}}">Continue</a>
+    {% endif %}
+  </article>
+{% endfor %}
 
 {% include 'includes/footer' %}

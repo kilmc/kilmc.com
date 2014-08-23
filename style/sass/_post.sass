@@ -1,0 +1,15 @@
+.post
+  @include text(550px, 1200px)
+  
+.post footer
+  &:before
+    content: ""
+    height: 1px
+    width: 100%
+    background: #75FFDE
+    display: block
+  @include clearfix
+  a 
+    float: right
+    font-family: $avenir
+    @include text-small

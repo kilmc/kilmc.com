@@ -1,0 +1,489 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* HTML5 Elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, main {
+  display: block; }
+
+audio[controls], canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/* Eric Meyer's Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, main,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* HTML5 Boilerplate */
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+/* Correct overflow displayed oddly in IE9  */
+svg:not(:root) {
+  overflow: hidden; }
+
+label {
+  cursor: pointer; }
+
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  line-height: normal;
+  *overflow: visible; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box; }
+
+input[type="search"] {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+@font-face {
+  font-family: "Avenir LT W01 45 Book";
+  src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix");
+  src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix") format("eot");
+  src: url("/fonts/939cba03-5b40-4d01-9bc5-7589eca863db.woff") format("woff");
+  src: url("/fonts/f67fa3b5-c1d1-488f-8e60-a828b9ad56a4.svg#f67fa3b5-c1d1-488f-8e60-a828b9ad56a4") format("svg");
+  src: url("/fonts/849bc5b9-a2ff-4343-977b-26ba8bd24a60.ttf") format("truetype"); }
+@font-face {
+  font-family: "Avenir LT W01 85 Heavy";
+  src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix");
+  src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix") format("eot");
+  src: url("/fonts/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff") format("woff");
+  src: url("/fonts/731dd4d3-64da-427d-ba61-01575b3cf3f7.svg#731dd4d3-64da-427d-ba61-01575b3cf3f7") format("svg");
+  src: url("/fonts/d1dc54b2-878d-4693-8d6e-b442e99fef68.ttf") format("truetype"); }
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  position: relative;
+  border-top: 0.2rem solid #75ffde;
+  border-bottom: 0.2rem solid #67b1ff;
+  min-height: 100%;
+  font-size: 62.5%; }
+  html:before, html:after {
+    content: "";
+    position: absolute; }
+  html:before {
+    top: -0.2rem;
+    left: -0.2rem;
+    bottom: -0.2rem;
+    right: -0.2rem;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#75ffde), to(#67b1ff));
+    background-image: -webkit-linear-gradient(#75ffde, #67b1ff);
+    background-image: -moz-linear-gradient(#75ffde, #67b1ff);
+    background-image: -o-linear-gradient(#75ffde, #67b1ff);
+    z-index: -2; }
+  html:after {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white; }
+  @media screen and (min-width: 690px) {
+    html {
+      margin-left: 0.6rem;
+      margin-right: 0.6rem;
+      position: relative;
+      border-top: 0.6rem solid #75ffde;
+      border-bottom: 0.6rem solid #67b1ff; }
+      html:before, html:after {
+        content: "";
+        position: absolute; }
+      html:before {
+        top: -0.6rem;
+        left: -0.6rem;
+        bottom: -0.6rem;
+        right: -0.6rem;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#75ffde), to(#67b1ff));
+        background-image: -webkit-linear-gradient(#75ffde, #67b1ff);
+        background-image: -moz-linear-gradient(#75ffde, #67b1ff);
+        background-image: -o-linear-gradient(#75ffde, #67b1ff);
+        z-index: -2; }
+      html:after {
+        z-index: -1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: white; } }
+
+body {
+  color: #303f4b;
+  background: white;
+  font-family: "Avenir LT W01 45 Book"; }
+
+a {
+  text-decoration: none;
+  color: #303f4b;
+  font-weight: normal; }
+
+.site-card {
+  padding: 4rem 1.5rem 16rem 1.5rem;
+  background: white;
+  height: 100%; }
+  @media screen and (min-width: 750px) {
+    .site-card {
+      padding-left: 9rem; } }
+  @media screen and (min-width: 1080px) {
+    .site-card {
+      padding: 8rem 0 1rem 9rem; } }
+
+nav {
+  position: absolute;
+  bottom: 6rem;
+  font-size: 1.8rem; }
+  @media screen and (min-width: 1080px) {
+    nav {
+      font-size: 2.2rem; } }
+  @media screen and (min-width: 1200px) {
+    nav {
+      font-size: 2.6rem; } }
+  @media screen and (min-width: 1080px) {
+    nav {
+      width: 20rem;
+      position: fixed;
+      top: 9rem;
+      width: 20rem;
+      left: 82.33333rem; } }
+  @media screen and (min-width: 1200px) {
+    nav {
+      left: 95.66667rem; } }
+  nav a {
+    opacity: 0.2; }
+    nav a:hover {
+      opacity: 1; }
+  nav h1 {
+    font-family: "Avenir LT W01 85 Heavy"; }
+
+.nav-item {
+  float: left;
+  display: block;
+  margin-right: 1rem;
+  margin-top: 1rem; }
+  @media screen and (min-width: 1080px) {
+    .nav-item {
+      width: 100%;
+      margin-bottom: 1rem;
+      float: left;
+      margin-top: 0; }
+      .nav-item:first-of-type {
+        margin-top: 2.4rem; } }
+
+.post {
+  width: 100%;
+  margin-bottom: 2.4rem; }
+  @media screen and (min-width: 550px) {
+    .post {
+      width: 55rem;
+      margin-bottom: 2.55rem; } }
+  @media screen and (min-width: 1200px) {
+    .post {
+      width: 65rem;
+      margin-bottom: 2.9rem; } }
+  .post p {
+    font-family: "Avenir LT W01 45 Book";
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.6rem; }
+    @media screen and (min-width: 550px) {
+      .post p {
+        line-height: 2.55rem;
+        margin-bottom: 2.55rem; } }
+    @media screen and (min-width: 1200px) {
+      .post p {
+        line-height: 2.9rem;
+        margin-bottom: 2.9rem; } }
+    @media screen and (min-width: 550px) {
+      .post p {
+        font-size: 1.7rem; } }
+    @media screen and (min-width: 1200px) {
+      .post p {
+        font-size: 2rem; } }
+  .post h2 {
+    font-family: "Avenir LT W01 45 Book";
+    line-height: 1.9rem;
+    margin-bottom: 1.9rem;
+    font-size: 1.8rem; }
+    @media screen and (min-width: 550px) {
+      .post h2 {
+        line-height: 1.9rem;
+        margin-bottom: 1.9rem; } }
+    @media screen and (min-width: 1200px) {
+      .post h2 {
+        line-height: 2.6rem;
+        margin-bottom: 2.6rem; } }
+    @media screen and (min-width: 550px) {
+      .post h2 {
+        font-size: 2.2rem; } }
+    @media screen and (min-width: 1200px) {
+      .post h2 {
+        font-size: 2.6rem; } }
+  .post h3 {
+    font-family: "Avenir LT W01 45 Book";
+    line-height: 1.9rem;
+    margin-bottom: 1.9rem;
+    font-size: 1.6rem; }
+    @media screen and (min-width: 550px) {
+      .post h3 {
+        line-height: 1.9rem;
+        margin-bottom: 1.9rem; } }
+    @media screen and (min-width: 1200px) {
+      .post h3 {
+        line-height: 1.9rem;
+        margin-bottom: 1.9rem; } }
+    @media screen and (min-width: 550px) {
+      .post h3 {
+        font-size: 2rem; } }
+    @media screen and (min-width: 1200px) {
+      .post h3 {
+        font-size: 2rem; } }
+  .post a {
+    color: #303f4b;
+    font-family: "Avenir LT W01 85 Heavy";
+    text-decoration: none; }
+    .post a:link, .post a:visited {
+      color: #303f4b; }
+  .post ul, .post ol {
+    font-family: "Avenir LT W01 45 Book";
+    line-height: 1.9rem;
+    margin-bottom: 1.9rem;
+    font-size: 1.6rem; }
+    @media screen and (min-width: 550px) {
+      .post ul, .post ol {
+        line-height: 1.9rem;
+        margin-bottom: 1.9rem; } }
+    @media screen and (min-width: 1200px) {
+      .post ul, .post ol {
+        line-height: 2.6rem;
+        margin-bottom: 2.6rem; } }
+    @media screen and (min-width: 550px) {
+      .post ul, .post ol {
+        font-size: 1.7rem; } }
+    @media screen and (min-width: 1200px) {
+      .post ul, .post ol {
+        font-size: 2rem; } }
+
+.post footer:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #75ffde;
+  display: block; }
+.post footer:after {
+  content: "";
+  display: table;
+  clear: both; }
+.post footer a {
+  float: right;
+  font-family: "Avenir LT W01 45 Book";
+  font-size: 1.6rem; }
+  @media screen and (min-width: 550px) {
+    .post footer a {
+      font-size: 1.7rem; } }
+  @media screen and (min-width: 1200px) {
+    .post footer a {
+      font-size: 2rem; } }
+
+.photo {
+  width: 100%;
+  margin-bottom: 4.8rem; }
+  @media screen and (min-width: 550px) {
+    .photo {
+      width: 55rem;
+      margin-bottom: 7.65rem; } }
+  @media screen and (min-width: 1200px) {
+    .photo {
+      width: 65rem;
+      margin-bottom: 8.7rem; } }
+  .photo img {
+    width: 100%;
+    margin-bottom: 2.4rem; }
+    @media screen and (min-width: 550px) {
+      .photo img {
+        margin-bottom: 2.55rem; } }
+    @media screen and (min-width: 1200px) {
+      .photo img {
+        margin-bottom: 2.9rem; } }
+  .photo h2 {
+    font-size: 1.6rem; }
+    @media screen and (min-width: 550px) {
+      .photo h2 {
+        font-size: 1.7rem; } }
+    @media screen and (min-width: 1200px) {
+      .photo h2 {
+        font-size: 2rem; } }
+
+.main {
+  width: 100%;
+  margin-bottom: 2.4rem; }
+  @media screen and (min-width: 550px) {
+    .main {
+      width: 55rem;
+      margin-bottom: 2.55rem; } }
+  @media screen and (min-width: 1200px) {
+    .main {
+      width: 65rem;
+      margin-bottom: 2.9rem; } }
+  .main p {
+    font-family: "Avenir LT W01 45 Book";
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.6rem; }
+    @media screen and (min-width: 550px) {
+      .main p {
+        line-height: 2.55rem;
+        margin-bottom: 2.55rem; } }
+    @media screen and (min-width: 1200px) {
+      .main p {
+        line-height: 2.9rem;
+        margin-bottom: 2.9rem; } }
+    @media screen and (min-width: 550px) {
+      .main p {
+        font-size: 1.7rem; } }
+    @media screen and (min-width: 1200px) {
+      .main p {
+        font-size: 2rem; } }
+  .main h2 {
+    font-family: "Avenir LT W01 45 Book";
+    line-height: 1.9rem;
+    margin-bottom: 1.9rem;
+    font-size: 1.8rem; }
+    @media screen and (min-width: 550px) {
+      .main h2 {
+        line-height: 1.9rem;
+        margin-bottom: 1.9rem; } }
+    @media screen and (min-width: 1200px) {
+      .main h2 {
+        line-height: 2.6rem;
+        margin-bottom: 2.6rem; } }
+    @media screen and (min-width: 550px) {
+      .main h2 {
+        font-size: 2.2rem; } }
+    @media screen and (min-width: 1200px) {
+      .main h2 {
+        font-size: 2.6rem; } }
+  .main h3 {
+    font-family: "Avenir LT W01 45 Book";
+    line-height: 1.9rem;
+    margin-bottom: 1.9rem;
+    font-size: 1.6rem; }
+    @media screen and (min-width: 550px) {
+      .main h3 {
+        line-height: 1.9rem;
+        margin-bottom: 1.9rem; } }
+    @media screen and (min-width: 1200px) {
+      .main h3 {
+        line-height: 1.9rem;
+        margin-bottom: 1.9rem; } }
+    @media screen and (min-width: 550px) {
+      .main h3 {
+        font-size: 2rem; } }
+    @media screen and (min-width: 1200px) {
+      .main h3 {
+        font-size: 2rem; } }
+  .main a {
+    color: #303f4b;
+    font-family: "Avenir LT W01 85 Heavy";
+    text-decoration: none; }
+    .main a:link, .main a:visited {
+      color: #303f4b; }
+  .main ul, .main ol {
+    font-family: "Avenir LT W01 45 Book";
+    line-height: 1.9rem;
+    margin-bottom: 1.9rem;
+    font-size: 1.6rem; }
+    @media screen and (min-width: 550px) {
+      .main ul, .main ol {
+        line-height: 1.9rem;
+        margin-bottom: 1.9rem; } }
+    @media screen and (min-width: 1200px) {
+      .main ul, .main ol {
+        line-height: 2.6rem;
+        margin-bottom: 2.6rem; } }
+    @media screen and (min-width: 550px) {
+      .main ul, .main ol {
+        font-size: 1.7rem; } }
+    @media screen and (min-width: 1200px) {
+      .main ul, .main ol {
+        font-size: 2rem; } }
