@@ -1,0 +1,496 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* HTML5 Elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, main {
+  display: block; }
+
+audio[controls], canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/* Eric Meyer's Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, main,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* HTML5 Boilerplate */
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+/* Correct overflow displayed oddly in IE9  */
+svg:not(:root) {
+  overflow: hidden; }
+
+label {
+  cursor: pointer; }
+
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  line-height: normal;
+  *overflow: visible; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box; }
+
+input[type="search"] {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+@font-face {
+  font-family: "Avenir LT W01 45 Book";
+  src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix");
+  src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix") format("eot"), url("/fonts/939cba03-5b40-4d01-9bc5-7589eca863db.woff") format("woff"), url("/fonts/849bc5b9-a2ff-4343-977b-26ba8bd24a60.ttf") format("truetype"), url("/fonts/f67fa3b5-c1d1-488f-8e60-a828b9ad56a4.svg#f67fa3b5-c1d1-488f-8e60-a828b9ad56a4") format("svg"); }
+
+@font-face {
+  font-family: "Avenir LT W01 85 Heavy";
+  src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix");
+  src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix") format("eot"), url("/fonts/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff") format("woff"), url("/fonts/d1dc54b2-878d-4693-8d6e-b442e99fef68.ttf") format("truetype"), url("/fonts/731dd4d3-64da-427d-ba61-01575b3cf3f7.svg#731dd4d3-64da-427d-ba61-01575b3cf3f7") format("svg"); }
+
+@font-face {
+  font-family: "AvenirLTW01-85HeavyObli";
+  src: url("/fonts/7be0fdec-384a-42b5-ab27-c60a322cde7d.eot?#iefix");
+  src: url("/fonts/7be0fdec-384a-42b5-ab27-c60a322cde7d.eot?#iefix") format("eot"), url("/fonts/53554f6f-4b01-4815-87fe-82c49b8ba5a9.woff") format("woff"), url("/fonts/28dfedaf-6372-45a1-8833-b3078dc56a21.ttf") format("truetype"), url("/fonts/f747b6ee-4d13-4e45-815d-f33ac1b71d63.svg#f747b6ee-4d13-4e45-815d-f33ac1b71d63") format("svg"); }
+
+html,
+body {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  color: #fff;
+  font-family: "Avenir LT W01 45 Book";
+  font-size: 2rem;
+  line-height: 2.6rem; }
+  @media only screen and (min-width: 910px) {
+    body {
+      font-size: 2.2rem;
+      line-height: 3rem; } }
+  @media only screen and (min-width: 910px) {
+    body {
+      font-size: 2.2rem;
+      line-height: 3rem; } }
+
+a {
+  text-decoration: none; }
+
+h1,
+h2,
+h3 {
+  font-family: "Avenir LT W01 85 Heavy"; }
+
+section {
+  padding-bottom: 6rem;
+  position: relative; }
+
+.inner {
+  width: 100%;
+  padding: 4rem 1rem 0;
+  margin: 0 auto; }
+  @media only screen and (min-width: 700px) {
+    .inner {
+      padding-top: 6rem;
+      width: 60rem; } }
+  @media only screen and (min-width: 910px) {
+    .inner {
+      padding-top: 6rem;
+      width: 80rem; } }
+  .inner h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem; }
+    @media only screen and (min-width: 910px) {
+      .inner h2 {
+        font-size: 4rem; } }
+
+.top {
+  color: #000;
+  height: 20rem; }
+  .top .inner {
+    padding-top: 6rem; }
+
+.title, .sub-title {
+  font-size: 3rem; }
+  @media only screen and (min-width: 910px) {
+    .title, .sub-title {
+      font-size: 4rem; } }
+
+.title {
+  margin-bottom: 1.5rem;
+  font-family: "Avenir LT W01 85 Heavy"; }
+
+.tito p,
+.ull p,
+.hundred p,
+.personal p,
+.battlequotes p {
+  margin-bottom: 3rem; }
+  .tito p a,
+  .ull p a,
+  .hundred p a,
+  .personal p a,
+  .battlequotes p a {
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); }
+    .tito p a:hover,
+    .ull p a:hover,
+    .hundred p a:hover,
+    .personal p a:hover,
+    .battlequotes p a:hover {
+      border-bottom: 2px solid white; }
+
+.meta {
+  padding: 0 1rem;
+  margin: 1.5rem auto;
+  *zoom: 1; }
+  .meta:before, .meta:after {
+    content: " ";
+    display: table; }
+  .meta:after {
+    clear: both; }
+  .meta h3 {
+    font-family: "Avenir LT W01 85 Heavy";
+    float: left;
+    margin-right: 1rem;
+    width: 100%; }
+    @media only screen and (min-width: 700px) {
+      .meta h3 {
+        width: auto; } }
+  .meta ul {
+    *zoom: 1; }
+    .meta ul:before, .meta ul:after {
+      content: " ";
+      display: table; }
+    .meta ul:after {
+      clear: both; }
+  .meta ul li {
+    float: left;
+    margin-right: 1rem; }
+    .meta ul li:not(:last-of-type):after {
+      content: ","; }
+  .meta a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); }
+    .meta a:hover {
+      border-bottom: 2px solid white; }
+  @media only screen and (min-width: 700px) {
+    .meta {
+      width: 60rem; } }
+  @media only screen and (min-width: 910px) {
+    .meta {
+      width: 80rem; } }
+
+.tito {
+  background: #6f9dc0; }
+
+.ull {
+  background: #ec5d60; }
+
+.hundred {
+  background: black; }
+
+.personal {
+  background: #4b5264; }
+
+.battlequotes {
+  background: #55ae97; }
+
+.cv {
+  color: #000; }
+  .cv h4 {
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.69231rem;
+    letter-spacing: 0.1rem; }
+
+.work, .experience {
+  margin-bottom: 3rem;
+  *zoom: 1; }
+  .work:before, .work:after, .experience:before, .experience:after {
+    content: " ";
+    display: table; }
+  .work:after, .experience:after {
+    clear: both; }
+
+.job, .skill {
+  margin-bottom: 3rem;
+  width: 100%; }
+  @media only screen and (min-width: 700px) {
+    .job, .skill {
+      width: 50%;
+      float: left; } }
+
+.contact {
+  clear: left; }
+  .contact a {
+    color: #000;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3); }
+    .contact a:hover {
+      border-bottom: 2px solid black; }
+
+.ull-slides,
+.hundred-slides,
+.personal-slides,
+.battlequotes-slides {
+  position: relative;
+  overflow: auto;
+  height: 100% !important;
+  padding-bottom: 4rem;
+  margin-top: 4rem; }
+  @media only screen and (min-width: 910px) {
+    .ull-slides,
+    .hundred-slides,
+    .personal-slides,
+    .battlequotes-slides {
+      height: 100% !important; } }
+  .ull-slides img,
+  .hundred-slides img,
+  .personal-slides img,
+  .battlequotes-slides img {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: block; }
+    @media only screen and (min-width: 700px) {
+      .ull-slides img,
+      .hundred-slides img,
+      .personal-slides img,
+      .battlequotes-slides img {
+        width: 60rem; } }
+    @media only screen and (min-width: 910px) {
+      .ull-slides img,
+      .hundred-slides img,
+      .personal-slides img,
+      .battlequotes-slides img {
+        width: 80rem; } }
+  .ull-slides ul,
+  .hundred-slides ul,
+  .personal-slides ul,
+  .battlequotes-slides ul {
+    height: 100% !important;
+    *zoom: 1; }
+    .ull-slides ul:before, .ull-slides ul:after,
+    .hundred-slides ul:before,
+    .hundred-slides ul:after,
+    .personal-slides ul:before,
+    .personal-slides ul:after,
+    .battlequotes-slides ul:before,
+    .battlequotes-slides ul:after {
+      content: " ";
+      display: table; }
+    .ull-slides ul:after,
+    .hundred-slides ul:after,
+    .personal-slides ul:after,
+    .battlequotes-slides ul:after {
+      clear: both; }
+  .ull-slides ul li,
+  .hundred-slides ul li,
+  .personal-slides ul li,
+  .battlequotes-slides ul li {
+    float: left;
+    list-style: none; }
+  .ull-slides ol,
+  .hundred-slides ol,
+  .personal-slides ol,
+  .battlequotes-slides ol {
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    *zoom: 1; }
+    .ull-slides ol:before, .ull-slides ol:after,
+    .hundred-slides ol:before,
+    .hundred-slides ol:after,
+    .personal-slides ol:before,
+    .personal-slides ol:after,
+    .battlequotes-slides ol:before,
+    .battlequotes-slides ol:after {
+      content: " ";
+      display: table; }
+    .ull-slides ol:after,
+    .hundred-slides ol:after,
+    .personal-slides ol:after,
+    .battlequotes-slides ol:after {
+      clear: both; }
+  .ull-slides ol li,
+  .hundred-slides ol li,
+  .personal-slides ol li,
+  .battlequotes-slides ol li {
+    text-align: center;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px;
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+    display: inline-block;
+    cursor: pointer; }
+    .ull-slides ol li.active,
+    .hundred-slides ol li.active,
+    .personal-slides ol li.active,
+    .battlequotes-slides ol li.active {
+      background: #fff; }
+
+.ull-arrow,
+.hundred-arrow,
+.personal-arrow,
+.battlequotes-arrow {
+  position: absolute;
+  cursor: pointer; }
+  @media only screen and (min-width: 700px) {
+    .ull-arrow,
+    .hundred-arrow,
+    .personal-arrow,
+    .battlequotes-arrow {
+      display: block; } }
+  .ull-arrow b,
+  .hundred-arrow b,
+  .personal-arrow b,
+  .battlequotes-arrow b {
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none; }
+  .ull-arrow.prev, .ull-arrow.next,
+  .hundred-arrow.prev,
+  .hundred-arrow.next,
+  .personal-arrow.prev,
+  .personal-arrow.next,
+  .battlequotes-arrow.prev,
+  .battlequotes-arrow.next {
+    top: -1.6rem; }
+    @media only screen and (min-width: 700px) {
+      .ull-arrow.prev, .ull-arrow.next,
+      .hundred-arrow.prev,
+      .hundred-arrow.next,
+      .personal-arrow.prev,
+      .personal-arrow.next,
+      .battlequotes-arrow.prev,
+      .battlequotes-arrow.next {
+        top: -23rem; } }
+    @media only screen and (min-width: 910px) {
+      .ull-arrow.prev, .ull-arrow.next,
+      .hundred-arrow.prev,
+      .hundred-arrow.next,
+      .personal-arrow.prev,
+      .personal-arrow.next,
+      .battlequotes-arrow.prev,
+      .battlequotes-arrow.next {
+        top: -30rem; } }
+  .ull-arrow.prev,
+  .hundred-arrow.prev,
+  .personal-arrow.prev,
+  .battlequotes-arrow.prev {
+    left: 2rem; }
+    @media only screen and (min-width: 700px) {
+      .ull-arrow.prev,
+      .hundred-arrow.prev,
+      .personal-arrow.prev,
+      .battlequotes-arrow.prev {
+        left: 0; } }
+  .ull-arrow.next,
+  .hundred-arrow.next,
+  .personal-arrow.next,
+  .battlequotes-arrow.next {
+    right: 2rem; }
+    @media only screen and (min-width: 700px) {
+      .ull-arrow.next,
+      .hundred-arrow.next,
+      .personal-arrow.next,
+      .battlequotes-arrow.next {
+        right: 0; } }
+
+.arrow-wrap {
+  width: 96%;
+  margin: 0 auto;
+  display: block;
+  position: relative; }
+  @media only screen and (min-width: 700px) {
+    .arrow-wrap {
+      width: 70rem; } }
+  @media only screen and (min-width: 910px) {
+    .arrow-wrap {
+      width: 90rem; } }
+
+.tito-slides, .tito-arrow {
+  display: none; }

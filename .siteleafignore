@@ -1,5 +1,6 @@
 .*
 style/sass/*.scss
+style/sass/*.sass
 scripts/*.coffee
 *.sublime-project
 *.sublime-workspace
