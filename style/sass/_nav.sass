@@ -8,11 +8,9 @@ $nav-push-large:        (9rem + $measure-b2 + $measure-b2/3)
 
 nav
   position: absolute
-  bottom: 2rem
+  bottom: 4rem
   @include text-large($nav-b1, $nav-b2)
-
-  @include from(650px)
-    bottom: 4rem
+    
   @include from($nav-b1)
     width: 20rem
     position: fixed

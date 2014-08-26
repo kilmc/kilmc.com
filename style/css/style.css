@@ -220,7 +220,7 @@ a {
 
 nav {
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
   font-size: 1.8rem; }
   @media screen and (min-width: 860px) {
     nav {
@@ -228,9 +228,6 @@ nav {
   @media screen and (min-width: 1080px) {
     nav {
       font-size: 2.4rem; } }
-  @media screen and (min-width: 650px) {
-    nav {
-      bottom: 4rem; } }
   @media screen and (min-width: 860px) {
     nav {
       width: 20rem;
