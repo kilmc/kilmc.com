@@ -7,8 +7,10 @@ $nav-push-medium:       (0rem + $measure-b1 + $measure-b1/3)
 $nav-push-large:        (9rem + $measure-b2 + $measure-b2/3)
 
 nav
-  position: absolute
-  bottom: 4rem
+  position: static
+  display: block
+  @include clearfix
+  margin-bottom: 4rem
   @include text-large($nav-b1, $nav-b2)
     
   @include from($nav-b1)
@@ -29,6 +31,15 @@ nav
       opacity: 1
   h1
     font-family: $avenir-bold
+
+.masthead-alt
+  @include style(display, block, none, none, $nav-b1, $nav-b2)
+  margin-bottom: 2rem
+  @include text-large($nav-b1, $nav-b2)
+  font-family: $avenir-bold
+  opacity: 0.2
+  &:hover
+    opacity: 1
 
 .nav-item 
   float: left
