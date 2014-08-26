@@ -1,10 +1,14 @@
+// Breaks
+
+$body-b1: 650px
+
 *, *:after, *:before
   @include box-sizing(border-box)
 
 html
-  @include border-gradient(0.2rem,#75FFDE, #67B1FF)
-  @include from($break-medium)
-    @include border-gradient(0.6rem,#75FFDE, #67B1FF)
+  @include border-gradient(0.4rem,$c-stop1, $c-stop2)
+  @include from($body-b1)
+    @include border-gradient(0.6rem,$c-stop1, $c-stop2)
   min-height: 100%
   font-size: 62.5%
 
@@ -17,3 +21,6 @@ a
   text-decoration: none
   color: $c-text
   font-weight: normal
+
+.title
+  @include text-large

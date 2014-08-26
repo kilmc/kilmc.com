@@ -1,8 +1,12 @@
+// Breaks
+$site-b1: 650px
+$site-b2: 1080px
+
 .site-card 
-  padding: 4rem 1.5rem 16rem 1.5rem
+  padding: 2rem 1.3rem 12rem 1.3rem
   background: #fff
   height: 100%
-  @include from(750px)
-    padding-left: 9rem
-  @include from(1080px)
-    padding: 8rem 0 1rem 9rem
+  @include from($site-b1)
+    padding: 4rem 0 16rem 4rem
+  @include from($site-b2)
+    padding: 8rem 0 7rem 9rem

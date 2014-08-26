@@ -31,15 +31,26 @@ $leading-medium-b2:                                   1.9rem
 
 // Large Text
 $text-large-b0:                                       1.8rem
-$text-large-b1:                                       2.2rem
-$text-large-b2:                                       2.6rem
+$text-large-b1:                                         2rem
+$text-large-b2:                                       2.4rem
 
 $leading-large-b0:                                    1.9rem
 $leading-large-b1:                                    1.9rem
 $leading-large-b2:                                    2.6rem
 
-$nav-push-medium:       (9rem + $measure-b1 + $measure-b1/3)
-$nav-push-large:        (9rem + $measure-b2 + $measure-b2/3)
+// Huge Text
+$text-huge-b0:                                         2rem
+$text-huge-b1:                                       2.6rem
+$text-huge-b2:                                         3rem
+
+$leading-huge-b0:                                    1.9rem
+$leading-huge-b1:                                    1.9rem
+$leading-huge-b2:                                    2.6rem
+
+$measure-huge-b0:                                      100%
+$measure-huge-b1:                                     70rem
+$measure-huge-b2:                                     90rem
+
 
 // =========================================================
 // Mixins
@@ -68,6 +79,21 @@ $nav-push-large:        (9rem + $measure-b2 + $measure-b2/3)
     font-size: $text-large-b1
   @include from($b2)
     font-size: $text-large-b2
+
+@mixin text-huge($b1:$text-b1, $b2:$text-b2)
+  font-size: $text-huge-b0
+  @include from($b1)
+    font-size: $text-huge-b1
+  @include from($b2)
+    font-size: $text-huge-b2
+
+// Measure
+@mixin measure
+  width: $measure-b0
+  @include from($text-b1)
+    width: $measure-b1
+  @include from($text-b2)
+    width: $measure-b2
 
 
 // Paragraph Base
@@ -115,9 +141,13 @@ $nav-push-large:        (9rem + $measure-b2 + $measure-b2/3)
 // =========================================================
 
 @mixin title($b1:$text-b1, $b2:$text-b2)
-  font-family: $avenir
+  font-family: $avenir-bold
+  font-weight: normal
   line-height: $leading-large-b0
   margin-bottom: $leading-large-b0
+  color: $c-stop2
+  a:link, a:visited
+    color: $c-stop2
 
   @include from($b1)
     line-height: $leading-large-b1
@@ -133,27 +163,28 @@ $nav-push-large:        (9rem + $measure-b2 + $measure-b2/3)
 // =========================================================
 
 @mixin text-link
-  color: $c-text
-  &:link, &:visited
-    color: $c-text
-  font-family: $avenir-bold
+  color: rgba($c-text, 0.5)
   text-decoration: none
+  &:link, &:visited
+    color: rgba($c-text, 0.5)
+  &:hover
+    color: $c-text
 
 // List Base
 // =========================================================
 
 @mixin list($b1:$text-b1, $b2:$text-b2)
   font-family: $avenir
-  line-height: $leading-large-b0
-  margin-bottom: $leading-large-b0
+  line-height: $leading-small-b0
+  margin-bottom: $leading-small-b0
 
   @include from($b1)
-    line-height: $leading-large-b1
-    margin-bottom: $leading-large-b1
+    line-height: $leading-small-b1
+    margin-bottom: $leading-small-b1
 
   @include from($b2)
-    line-height: $leading-large-b2
-    margin-bottom: $leading-large-b2
+    line-height: $leading-small-b2
+    margin-bottom: $leading-small-b2
 
   @include text-small($b1, $b2)
 
@@ -187,7 +218,7 @@ $nav-push-large:        (9rem + $measure-b2 + $measure-b2/3)
   a
     @include text-link
   ul, ol
-    @include list
+    @include list($b1, $b2)
 
 
 

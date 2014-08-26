@@ -1,12 +1,6 @@
 .photo
-  width: $measure-b0
-  margin-bottom: $leading-small-b0*2
-  @include from($text-b1)
-    width: $measure-b1
-    margin-bottom: $leading-small-b1*3
-  @include from($text-b2)
-    width: $measure-b2
-    margin-bottom: $leading-small-b2*3
+  @include style(width, $measure-b0, $measure-b1, $measure-b2)
+  @include style(margin-bottom, $leading-small-b0*2, $leading-small-b1*3, $leading-small-b2*3)
 
   img 
     width: 100%

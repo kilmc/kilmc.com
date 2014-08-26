@@ -2,6 +2,7 @@
 {% include 'includes/header' %}
 
 <section class="main">
+  <h2>{{title}}</h2>
   {{ body }}
   {% for asset in assets %}
     {% if asset.type == 'image' %}

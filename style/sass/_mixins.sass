@@ -2,6 +2,14 @@
 // General Mixins
 // =========================================================
 
+@mixin style($property, $v0, $v1: $v0, $v2: $v0, $b1: $text-b1, $b2: $text-b2 )
+  #{$property}: $v0
+  @include from($b1)
+    #{$property}: $v1
+  @include from($b2)
+    #{$property}: $v2
+
+
 // Design
 
 @mixin border-gradient($size, $colour1, $colour2) 

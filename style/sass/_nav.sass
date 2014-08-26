@@ -1,23 +1,28 @@
 // Breaks
 
-$nav-b1: 1080px
-$nav-b2: 1200px
+$nav-b1: 860px
+$nav-b2: 1080px
 
+$nav-push-medium:       (0rem + $measure-b1 + $measure-b1/3)
+$nav-push-large:        (9rem + $measure-b2 + $measure-b2/3)
 
 nav
-  // left: 9rem
   position: absolute
-  bottom: 6rem
+  bottom: 2rem
   @include text-large($nav-b1, $nav-b2)
 
+  @include from(650px)
+    bottom: 4rem
   @include from($nav-b1)
     width: 20rem
     position: fixed
-    top: 9rem
+    top: 4rem
     width: 20rem
     left: $nav-push-medium
-
   @include from($nav-b2)
+    left: $nav-push-large - 8rem
+    top: 9rem
+  @include from(1200px)
     left: $nav-push-large
 
   a
@@ -41,3 +46,10 @@ nav
 
     &:first-of-type 
       margin-top: 2.4rem
+
+
+
+.obsessions,
+.home
+  nav 
+    display: none

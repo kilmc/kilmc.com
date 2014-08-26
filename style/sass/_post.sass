@@ -1,15 +1,22 @@
 .post
-  @include text(550px, 1200px)
-  
-.post footer
-  &:before
-    content: ""
-    height: 1px
-    width: 100%
-    background: #75FFDE
-    display: block
-  @include clearfix
-  a 
-    float: right
-    font-family: $avenir
-    @include text-small
+  @include text(650px, 1080px)
+  @include style(margin-bottom, $leading-small-b0*2, $leading-small-b1*2, $leading-small-b2*2)
+  &:last-of-type
+    margin-bottom: 0
+
+  p:last-of-type
+    @include style(margin-bottom, $leading-small-b0/2, $leading-small-b1/2, $leading-small-b2/2)
+  a.excerpt-link
+    @include style(background, rgba($c-stop2, 0.01), rgba($c-stop2, 0.1), rgba($c-stop2, 0.1))
+    @include style(display, block, inline-block, inline-block)
+    color: $c-stop2
+    font-family: $avenir-bold
+    font-size: 1.2rem
+    letter-spacing: 0.1rem
+    padding: 0.75rem
+    text-transform: uppercase
+    
+    &:hover
+      background: $c-stop2
+      span
+        color: $c-bg

@@ -1,4 +1,4 @@
-{% comment %} Homepage {% endcomment %}
+{% comment %} Writing {% endcomment %}
 {% include 'includes/header' %}
 
 {% for post in posts %}
@@ -6,7 +6,7 @@
     <h2><a href="{{post.url}}">{{post.title}}</a></h2>
     {{post.excerpt}}
     {% if post.excerpt != post.body %}
-    <a href="{{post.url}}">Continue</a>
+    <a href="{{post.url}}" class="excerpt-link"><span>Continue…</span></a>
     {% endif %}
   </article>
 {% endfor %}

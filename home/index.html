@@ -1,0 +1,19 @@
+{% comment %} Homepage {% endcomment %}
+{% include 'includes/header' %}
+
+{% for obsession in site.pages.obsessions.posts | limit: 1 %}
+  {% assign svg_path = 'includes/svg/icon-'' %}
+  {% assign svg = svg_path | append: obsession.meta.type %}</h1>
+  <div class="obsession">
+    {% include "includes/svg/icon-music" %}
+    {{obsession.body}}
+  </div>
+{% endfor %}
+
+
+  {% for feature in site.pages.writing.taxonomy.tags.featured %}
+    <h1>{{ feature.title }}</h1>
+  {% endfor %}
+{% include 'includes/footer' %}
+
+{{meta.type}}
