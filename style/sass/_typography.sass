@@ -4,7 +4,9 @@
 
 // Fonts
 $avenir:                             "Avenir LT W01 45 Book"
+$avenir-oblique:             "Avenir LT W01 45 Book Oblique"
 $avenir-bold:                       "Avenir LT W01 85 Heavy"
+
 
 // Measure
 $measure-b0:                                           100%
@@ -64,7 +66,7 @@ $measure-huge-b2:                                     90rem
   @include from($b2)
     font-size: $text-small-b2
 
-// Text Medium 
+// Text Medium
 @mixin text-medium($b1:$text-b1, $b2:$text-b2)
   font-size: $text-medium-b0
   @include from($b1)
@@ -192,7 +194,7 @@ $measure-huge-b2:                                     90rem
 // =========================================================
 
 
-// Text 
+// Text
 // =========================================================
 // Include this at the container level. This will set
 // paragraph, title, link and list styles.
@@ -217,8 +219,12 @@ $measure-huge-b2:                                     90rem
 
   a
     @include text-link
+
   ul, ol
     @include list($b1, $b2)
+
+  em
+    font-family: $avenir-oblique
 
 
 

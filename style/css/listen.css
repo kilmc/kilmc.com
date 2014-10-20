@@ -1,0 +1,139 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "Avenir LT W01 45 Book";
+  src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix");
+  src: url("/fonts/4f32268f-fd86-4960-b72c-4bb1ba75ec6f.eot?#iefix") format("eot");
+  src: url("/fonts/939cba03-5b40-4d01-9bc5-7589eca863db.woff") format("woff");
+  src: url("/fonts/f67fa3b5-c1d1-488f-8e60-a828b9ad56a4.svg#f67fa3b5-c1d1-488f-8e60-a828b9ad56a4") format("svg");
+  src: url("/fonts/849bc5b9-a2ff-4343-977b-26ba8bd24a60.ttf") format("truetype"); }
+@font-face {
+  font-family: "Avenir LT W01 85 Heavy";
+  src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix");
+  src: url("/fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix") format("eot");
+  src: url("/fonts/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff") format("woff");
+  src: url("/fonts/731dd4d3-64da-427d-ba61-01575b3cf3f7.svg#731dd4d3-64da-427d-ba61-01575b3cf3f7") format("svg");
+  src: url("/fonts/d1dc54b2-878d-4693-8d6e-b442e99fef68.ttf") format("truetype"); }
+@font-face {
+  font-family: "Avenir LT W01 45 Book Oblique";
+  src: url("/fonts/acc13cdc-338a-43e6-a156-e54a4c87582d.eot?#iefix");
+  src: url("/fonts/acc13cdc-338a-43e6-a156-e54a4c87582d.eot?#iefix") format("eot");
+  src: url("/fonts/ca94ed56-18fc-4856-940a-70a072607c7c.woff") format("woff");
+  src: url("/fonts/c7f424be-90e1-45b8-b617-ee3589a859bd.svg#c7f424be-90e1-45b8-b617-ee3589a859bd") format("svg");
+  src: url("/fonts/dd6da407-70fe-4aa3-a1c7-64f0cb086f01.ttf") format("truetype"); }
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Avenir LT W01 45 Book";
+  font-size: 62.5%;
+  color: #4A90E2; }
+
+h1, h2 {
+  font-family: "Avenir LT W01 85 Heavy"; }
+
+h1 {
+  font-size: 2.4rem;
+  margin: 0 0 2.1rem 0; }
+  @media screen and (min-width: 880px) {
+    h1 {
+      font-size: 4rem;
+      margin: 0 0 3.2rem 0; } }
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.1rem; }
+  @media screen and (min-width: 880px) {
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 3.2rem; } }
+
+ul, ol {
+  padding: 0;
+  padding-left: 1.5rem; }
+  @media screen and (min-width: 880px) {
+    ul, ol {
+      padding-left: 3rem; } }
+
+.sub {
+  font-size: 1.4rem;
+  line-height: 1.8rem; }
+  @media screen and (min-width: 880px) {
+    .sub {
+      font-size: 2rem;
+      line-height: 2.6rem; } }
+
+.signoff {
+  margin-top: 4.2rem; }
+  @media screen and (min-width: 880px) {
+    .signoff {
+      margin-top: 3.2rem; } }
+
+.main {
+  font-size: 1.1rem;
+  margin: 6.3rem auto;
+  line-height: 1.5rem;
+  padding: 0.5rem; }
+  @media screen and (min-width: 600px) {
+    .main {
+      width: 36rem; } }
+  @media screen and (min-width: 880px) {
+    .main {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      margin: 9.6rem auto;
+      max-width: auto;
+      width: 50rem; } }
+
+.box {
+  display: block;
+  position: fixed;
+  z-index: -1;
+  border-radius: 0.5rem; }
+  .box.yellow {
+    background: #FFFBCE; }
+  .box.green {
+    background: #CEFFE6; }
+  .box.bigboi {
+    top: 3.2rem;
+    left: 20%;
+    width: 6.4rem;
+    height: 24rem;
+    display: none; }
+    @media screen and (min-width: 880px) {
+      .box.bigboi {
+        display: block; } }
+  .box.andre {
+    right: 10%;
+    top: 17.6rem;
+    height: 12.8rem;
+    width: 24rem;
+    display: none; }
+    @media screen and (min-width: 880px) {
+      .box.andre {
+        display: block; } }
+  .box.earl {
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    top: 6.4rem;
+    right: 3rem; }
+    @media screen and (min-width: 880px) {
+      .box.earl {
+        top: 6.4rem;
+        right: 20%; } }
+  .box.kanye {
+    border-radius: 50%;
+    width: 4.8rem;
+    height: 4.8rem;
+    top: 16rem;
+    left: 3rem; }
+    @media screen and (min-width: 880px) {
+      .box.kanye {
+        top: 20rem;
+        left: 5%; } }

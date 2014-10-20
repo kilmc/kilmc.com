@@ -1,0 +1,149 @@
+// Imports
+@import vendor/bourbon/bourbon
+@import vendor/neat/neat
+@import fonts
+
+// Variables
+$c-blue:                                             #4A90E2
+$c-yellow:                                           #FFFBCE
+$c-green:                                            #CEFFE6
+
+$avenir:                             "Avenir LT W01 45 Book"
+$avenir-oblique:             "Avenir LT W01 45 Book Oblique"
+$avenir-bold:                       "Avenir LT W01 85 Heavy"
+
+$vu-b0:                                              2.1rem
+$vu-b1:                                              1.6rem
+
+
+// Mixins
+@mixin upto($end)
+  @media screen and (max-width: ($end - 1))
+    @content
+
+@mixin between($start, $end)
+  @media screen and (min-width: $start) and (max-width: ($end - 1))
+    @content
+
+@mixin from($start)
+  @media screen and (min-width: $start)
+    @content
+
+// Base
+
+*, *:after, *:before
+  @include box-sizing(border-box)
+
+body
+  font-family: $avenir
+  font-size: 62.5%
+  color: $c-blue
+
+// Typography
+
+h1, h2
+  font-family: $avenir-bold
+
+h1
+  font-size: 2.4rem
+  margin: 0 0 $vu-b0 0
+  @include from(880px)
+    font-size: 4rem
+    margin: 0 0 $vu-b1*2 0
+
+h2
+  font-size: 1.4rem
+  margin-top: $vu-b0
+  @include from(880px)
+    font-size: 1.4rem
+    margin-top: $vu-b1*2
+
+ul, ol
+  padding: 0
+  padding-left: 1.5rem
+  @include from(880px)
+    padding-left: 3rem
+.sub
+  font-size: 1.4rem
+  line-height: 1.8rem
+  @include from(880px)
+    font-size: 2rem
+    line-height: 2.6rem
+
+.signoff
+  margin-top: $vu-b0*2
+  @include from(880px)
+    margin-top: $vu-b1*2
+
+
+// Main
+
+.main
+  font-size: 1.1rem
+  margin: $vu-b0*3 auto
+  line-height: 1.5rem
+  padding: 0.5rem
+  @include from(600px)
+    width: 36rem
+  @include from(880px)
+    font-size: 1.4rem
+    line-height: 2.1rem
+    margin: $vu-b1*6 auto
+    max-width: auto
+    width: 50rem
+
+
+.box
+  display: block
+  position: fixed
+  z-index: -1
+  border-radius: 0.5rem
+  &.yellow
+    background: $c-yellow
+  &.green
+    background: $c-green
+  &.bigboi
+    top: $vu-b1*2
+    left: 20%
+    width: $vu-b1*4
+    height: $vu-b1*15
+    display: none
+    @include from(880px)
+      display: block
+  &.andre
+    right: 10%
+    top: $vu-b1*11
+    height: $vu-b1*8
+    width: $vu-b1*15
+    display: none
+    @include from(880px)
+      display: block
+  &.earl
+    border-radius: 50%
+    width: $vu-b1*5
+    height: $vu-b1*5
+    top: $vu-b1*4
+    right: 3rem
+    // display: none
+    @include from(880px)
+      top: $vu-b1*4
+      right: 20%
+  &.kanye
+    border-radius: 50%
+    width: $vu-b1*3
+    height: $vu-b1*3
+    top: 16rem
+    left: 3rem
+    // display: none
+    @include from(880px)
+      top: 20rem
+      left: 5%
+
+
+
+
+
+
+
+
+

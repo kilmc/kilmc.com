@@ -1,7 +1,9 @@
 .*
 style/sass/*.scss
 style/sass/*.sass
+style/sass/vendor
 scripts/*.coffee
 *.sublime-project
 *.sublime-workspace
 config.codekit
+*.map

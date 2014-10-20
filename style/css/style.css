@@ -127,6 +127,13 @@ textarea {
   src: url("/fonts/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff") format("woff");
   src: url("/fonts/731dd4d3-64da-427d-ba61-01575b3cf3f7.svg#731dd4d3-64da-427d-ba61-01575b3cf3f7") format("svg");
   src: url("/fonts/d1dc54b2-878d-4693-8d6e-b442e99fef68.ttf") format("truetype"); }
+@font-face {
+  font-family: "Avenir LT W01 45 Book Oblique";
+  src: url("/fonts/acc13cdc-338a-43e6-a156-e54a4c87582d.eot?#iefix");
+  src: url("/fonts/acc13cdc-338a-43e6-a156-e54a4c87582d.eot?#iefix") format("eot");
+  src: url("/fonts/ca94ed56-18fc-4856-940a-70a072607c7c.woff") format("woff");
+  src: url("/fonts/c7f424be-90e1-45b8-b617-ee3589a859bd.svg#c7f424be-90e1-45b8-b617-ee3589a859bd") format("svg");
+  src: url("/fonts/dd6da407-70fe-4aa3-a1c7-64f0cb086f01.ttf") format("truetype"); }
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -136,8 +143,8 @@ html {
   margin-left: 0.4rem;
   margin-right: 0.4rem;
   position: relative;
-  border-top: 0.4rem solid #75ffde;
-  border-bottom: 0.4rem solid #67b1ff;
+  border-top: 0.4rem solid #75FFDE;
+  border-bottom: 0.4rem solid #67B1FF;
   min-height: 100%;
   font-size: 62.5%; }
   html:before, html:after {
@@ -148,10 +155,10 @@ html {
     left: -0.4rem;
     bottom: -0.4rem;
     right: -0.4rem;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#75ffde), to(#67b1ff));
-    background-image: -webkit-linear-gradient(#75ffde, #67b1ff);
-    background-image: -moz-linear-gradient(#75ffde, #67b1ff);
-    background-image: -o-linear-gradient(#75ffde, #67b1ff);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#75FFDE), to(#67B1FF));
+    background-image: -webkit-linear-gradient(#75FFDE, #67B1FF);
+    background-image: -moz-linear-gradient(#75FFDE, #67B1FF);
+    background-image: -o-linear-gradient(#75FFDE, #67B1FF);
     z-index: -2; }
   html:after {
     z-index: -1;
@@ -159,14 +166,14 @@ html {
     left: 0;
     bottom: 0;
     right: 0;
-    background: white; }
+    background: #fff; }
   @media screen and (min-width: 650px) {
     html {
       margin-left: 0.6rem;
       margin-right: 0.6rem;
       position: relative;
-      border-top: 0.6rem solid #75ffde;
-      border-bottom: 0.6rem solid #67b1ff; }
+      border-top: 0.6rem solid #75FFDE;
+      border-bottom: 0.6rem solid #67B1FF; }
       html:before, html:after {
         content: "";
         position: absolute; }
@@ -175,10 +182,10 @@ html {
         left: -0.6rem;
         bottom: -0.6rem;
         right: -0.6rem;
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#75ffde), to(#67b1ff));
-        background-image: -webkit-linear-gradient(#75ffde, #67b1ff);
-        background-image: -moz-linear-gradient(#75ffde, #67b1ff);
-        background-image: -o-linear-gradient(#75ffde, #67b1ff);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#75FFDE), to(#67B1FF));
+        background-image: -webkit-linear-gradient(#75FFDE, #67B1FF);
+        background-image: -moz-linear-gradient(#75FFDE, #67B1FF);
+        background-image: -o-linear-gradient(#75FFDE, #67B1FF);
         z-index: -2; }
       html:after {
         z-index: -1;
@@ -186,16 +193,16 @@ html {
         left: 0;
         bottom: 0;
         right: 0;
-        background: white; } }
+        background: #fff; } }
 
 body {
-  color: #303f4b;
-  background: white;
+  color: #303F4B;
+  background: #fff;
   font-family: "Avenir LT W01 45 Book"; }
 
 a {
   text-decoration: none;
-  color: #303f4b;
+  color: #303F4B;
   font-weight: normal; }
 
 .title {
@@ -209,7 +216,7 @@ a {
 
 .site-card {
   padding: 2rem 1.3rem 4rem 1.3rem;
-  background: white;
+  background: #fff;
   height: 100%; }
   @media screen and (min-width: 650px) {
     .site-card {
@@ -239,14 +246,14 @@ nav {
       position: fixed;
       top: 4rem;
       width: 20rem;
-      left: 73.33333rem; } }
+      left: 73.3333333333rem; } }
   @media screen and (min-width: 1080px) {
     nav {
-      left: 87.66667rem;
+      left: 87.6666666667rem;
       top: 9rem; } }
   @media screen and (min-width: 1200px) {
     nav {
-      left: 95.66667rem; } }
+      left: 95.6666666667rem; } }
   nav a {
     opacity: 0.2; }
     nav a:hover {
@@ -323,12 +330,13 @@ header {
     margin: 0rem auto 1rem; }
 
 .icon-writing {
-  fill: #303f4b; }
+  fill: #303F4B; }
 
 .post {
   width: 100%;
   margin-bottom: 2.4rem;
-  margin-bottom: 4.8rem; }
+  margin-bottom: 4.8rem;
+  font-family: "Avenir LT W01 45 Book Oblique"; }
   @media screen and (min-width: 650px) {
     .post {
       width: 55rem;
@@ -361,10 +369,10 @@ header {
     font-weight: normal;
     line-height: 1.9rem;
     margin-bottom: 1.9rem;
-    color: #67b1ff;
+    color: #67B1FF;
     font-size: 1.8rem; }
     .post h2 a:link, .post h2 a:visited {
-      color: #67b1ff; }
+      color: #67B1FF; }
     @media screen and (min-width: 650px) {
       .post h2 {
         line-height: 1.9rem;
@@ -404,7 +412,7 @@ header {
     .post a:link, .post a:visited {
       color: rgba(48, 63, 75, 0.5); }
     .post a:hover {
-      color: #303f4b; }
+      color: #303F4B; }
   .post ul, .post ol {
     font-family: "Avenir LT W01 45 Book";
     line-height: 2.4rem;
@@ -424,6 +432,8 @@ header {
     @media screen and (min-width: 1080px) {
       .post ul, .post ol {
         font-size: 2rem; } }
+  .post em {
+    font-family: "Avenir LT W01 45 Book Oblique"; }
   @media screen and (min-width: 550px) {
     .post {
       margin-bottom: 5.1rem; } }
@@ -443,7 +453,7 @@ header {
   .post a.excerpt-link {
     background: rgba(103, 177, 255, 0.01);
     display: block;
-    color: #67b1ff;
+    color: #67B1FF;
     font-family: "Avenir LT W01 85 Heavy";
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
@@ -462,9 +472,9 @@ header {
       .post a.excerpt-link {
         display: inline-block; } }
     .post a.excerpt-link:hover {
-      background: #67b1ff; }
+      background: #67B1FF; }
       .post a.excerpt-link:hover span {
-        color: white; }
+        color: #fff; }
 
 .photo {
   width: 100%;
@@ -534,10 +544,10 @@ header {
     font-weight: normal;
     line-height: 1.9rem;
     margin-bottom: 1.9rem;
-    color: #67b1ff;
+    color: #67B1FF;
     font-size: 1.8rem; }
     .main h2 a:link, .main h2 a:visited {
-      color: #67b1ff; }
+      color: #67B1FF; }
     @media screen and (min-width: 650px) {
       .main h2 {
         line-height: 1.9rem;
@@ -577,7 +587,7 @@ header {
     .main a:link, .main a:visited {
       color: rgba(48, 63, 75, 0.5); }
     .main a:hover {
-      color: #303f4b; }
+      color: #303F4B; }
   .main ul, .main ol {
     font-family: "Avenir LT W01 45 Book";
     line-height: 2.4rem;
@@ -597,6 +607,8 @@ header {
     @media screen and (min-width: 1080px) {
       .main ul, .main ol {
         font-size: 2rem; } }
+  .main em {
+    font-family: "Avenir LT W01 45 Book Oblique"; }
   .main img {
     width: 100%; }
 
@@ -619,7 +631,7 @@ header {
     .obsession {
       width: 90rem; } }
   .obsession a {
-    color: #67b1ff; }
+    color: #67B1FF; }
     .obsession a:hover {
       opacity: 0.5; }
   .obsession svg {
@@ -629,4 +641,4 @@ header {
     float: left;
     margin-right: 4rem; }
     .obsession svg .icon-music {
-      fill: #67b1ff; }
+      fill: #67B1FF; }
