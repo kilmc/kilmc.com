@@ -75,6 +75,7 @@ ul, ol {
       margin-top: 3.2rem; } }
 
 .main {
+  position: relative;
   font-size: 1.1rem;
   margin: 6.3rem auto;
   line-height: 1.5rem;
@@ -90,50 +91,34 @@ ul, ol {
       max-width: auto;
       width: 50rem; } }
 
-.box {
+.shape {
   display: block;
-  position: fixed;
+  position: absolute;
   z-index: -1;
   border-radius: 0.5rem; }
-  .box.yellow {
+  .shape.yellow {
     background: #FFFBCE; }
-  .box.green {
+  .shape.green {
     background: #CEFFE6; }
-  .box.bigboi {
-    top: 3.2rem;
-    left: 20%;
-    width: 6.4rem;
-    height: 24rem;
-    display: none; }
-    @media screen and (min-width: 880px) {
-      .box.bigboi {
-        display: block; } }
-  .box.andre {
-    right: 10%;
-    top: 17.6rem;
-    height: 12.8rem;
-    width: 24rem;
-    display: none; }
-    @media screen and (min-width: 880px) {
-      .box.andre {
-        display: block; } }
-  .box.earl {
+  .shape.bigboi {
+    top: 30%;
+    left: 40%;
+    width: 16rem;
+    height: 3.2rem; }
+  .shape.andre {
+    right: -10%;
+    top: 5%;
+    height: 3.2rem;
+    width: 19.2rem; }
+  .shape.earl {
     border-radius: 50%;
     width: 8rem;
     height: 8rem;
-    top: 6.4rem;
-    right: 3rem; }
-    @media screen and (min-width: 880px) {
-      .box.earl {
-        top: 6.4rem;
-        right: 20%; } }
-  .box.kanye {
+    top: -5%;
+    left: -5%; }
+  .shape.kanye {
     border-radius: 50%;
     width: 4.8rem;
     height: 4.8rem;
-    top: 16rem;
-    left: 3rem; }
-    @media screen and (min-width: 880px) {
-      .box.kanye {
-        top: 20rem;
-        left: 5%; } }
+    top: 90%;
+    left: -5%; }

@@ -79,6 +79,7 @@ ul, ol
 // Main
 
 .main
+  position: relative
   font-size: 1.1rem
   margin: $vu-b0*3 auto
   line-height: 1.5rem
@@ -93,9 +94,9 @@ ul, ol
     width: 50rem
 
 
-.box
+.shape
   display: block
-  position: fixed
+  position: absolute
   z-index: -1
   border-radius: 0.5rem
   &.yellow
@@ -103,41 +104,30 @@ ul, ol
   &.green
     background: $c-green
   &.bigboi
-    top: $vu-b1*2
-    left: 20%
-    width: $vu-b1*4
-    height: $vu-b1*15
-    display: none
-    @include from(880px)
-      display: block
+    top: 30%
+    left: 40%
+    width: $vu-b1*10
+    height: $vu-b1*2
+
   &.andre
-    right: 10%
-    top: $vu-b1*11
-    height: $vu-b1*8
-    width: $vu-b1*15
-    display: none
-    @include from(880px)
-      display: block
+    right: -10%
+    top: 5%
+    height: $vu-b1*2
+    width: $vu-b1*12
+
   &.earl
     border-radius: 50%
     width: $vu-b1*5
     height: $vu-b1*5
-    top: $vu-b1*4
-    right: 3rem
-    // display: none
-    @include from(880px)
-      top: $vu-b1*4
-      right: 20%
+    top: -5%
+    left: -5%
+
   &.kanye
     border-radius: 50%
     width: $vu-b1*3
     height: $vu-b1*3
-    top: 16rem
-    left: 3rem
-    // display: none
-    @include from(880px)
-      top: 20rem
-      left: 5%
+    top: 90%
+    left: -5%
 
 
 
