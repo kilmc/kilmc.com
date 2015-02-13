@@ -7,6 +7,7 @@
 $c-blue:                                             #4A90E2
 $c-yellow:                                           #FFFBCE
 $c-green:                                            #CEFFE6
+$c-red:                                              #FF5663
 
 $avenir:                             "Avenir LT W01 45 Book"
 $avenir-oblique:             "Avenir LT W01 45 Book Oblique"
@@ -29,6 +30,24 @@ $vu-b1:                                              1.6rem
   @media screen and (min-width: $start)
     @content
 
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+// Placeholder
+
+%clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
 // Base
 
 *, *:after, *:before
@@ -50,6 +69,7 @@ h1
   @include from(880px)
     font-size: 4rem
     margin: 0 0 $vu-b1*2 0
+    line-height: 3rem
 
 h2
   font-size: 1.4rem
@@ -63,6 +83,15 @@ ul, ol
   padding-left: 1.5rem
   @include from(880px)
     padding-left: 3rem
+
+a
+  color: $c-blue
+  text-decoration: none
+  background: $c-yellow
+  padding: 0.2rem
+  &:hover
+    background: rgba($c-yellow, 0.5)
+
 .sub
   font-size: 1.4rem
   line-height: 1.8rem
@@ -81,11 +110,12 @@ ul, ol
 .main
   position: relative
   font-size: 1.1rem
-  margin: $vu-b0*3 auto
-  line-height: 1.5rem
-  padding: 0.5rem
+  margin: $vu-b0 auto
+  line-height: 1.6rem
+  padding: 0.75rem
   @include from(600px)
     width: 36rem
+    margin: $vu-b0*3 auto
   @include from(880px)
     font-size: 1.4rem
     line-height: 2.1rem
@@ -93,6 +123,9 @@ ul, ol
     max-width: auto
     width: 50rem
 
+
+.shapes
+  overflow-x: hidden
 
 .shape
   display: block
@@ -104,16 +137,27 @@ ul, ol
   &.green
     background: $c-green
   &.bigboi
-    top: 30%
-    left: 40%
-    width: $vu-b1*10
+    top: 50%
+    left: 2%
+    width: $vu-b1*6
     height: $vu-b1*2
+    @include from(1000px)
+      top: 40%
+      left: 10%
+      width: $vu-b1*10
+      height: $vu-b1*2
 
   &.andre
-    right: -10%
-    top: 5%
+    top: 20%
+    right: 2%
     height: $vu-b1*2
-    width: $vu-b1*12
+    width: $vu-b1*6
+    @include from(1000px)
+      top: 5%
+      right: -10%
+      height: $vu-b1*2
+      width: $vu-b1*12
+
 
   &.earl
     border-radius: 50%
@@ -129,11 +173,83 @@ ul, ol
     top: 90%
     left: -5%
 
+.signoff
+  clear: both
+  margin-top: $vu-b1*2
+  @include from(880px)
+    margin-top: $vu-b1*4
 
+// Email
 
+.group-wrap
+  width: 100%
+  float: left
+  @extend %clearfix
 
+.mc-field-group
+  @extend %clearfix
+  @include from(880px)
+    width: 49%
+    &:first-of-type
+      float: left
+    &:nth-of-type(2)
+      float: right
 
+  input
+    -webkit-appearance: none
+    border: none
+    display: block
+    padding: $vu-b1/2 0
+    color: $c-blue
+    font-size: 1.1rem
+    margin-bottom: $vu-b1/2
+    background: transparent
+    width: 100%
+    border-bottom: 1px solid $c-blue
+    border-radius: 0
+    &:focus
+      outline: none
+      border-bottom: 1px solid $c-blue
+    +placeholder
+      color: rgba($c-blue, 0.7)
 
+    @include from(600px)
+      font-size: 1.4rem
+  label
+    display: none
 
+.button
+  display: block
+  border: none
+  float: left
+  background: $c-blue
+  color: #fff
+  font-size: 1rem
+  padding: $vu-b1/2 $vu-b1
+  border-radius: 4px
+  margin-top: $vu-b1/2
+  -webkit-appearance: none
+  width: 100%
+  &:hover
+    background: rgba($c-blue, 0.7)
+  @include from(600px)
+    width: auto
 
+#mc_embed_signup
+  @extend %clearfix
+  margin-top: $vu-b1*2
+  @include from(880px)
+    margin-top: $vu-b1*4
 
+#mc_embed_signup input.mce_inline_error
+  border-color: $c-red !important
+
+#mc_embed_signup div.mce_inline_error,
+
+  display: none !important
+
+#mce-success-response,
+#mce-error-response
+  margin: 1rem auto
+  clear: both
+  float: left

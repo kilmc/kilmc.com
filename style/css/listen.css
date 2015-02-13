@@ -24,6 +24,11 @@
   src: url("/fonts/ca94ed56-18fc-4856-940a-70a072607c7c.woff") format("woff");
   src: url("/fonts/c7f424be-90e1-45b8-b617-ee3589a859bd.svg#c7f424be-90e1-45b8-b617-ee3589a859bd") format("svg");
   src: url("/fonts/dd6da407-70fe-4aa3-a1c7-64f0cb086f01.ttf") format("truetype"); }
+.group-wrap:after, .mc-field-group:after, #mc_embed_signup:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -43,7 +48,8 @@ h1 {
   @media screen and (min-width: 880px) {
     h1 {
       font-size: 4rem;
-      margin: 0 0 3.2rem 0; } }
+      margin: 0 0 3.2rem 0;
+      line-height: 3rem; } }
 
 h2 {
   font-size: 1.4rem;
@@ -59,6 +65,14 @@ ul, ol {
   @media screen and (min-width: 880px) {
     ul, ol {
       padding-left: 3rem; } }
+
+a {
+  color: #4A90E2;
+  text-decoration: none;
+  background: #FFFBCE;
+  padding: 0.2rem; }
+  a:hover {
+    background: rgba(255, 251, 206, 0.5); }
 
 .sub {
   font-size: 1.4rem;
@@ -77,12 +91,13 @@ ul, ol {
 .main {
   position: relative;
   font-size: 1.1rem;
-  margin: 6.3rem auto;
-  line-height: 1.5rem;
-  padding: 0.5rem; }
+  margin: 2.1rem auto;
+  line-height: 1.6rem;
+  padding: 0.75rem; }
   @media screen and (min-width: 600px) {
     .main {
-      width: 36rem; } }
+      width: 36rem;
+      margin: 6.3rem auto; } }
   @media screen and (min-width: 880px) {
     .main {
       font-size: 1.4rem;
@@ -90,6 +105,9 @@ ul, ol {
       margin: 9.6rem auto;
       max-width: auto;
       width: 50rem; } }
+
+.shapes {
+  overflow-x: hidden; }
 
 .shape {
   display: block;
@@ -101,15 +119,27 @@ ul, ol {
   .shape.green {
     background: #CEFFE6; }
   .shape.bigboi {
-    top: 30%;
-    left: 40%;
-    width: 16rem;
+    top: 50%;
+    left: 2%;
+    width: 9.6rem;
     height: 3.2rem; }
+    @media screen and (min-width: 1000px) {
+      .shape.bigboi {
+        top: 40%;
+        left: 10%;
+        width: 16rem;
+        height: 3.2rem; } }
   .shape.andre {
-    right: -10%;
-    top: 5%;
+    top: 20%;
+    right: 2%;
     height: 3.2rem;
-    width: 19.2rem; }
+    width: 9.6rem; }
+    @media screen and (min-width: 1000px) {
+      .shape.andre {
+        top: 5%;
+        right: -10%;
+        height: 3.2rem;
+        width: 19.2rem; } }
   .shape.earl {
     border-radius: 50%;
     width: 8rem;
@@ -122,3 +152,86 @@ ul, ol {
     height: 4.8rem;
     top: 90%;
     left: -5%; }
+
+.signoff {
+  clear: both;
+  margin-top: 3.2rem; }
+  @media screen and (min-width: 880px) {
+    .signoff {
+      margin-top: 6.4rem; } }
+
+.group-wrap {
+  width: 100%;
+  float: left; }
+
+@media screen and (min-width: 880px) {
+  .mc-field-group {
+    width: 49%; }
+    .mc-field-group:first-of-type {
+      float: left; }
+    .mc-field-group:nth-of-type(2) {
+      float: right; } }
+.mc-field-group input {
+  -webkit-appearance: none;
+  border: none;
+  display: block;
+  padding: 0.8rem 0;
+  color: #4A90E2;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  background: transparent;
+  width: 100%;
+  border-bottom: 1px solid #4A90E2;
+  border-radius: 0; }
+  .mc-field-group input:focus {
+    outline: none;
+    border-bottom: 1px solid #4A90E2; }
+  .mc-field-group input::-webkit-input-placeholder {
+    color: rgba(74, 144, 226, 0.7); }
+  .mc-field-group input:-moz-placeholder {
+    color: rgba(74, 144, 226, 0.7); }
+  .mc-field-group input::-moz-placeholder {
+    color: rgba(74, 144, 226, 0.7); }
+  .mc-field-group input:-ms-input-placeholder {
+    color: rgba(74, 144, 226, 0.7); }
+  @media screen and (min-width: 600px) {
+    .mc-field-group input {
+      font-size: 1.4rem; } }
+.mc-field-group label {
+  display: none; }
+
+.button {
+  display: block;
+  border: none;
+  float: left;
+  background: #4A90E2;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  margin-top: 0.8rem;
+  -webkit-appearance: none;
+  width: 100%; }
+  .button:hover {
+    background: rgba(74, 144, 226, 0.7); }
+  @media screen and (min-width: 600px) {
+    .button {
+      width: auto; } }
+
+#mc_embed_signup {
+  margin-top: 3.2rem; }
+  @media screen and (min-width: 880px) {
+    #mc_embed_signup {
+      margin-top: 6.4rem; } }
+
+#mc_embed_signup input.mce_inline_error {
+  border-color: #FF5663 !important; }
+
+#mc_embed_signup div.mce_inline_error {
+  display: none !important; }
+
+#mce-success-response,
+#mce-error-response {
+  margin: 1rem auto;
+  clear: both;
+  float: left; }
