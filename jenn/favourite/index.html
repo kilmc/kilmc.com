@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Happy Valentine&rsquo;s Jenn &#10084;</title>
+  <link rel="stylesheet" href="/style/css/jenn.css" media="all">
+  <script src="/scripts/avenir.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="/scripts/nav.js"></script>
+  <script src="/scripts/jenn.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1;">
+  {% include 'includes/favicon' %}
+</head>
+<body>
+  <div class="wrapper">
+    <section class="hello">
+      <h2>Dear Jenn,</h2>
+      <p>I love and miss you. I hope this makes you makes you smile.</p>
+      <audio id="song__audio" src='/assets/audio/favourite.mp3'></audio>
+      <a href="javascript:void(0)" class="song__button" data-toggle="tooltip" title="I love you Jenn" onclick="aud_play_pause()">
+        Play
+      </a>
+    </section>
+
+    <section class="song">
+
+      <h2>Favourite</h2>
+
+      <p>
+        I kissed your cheek <br>
+        To say words I couldn&rsquo;t speak
+      </p>
+      <p>
+        I spent your last night<br>
+        Wishing that this could always be
+      </p>
+
+      <p>
+        It felt like luck<br>
+        To simply have you in my life
+      </p>
+
+      <p>
+        But when you said to me<br>
+        That I was someone that you liked
+      </p>
+
+      <p>
+        I literally died of happiness<br>
+        And when I say you are the best<br>
+        I mean it<br>
+        Oh, I can&rsquo;t imagine life without you<br>
+        You&rsquo;re my favourite<br>
+        Can I steal your line<br>
+        Cause you&rsquo;re my favourite
+      </p>
+
+      <p>
+        I need you near<br>
+        Together as we fall asleep
+      </p>
+
+      <p>
+        But soon you&rsquo;ll be here<br>
+        And time together won&rsquo;t fleeting
+      </p>
+
+      <p>
+        I&rsquo;ll do my best<br>
+        To keep you warm on these cold streets
+      </p>
+
+      <p>
+        Go arm in arm<br>
+        And feel you get so close to me
+      </p>
+    </section>
+
+
+  </div>
+  <script>
+    function aud_play_pause() {
+      var myAudio = document.getElementById("song__audio");
+      if (myAudio.paused) {
+        $('.song__button').text('Pause');
+        myAudio.play();
+      } else {
+        $('.song__button').text('Play');
+        myAudio.pause();
+     }
+   }
+  </script>
+
+</body>
+</html>
+
+

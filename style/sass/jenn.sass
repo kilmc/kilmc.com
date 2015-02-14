@@ -1,0 +1,131 @@
+// Imports
+@import vendor/bourbon/bourbon
+@import vendor/neat/neat
+@import fonts
+@import helpers
+
+// Variables
+$c-red:                                 lighten(#E43640, 5%)
+
+$avenir:                             "Avenir LT W01 45 Book"
+$avenir-oblique:             "Avenir LT W01 45 Book Oblique"
+$avenir-bold:                       "Avenir LT W01 85 Heavy"
+
+$vu-b0:                                              1.5rem
+$vu-b1:                                              2.1rem
+
+$body-b1:                                             650px
+$body-b2:                                             1000px
+
+
+// Mixins
+@mixin upto($end)
+  @media screen and (max-width: ($end - 1))
+    @content
+
+@mixin between($start, $end)
+  @media screen and (min-width: $start) and (max-width: ($end - 1))
+    @content
+
+@mixin from($start)
+  @media screen and (min-width: $start)
+    @content
+
+// Placeholder
+
+%clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+// Base
+
+*, *:after, *:before
+  @include box-sizing(border-box)
+
+html
+  @include border-gradient(0.4rem,lighten($c-red, 15%), $c-red)
+  @include from($body-b1)
+    @include border-gradient(1rem,lighten($c-red, 15%), $c-red)
+  min-height: 100%
+
+body
+  font-family: $avenir
+  font-size: 62.5%
+  color: $c-red
+
+.wrapper
+  max-width: 60rem
+  margin: $vu-b0*2 2.5% 2.5%
+  @extend %clearfix
+  @include from($body-b1)
+    margin: 5rem
+    margin-bottom: 2rem
+  @include from($body-b2)
+    margin: 10rem
+    margin-bottom: 2rem
+section
+  h1, h2, h3
+    margin: 0
+    font-weight: normal
+    font-family: $avenir-bold
+
+  h1, h2, h3, p
+    font-size: 1.5rem
+    line-height: $vu-b0
+    margin-bottom: $vu-b0
+    @include from($body-b1)
+      margin-bottom: $vu-b1
+  p
+    font-size: 1.2rem
+    line-height: $vu-b0
+    margin: 0 0 $vu-b0 0
+    @include from($body-b1)
+      font-size: 1.5rem
+      line-height: $vu-b1
+      margin: 0 0 $vu-b1 0
+
+.small
+  margin: 0 0 $vu-b1 0
+  font-size: 1.1rem
+  font-family: $avenir-oblique
+
+a
+  color: #fff
+  text-decoration: none
+  &:hover
+    color: rgba(#fff, 0.7)
+
+.hello
+
+  @include from($body-b1)
+    width: 40%
+    margin-right: 10%
+    float: left
+  p
+    font-family: $avenir-oblique
+.song
+  @include from($body-b1)
+    width: 50%
+    float: left
+
+
+.song__button
+  background: lighten($c-red, 15%)
+  color: #fff
+  padding: 0.5rem 2rem
+  font-size: 1.2rem
+  display: block
+  border-radius: 4px
+  text-align: center
+  margin-bottom: $vu-b1*2
+  @include from($body-b1)
+    font-size: 1.2rem
+    border-radius: 8px
+    padding: 1rem 3rem
+
+
+  &:hover
+    color: #fff
+    background: $c-red
