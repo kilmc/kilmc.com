@@ -335,8 +335,7 @@ header {
 .post {
   width: 100%;
   margin-bottom: 2.4rem;
-  margin-bottom: 4.8rem;
-  font-family: "Avenir LT W01 45 Book Oblique"; }
+  margin-bottom: 4.8rem; }
   @media screen and (min-width: 650px) {
     .post {
       width: 55rem;
@@ -388,7 +387,7 @@ header {
       .post h2 {
         font-size: 2.4rem; } }
   .post h3 {
-    font-family: "Avenir LT W01 45 Book";
+    font-family: "Avenir LT W01 85 Heavy";
     line-height: 1.9rem;
     margin-bottom: 1.9rem;
     font-size: 1.6rem; }
@@ -434,6 +433,8 @@ header {
         font-size: 2rem; } }
   .post em {
     font-family: "Avenir LT W01 45 Book Oblique"; }
+  .post strong {
+    font-family: "Avenir LT W01 85 Heavy"; }
   @media screen and (min-width: 550px) {
     .post {
       margin-bottom: 5.1rem; } }
@@ -475,6 +476,8 @@ header {
       background: #67B1FF; }
       .post a.excerpt-link:hover span {
         color: #fff; }
+  .post em {
+    font-family: "Avenir LT W01 45 Book Oblique"; }
 
 .photo {
   width: 100%;
@@ -563,7 +566,7 @@ header {
       .main h2 {
         font-size: 2.4rem; } }
   .main h3 {
-    font-family: "Avenir LT W01 45 Book";
+    font-family: "Avenir LT W01 85 Heavy";
     line-height: 1.9rem;
     margin-bottom: 1.9rem;
     font-size: 1.6rem; }
@@ -609,6 +612,8 @@ header {
         font-size: 2rem; } }
   .main em {
     font-family: "Avenir LT W01 45 Book Oblique"; }
+  .main strong {
+    font-family: "Avenir LT W01 85 Heavy"; }
   .main img {
     width: 100%; }
 
