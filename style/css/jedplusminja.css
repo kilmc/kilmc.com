@@ -1,0 +1,26 @@
+body {
+  font-family: Avenir, sans-serif;
+
+}
+
+section {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+  padding: 2rem 2rem 0;
+}
+
+h1, h2 {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 500px) {
+  section {
+
+  }
+}
